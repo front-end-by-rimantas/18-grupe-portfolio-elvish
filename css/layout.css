@@ -1,22 +1,57 @@
 body {
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 .container-fluid {
     display: grid;
     grid-template-columns: 1fr;
+
 }
     .container-fluid > .row {
-        grid-column: 1 / 2;
+        grid-column: 1 / 2;  
     }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
+
 }
     .container > .row {
         grid-column: 2 / 3;
     }
+
+        .aboutMe {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "about about"
+            "hello hello"
+            "bar1 bar2";
+            border: 1px solid orange;
+        }
+
+            .about {
+                grid-area: about;
+                border: 1px solid orange;
+            }
+
+            .hello {
+                grid-area: hello;
+                border: 1px solid orange;
+            }
+
+            .bar1 {
+                grid-area: bar1;
+                border: 1px solid orange;
+            }
+
+            .bar2 {
+                grid-area: bar2;
+                border: 1px solid orange;
+            }
+
 
 @media (max-width: 1300px) {
     .container {
@@ -32,6 +67,17 @@ body {
     .container {
         grid-template-columns: 1fr 600px 1fr;
     }
+
+    .aboutMe {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "about"
+        "hello"
+        "bar1"
+        "bar2"
+    }
+
 }
 @media (max-width: 700px) {
     .container {
