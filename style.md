@@ -17,6 +17,7 @@ Client testimonials  18px
 ## colors
 - Black
 - Grey font #6c757d
+- background color #F8F9FA (light grey)
 
 ## overlay
 
