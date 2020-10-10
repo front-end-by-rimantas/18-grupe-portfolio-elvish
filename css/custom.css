@@ -145,7 +145,7 @@ margin-top: 25vh;
 }
 .rows > h1 {
     font-size: 72px;
-    font-weight: 400;
+    font-weight: 380;
     line-height: 1.2;
     text-transform: capitalize;
 }
@@ -210,9 +210,18 @@ canvas {
     animation: mouse 2s infinite;
    
 }
-.test {
-    height: 200vh;
+
+.changing-text {
+    font-weight: 50 !important;
+    opacity: 1;
+    transition: opacity 2s;
+   
 }
+
+.hide-text {
+    opacity: 0 !important;
+}
+
 .hero-mouse::after {
     content: "^";
     width: 1px;

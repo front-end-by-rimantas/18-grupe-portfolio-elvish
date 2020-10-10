@@ -2,7 +2,8 @@
 import headerEffect from "./headerJS.js";
 
 // hero import
-import textChanging from "./heroTextTransform.js";
+import heroTextTransform from "./heroTextTransform.js";
+
 // about me import
 
 // services import
@@ -30,7 +31,8 @@ import textChanging from "./heroTextTransform.js";
 // header logic
 headerEffect();
 // hero logic
-textChanging();
+// change();
+
 // HeroTextChanging();
 // about logic
 
