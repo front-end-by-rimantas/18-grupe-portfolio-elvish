@@ -76,10 +76,29 @@ ul li:hover:after {
     border-radius: 100%;
     left:calc(50% - 8px);
 }
+.mobile-navigation {
+    width: 100%;
+    height: 75vh;
+    background-color: transparent;
+    transition: 0.5s;
+    margin-top: 8%;
+    z-index: 99999;
+    display: none;
+}
+.mobile-nav-links {
+    width: 100%;
+    height: 11.5%;
+    margin-top: 5px;
+    color: white;
+}
 .header-sandwhich {
     position: absolute;
-    right: 50px;
-    top: 29px;
+    right: 150px;
+    top: 25px;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    display: none;
 }
 .sandwhcih-icon {
     width: 17px;
@@ -89,6 +108,7 @@ ul li:hover:after {
     position: absolute;
     right: 40px;
     /* top: 6px; */
+  
 }
 .sandwhcih-icon::before {
     content: "";
@@ -140,6 +160,9 @@ ul li:hover:after {
         position: absolute;
     top: 0;
     display: inline-block;
+        }
+        .header-sandwhich {
+            display: block;
         }
 
 }
