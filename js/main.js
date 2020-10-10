@@ -3,6 +3,8 @@
 // hero import
 
 // about me import
+import bar from './data/dataBar.js';
+import renderProgressBar from './renderProgressBar.js';
 
 // services import
 
@@ -31,6 +33,7 @@
 // hero logic
 
 // about logic
+renderProgressBar(bar);
 
 // services logic
 
