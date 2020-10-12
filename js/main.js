@@ -2,6 +2,7 @@
 import headerEffect from "./headerJS.js";
 import sandwich from "./heroSandwich.js"
 import HeroScroll from "./scrollFromHero.js"
+import scrollToTop from "./scrollToTop.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
@@ -36,6 +37,7 @@ import renderProgressBar from './renderProgressBar.js';
 // header logic
 headerEffect();
 HeroScroll();
+scrollToTop();
 // headerFixes();
 // sandwich();
 // hero logic
