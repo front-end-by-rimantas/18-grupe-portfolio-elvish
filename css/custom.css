@@ -227,7 +227,7 @@ ul li:hover:after {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(../testImage.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
+    background-image: url(../images/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -559,6 +559,74 @@ canvas {
 /* services */
 
 /* statistics */
+    .statistics{
+        width:100%;
+        background-image: url(../images/background/Background-stat-hire.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 40%;
+        text-align: center;
+        color:white;
+    }
+
+    .bg-stats-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        }
+
+    .statistics-item{
+        width:253px;
+        margin:40px 15px;
+        display: inline-block;
+        border: 1px dashed #b9b9b9;
+        border-radius: 0.25rem;
+        padding: 24px;
+        line-height: 1.5;
+    }
+
+        .statistics-item > span{
+            margin-bottom: 1rem;
+            font-size: 40px;
+        }
+        .statistics-item > h2{
+            font-size: 40px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .statistics-item > h4{
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+    @media (max-width: 1200px) {
+        .statistics-item{
+            width:208px;
+        }
+    }
+
+    @media (max-width: 990px) {
+        .statistics-container{
+            padding: 60px 0px;
+        }
+        .statistics-item{
+            width:688px;
+            margin: 10px 0px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .statistics-item{
+            width:508px;
+        }
+    }
+
 
 /* education */
 
