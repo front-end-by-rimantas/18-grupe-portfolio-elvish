@@ -1,7 +1,7 @@
 // header import
 import headerEffect from "./headerJS.js";
 import sandwich from "./heroSandwich.js"
-
+// import headerFixes from "./headerFixes.js"
 
 // hero import
 import heroTextTransform from "./heroTextTransform.js";
@@ -32,6 +32,7 @@ import heroTextTransform from "./heroTextTransform.js";
 
 // header logic
 headerEffect();
+// headerFixes();
 // sandwich();
 // hero logic
 // change();

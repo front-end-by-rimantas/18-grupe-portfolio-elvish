@@ -212,12 +212,10 @@ ul li:hover:after {
     header a {
         color: black;
     }
-    #mobile-link-black {
-        color: white;
+    #burger {
+        background: black;
     }
-    .sandwhcih-icon, .sandwhcih-icon::before , .sandwhcih-icon::after {
-        background: black !important ;
-    }
+
 
 }
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
@@ -280,11 +278,7 @@ margin-top: 25vh;
     line-height: 1.2;
     text-transform: capitalize;
 }
-.social {
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
-}
+
 .fa {
     font-size: 18px;
     color: #ffffff;
@@ -339,6 +333,7 @@ canvas {
     transform: translate(-50%, -50%);
     bottom: 30px;
     animation: mouse 2s infinite;
+    cursor: pointer;
    
 }
 

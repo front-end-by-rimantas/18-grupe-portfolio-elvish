@@ -14,6 +14,9 @@ function sandwich ()
     mobileNavBar.style.display="none";
     return clickCount=0;
     }
+   if (window.innerWidth < 780) {
+    mobileNavBar.style.background = "white"
+   }
 
 }
 sandwichIcon.addEventListener('click', sandwich)
