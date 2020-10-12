@@ -4,13 +4,6 @@ function HeroScroll (){
     let navList = Array.from(navLinks);
     const about = document.querySelector(".about-section")
     const height = about.offsetTop;
-
-    navList[0].addEventListener('click',function(){
-        window.scrollTo({
-            top:height-height,
-            behavior: 'smooth'
-        })
-    })
     navList[1].addEventListener('click',function(){
         window.scrollTo({
             top:height,
