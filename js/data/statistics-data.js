@@ -23,3 +23,7 @@ const statisticsData = [
 ];
 
 export default statisticsData;
+
+// active true/false
+// selector #statistics-container
+// imagepath

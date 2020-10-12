@@ -8,3 +8,8 @@ function renderStatisticsItem(statisticsData) {
 };
 
 export default renderStatisticsItem;
+
+//input validation
+//logic
+//post logic validation
+//output

@@ -227,7 +227,7 @@ ul li:hover:after {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(../testImage.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
+    background-image: url(../images/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -561,7 +561,7 @@ canvas {
 /* statistics */
     .statistics{
         width:100%;
-        background-image: url(./Background\ stat&hire.png);
+        background-image: url(../images/background/Background-stat-hire.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0% 40%;
@@ -569,7 +569,7 @@ canvas {
         color:white;
     }
 
-    .bg-overlay {
+    .bg-stats-overlay {
         background: rgba(0, 0, 0, 0.7);
         top: 0;
         right: 0;
