@@ -79,18 +79,26 @@ ul li:hover:after {
 .mobile-navigation {
     width: 100%;
     height: 75vh;
+    z-index: 99;
     background-color: transparent;
-    margin-top: 8%;
+    margin-top: 5%;
     display: none;
     transition: height 2s;
     animation: mobileNav 1s ;
+    position: absolute;
+    top: 10px;
 }
 
 .mobile-nav-links {
-    width: 100%;
+    width: 67%;
     height: 11.5%;
-    margin-top: 5px;
+    margin-top: 7px;
     color: white;
+    margin-left: 102px;
+}
+.mobile-navigation .sticky {
+    color: black;
+    background: transparent;
 }
 
 .header-sandwhich {
@@ -108,29 +116,34 @@ ul li:hover:after {
     background-color: white;
     margin: 6px 0;
     position: absolute;
-    right: 40px;
-    /* top: 6px; */
+    right: 53px;
+    top: 6px;
   
 }
-.sandwhcih-icon::before {
+
+.sandwhcih-icon1 {
     content: "";
     width: 17px;
     height: 3px;
     background-color: white;
     margin: 6px 0;
-    top: 2px;
+    top: -1px;
     float: right;
     position: absolute;
     
 }
-.sandwhcih-icon::after {
+.sandwhcih-icon2 {
     content: "";
     width: 17px;
     height: 3px;
     background-color: white;
     margin: 6px 0;
-    top: 10px;
+    top: 13px;
     position: absolute;
+}
+
+.black-burger {
+    background-color: black;
 }
 /* ______________________________________________Sita reiks pakeist kai idesim JS ant nav baro, kad uzsidetu taskiukai, jeigu pamirsiu, priminkit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* ul li::after {
@@ -146,6 +159,7 @@ ul li:hover:after {
 } __________________________________________________________________________________________________________________________________________________________________*/
 @keyframes mobileNav {
 0% {height: 1vh;}
+
 /* 100% {height: 90vh;} */
 }
 /* ____________________________________________________________Header resposnisvnes custom__________________________________________________________________ */
@@ -172,18 +186,18 @@ ul li:hover:after {
         }
 
 }
-@media (max-width:750px) {
+@media (max-width:780px) {
     .mobile-navigation {
         width: 100%;
         height: 55vh;
         background-color: white;
-        margin-top: 4%;
+        margin-top: 6%;
         display: none;
         transition: height 2s;
         position: fixed;
         left: 0;
     }
-    
+
     .mobile-nav-links {
         width: 73%;
         height: 7.5%;
@@ -197,6 +211,9 @@ ul li:hover:after {
     }
     header a {
         color: black;
+    }
+    #mobile-link-black {
+        color: white;
     }
     .sandwhcih-icon, .sandwhcih-icon::before , .sandwhcih-icon::after {
         background: black !important ;
