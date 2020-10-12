@@ -27,31 +27,27 @@ body {
         .aboutMe {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 20px;
             grid-template-areas:
             "about about"
             "hello hello"
             "bar1 bar2";
-            border: 1px solid orange;
         }
 
-            .about {
+            .about-section {
                 grid-area: about;
-                border: 1px solid orange;
             }
 
-            .hello {
+            .hello-section {
                 grid-area: hello;
-                border: 1px solid orange;
             }
 
-            .bar1 {
+            .row.aboutMe > .bar1 {
                 grid-area: bar1;
-                border: 1px solid orange;
             }
 
-            .bar2 {
+            .row.aboutMe > .bar2 {
                 grid-area: bar2;
-                border: 1px solid orange;
             }
 
             @media (max-width: 960px) {
