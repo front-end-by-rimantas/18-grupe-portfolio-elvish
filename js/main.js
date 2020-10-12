@@ -1,8 +1,14 @@
 // header import
+import headerEffect from "./headerJS.js";
+import sandwich from "./heroSandwich.js"
+// import headerFixes from "./headerFixes.js"
 
 // hero import
+import heroTextTransform from "./heroTextTransform.js";
 
 // about me import
+import bar from './data/dataBar.js';
+import renderProgressBar from './renderProgressBar.js';
 
 // services import
 
@@ -27,10 +33,15 @@
 
 
 // header logic
-
+headerEffect();
+// headerFixes();
+// sandwich();
 // hero logic
+// change();
 
+// HeroTextChanging();
 // about logic
+renderProgressBar(bar);
 
 // services logic
 
