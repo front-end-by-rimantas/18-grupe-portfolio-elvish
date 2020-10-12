@@ -10,6 +10,50 @@
 /* statistics */
 
 /* education */
+.row.education {
+    text-align: center;
+    margin: 0 60px;
+}
+.row.education > .edu-top-section {
+    padding: 30px 60px;
+    
+}
+    .row.education > .edu-top-section > h2 {
+        margin-bottom: 30px;
+        font-size: 32px; 
+    }
+
+    .row.education > .edu-top-section > p { 
+        color: #6c757d;
+        font-size: 18px;
+        margin: 20px 0px;
+        line-height: 25px;
+    }
+
+        .flex-parent.snowflake {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10%;
+            height: 10px;
+            margin: auto;
+
+          }
+          
+          .flex-child-edge {
+            flex-grow: 2; 
+            border: 1px solid lightgrey;
+            margin-bottom: 5px;
+            
+          }
+          .flex-child-text {
+            flex-basis: auto;
+            flex-grow: 0;
+            margin: 5px 10px 0px 10px;
+            font-size: 40px;
+            
+          }
+
 
 /* hire me */
 

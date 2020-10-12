@@ -76,7 +76,16 @@ body {
         /* statistics */
 
         /* education */
-
+            .edu-main-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                "edu-12 edu-12";
+                background-color: aquamarine;
+            }
+            .edu-12 {
+                grid-area: edu-12;
+            }
         /* hire me */
 
         /* our work */
