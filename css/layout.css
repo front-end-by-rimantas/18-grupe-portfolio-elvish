@@ -72,7 +72,23 @@ body {
             }
 
         /* services */
-
+            .services {
+                display: grid;
+                grid-template-rows: 33% 1fr 33%;
+                grid-template-areas:
+                "topas topas topas"
+                "bot bot bot";
+                background-color: #F8F9FA;
+                gap: 20px;
+            }
+                .services-topas {
+                    grid-area: topas;
+                    background-color: red;
+                }
+                .services-bot {
+                    grid-area: bot;
+                    background-color: green;
+                }
         /* statistics */
 
         /* education */

@@ -1,37 +1,39 @@
 const list = [
     {
-        icon: 'dfds',
+        icon: 'a',
         h3: 'Graphic Design',
         paragraph: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
     {
-        icon: 'dfd',
+        icon: 'b',
         header: 'Unlimited Color',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested..',
 
     },
-        {
-        icon: 'dfda',
+    {
+        icon: 'c',
         header: 'Media Marketing',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
-        {
-        icon: 'dfdb',
+    {
+        icon: 'd',
         header: 'Unlimited Wifi',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
-        {
-        icon: 'dfdc',
+    {
+        icon: 'e',
         header: 'Responsive Design',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
-        {
-        icon: 'dfdd',
+    {
+        icon: 'f',
         header: 'Easy to customize',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     }
+]
+export default list

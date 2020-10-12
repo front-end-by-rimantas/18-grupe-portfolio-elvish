@@ -5,7 +5,9 @@
 // about me import
 
 // services import
-
+import servicesData from './services.js'
+import renderServices from './renderServices.js'
+import renderSingleService from './renderSingleService.js'
 // statistics import
 
 // hire me import
@@ -33,7 +35,8 @@
 // about logic
 
 // services logic
-
+renderServices(servicesData)
+renderSingleService
 // statistics logic
 
 // hire me logic
