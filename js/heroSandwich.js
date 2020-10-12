@@ -1,3 +1,4 @@
+import headerFixes from "./headerFixes.js";
 let sandwichIcon = document.querySelector(".header-sandwhich")
 const mobileNavBar = document.querySelector(".mobile-navigation ")
 let clickCount=0;
@@ -16,8 +17,9 @@ function sandwich ()
     }
    if (window.innerWidth < 780) {
     mobileNavBar.style.background = "white"
+    // sandwichIcon.style.background = "black"
    }
-
+   headerFixes ();
 }
 sandwichIcon.addEventListener('click', sandwich)
 export default sandwich;
