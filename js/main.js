@@ -7,6 +7,8 @@
 // services import
 
 // statistics import
+import statisticsData from './statistics-data.js';
+import renderStatistics from './renderStatistics-function.js';
 
 // hire me import
 
@@ -35,6 +37,8 @@
 // services logic
 
 // statistics logic
+// console.log(statisticsData);
+renderStatistics(statisticsData);
 
 // hire me logic
 
