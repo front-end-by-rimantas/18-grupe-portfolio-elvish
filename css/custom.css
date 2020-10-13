@@ -701,7 +701,7 @@ canvas {
 }
 .subscribe-form {
     margin-top: 50px;
-    height: 80px;
+    height: 115px;
     position: relative;
 }
 .subscribe-input {
@@ -748,10 +748,16 @@ canvas {
     background: red;
     color: white;
     position: absolute;
-    bottom: -9px;
+    bottom: 25px;
     left: 32%;
     border-radius: 50%;
     display: none;
+}
+@media (max-width:750px) {
+    .subscribe-submit, #subscribe-click {
+        right: 65px;
+    }
+  
 }
 /* blog */
 

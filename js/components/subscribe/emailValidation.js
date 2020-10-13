@@ -15,7 +15,7 @@ form.addEventListener('submit', (e)=> {
     emailError.style.display="none";
   }
 if(message.length > 0) {
-
+    emailError.style.display="block";
     emailError.innerHTML = message;
 }
  message=[];
