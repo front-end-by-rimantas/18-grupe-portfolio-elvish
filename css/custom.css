@@ -221,7 +221,7 @@ ul li:hover:after {
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
 /* hero */
 .hero-fluid {
-    padding-bottom: 42px;
+    padding-bottom: 35px;
 }
 .hero {
     width: 100%;
@@ -761,6 +761,7 @@ canvas {
     border-radius: 50%;
     display: none;
 }
+
 @media (max-width:750px) {
     .subscribe-submit, #subscribe-click {
         right: 65px;
