@@ -639,6 +639,12 @@ canvas {
         }
     }
 
+    @media (max-width: 768px) {
+        .statistics-item{
+            width:90%;
+        }
+    }
+
 
 /* education */
 
