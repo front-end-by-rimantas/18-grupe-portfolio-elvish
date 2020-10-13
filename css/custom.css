@@ -557,7 +557,19 @@ canvas {
 
 
 /* services */
-
+.servicesjs {
+    display: inline-block;
+    width: 28%;
+    float: left;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px dotted #e7e7e7;
+    margin-right: 30px;
+    }
+.servicesjs > p {
+    margin-top: 10px;
+}
 /* statistics */
 
 /* education */

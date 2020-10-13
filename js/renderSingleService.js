@@ -1,4 +1,4 @@
-import list from "./services.js";
+// import list from "./services.js";
 
 function renderSingleService(services, i) {
 
