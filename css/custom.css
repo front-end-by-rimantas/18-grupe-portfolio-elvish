@@ -220,6 +220,9 @@ ul li:hover:after {
 }
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
 /* hero */
+.hero-fluid {
+    padding-bottom: 42px;
+}
 .hero {
     width: 100%;
     height: 100vh;
@@ -687,6 +690,10 @@ canvas {
 /* trusties */
 
 /* subscribe */
+.subscribe-section > h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
 .subscribe-section {
     text-align: center;
     margin: 0 auto;
@@ -698,6 +705,7 @@ canvas {
     margin-top: 30px;
     width: 70%;
     margin-left: 15%;
+    font-size: 18px;
 }
 .subscribe-form {
     margin-top: 50px;
