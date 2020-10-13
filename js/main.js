@@ -1,6 +1,8 @@
 // header import
 import headerEffect from "./components/header/headerJS.js";
 import sandwich from "./components/hero/heroSandwich.js"
+import HeroScroll from "./components/header/scrollFromHero.js"
+import scrollToTop from "./components/back-to-top/scrollToTop.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
