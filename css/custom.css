@@ -631,11 +631,11 @@ canvas {
 /* education */
 .row.education {
     text-align: center;
-    margin: 0 60px;
+    /* margin: 0 60px; */
 }
 .row.education > .edu-top-section {
     padding: 30px 0px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     
 }
     .row.education > .edu-top-section > h2 {
@@ -647,8 +647,7 @@ canvas {
     .row.education > .edu-top-section > p { 
         color: #6c757d;
         font-size: 18px;
-        margin: 20px 0px;
-        line-height: 25px;
+        margin: 30px 15px 30px 15px;
     }
     .row.education > .edu-main-section {
         position: left; 
@@ -690,6 +689,7 @@ canvas {
 
     #circl {
         color: #000000;
+        /* border: 1px solid #fff; */
         position: absolute;
         top: 0px;
         left: -36px;

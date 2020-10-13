@@ -1,14 +1,16 @@
 import {renderSingleEdu} from './renderSingleEdu.js';
 
 function renderEducation(eduData) {
-    //input validation
+    //1. input validation
 
-    //logic
+    
 
-    //post logic validation
+    //3. post logic validation
 
-    //output
+    //4. output
 
+
+//2. logic
     let HTML = '';
 
     for (let i = 0; i < eduData.length / 2; i++) {
