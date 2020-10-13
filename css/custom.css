@@ -635,7 +635,6 @@ canvas {
 }
 .row.education > .edu-top-section {
     padding: 30px 0px;
-    /* margin-bottom: 20px; */
     
 }
     .row.education > .edu-top-section > h2 {
@@ -672,13 +671,13 @@ canvas {
         color: #000000;
         font-size: 16px;
         margin: 0px 0px 10px 15px;
-        font-weight: normal;
+        font-weight: 600;
     }
     .edu > h4  { 
         color: #000000;
         font-size: 18px;
         margin: 0px 0px 8px 15px;
-        font-weight: 600px ;
+        font-weight: 600;
     }
     .edu > p { 
         color: #6c757d;
@@ -689,15 +688,11 @@ canvas {
 
     #circl {
         color: #000000;
-        /* border: 1px solid #fff; */
         position: absolute;
         top: 0px;
         left: -36px;
         padding-top: 20px;
     }
-
-            
-          }
 
 
 /* hire me */
