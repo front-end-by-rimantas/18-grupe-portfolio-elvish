@@ -243,7 +243,7 @@ ul li:hover:after {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(../images/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
+    background-image: url(../img/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
