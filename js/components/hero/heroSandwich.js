@@ -1,4 +1,4 @@
-import headerFixes from "./headerFixes.js";
+import headerFixes from "../header/headerFixes.js";
 let sandwichIcon = document.querySelector(".header-sandwhich")
 const mobileNavBar = document.querySelector(".mobile-navigation ")
 let clickCount=0;

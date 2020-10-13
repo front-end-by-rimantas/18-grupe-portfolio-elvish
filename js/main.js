@@ -1,13 +1,11 @@
 // header import
-import headerEffect from "./headerJS.js";
-import sandwich from "./heroSandwich.js"
-import HeroScroll from "./scrollFromHero.js"
-import scrollToTop from "./scrollToTop.js"
-// import headerFixes from "./headerFixes.js"
-
+import headerEffect from "../js/components/header/headerJS.js";
+import sandwich from "./components/hero/heroSandwich.js"
+import HeroScroll from "./components/header/headerFixes.js"
+import scrollToTop from "./components/back-to-top/scrollToTop.js"
+import headerFixes from "./components/header/headerFixes.js"
 // hero import
-import heroTextTransform from "./heroTextTransform.js";
-
+import heroTextTransform from "./components/hero/heroTextTransform.js"
 // about me import
 import bar from './data/dataBar.js';
 import renderProgressBar from './renderProgressBar.js';
