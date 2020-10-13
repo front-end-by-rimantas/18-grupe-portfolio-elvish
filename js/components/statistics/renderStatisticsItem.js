@@ -2,7 +2,7 @@ function renderStatisticsItem(statisticsData) {
             // console.log(statisticsData); 
             return `<div class='statistics-item'>
                         <span class="${statisticsData.icon}"></span>
-                        <h2>${statisticsData.number}</h2>
+                        <div class="counter" data-target=${statisticsData.number}>0</div>
                         <h4>${statisticsData.title}</h4>
                     </div>`
 };
