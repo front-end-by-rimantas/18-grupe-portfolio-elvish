@@ -737,6 +737,22 @@ canvas {
     cursor: pointer;
     font-size: 18px;
 }
+.subscribe-error {
+    color: red;
+    padding: 20px;
+    position: relative;
+}
+.subscribe-errorIcon {
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    position: absolute;
+    bottom: -9px;
+    left: 32%;
+    border-radius: 50%;
+    display: none;
+}
 /* blog */
 
 /* contact */
