@@ -414,7 +414,6 @@ canvas {
     
 }
     .row.aboutMe > .about-section {
-        padding: 0 80px 0 80px;
         z-index: 2;
 
     }
@@ -427,11 +426,6 @@ canvas {
             z-index: 1;
             height: 100%;
             width: 100%;
-        }
-
-        .row.aboutMe > .about-section > h2 {
- 
-
         }
 
         .flex-parent.snowflake {
@@ -460,7 +454,7 @@ canvas {
     
 
     .row.aboutMe > .hello-section {
-        padding: 0 60px 30px 60px;
+        padding-bottom: 30px;
         
     }
 
@@ -648,7 +642,7 @@ canvas {
     background-size: cover;
     background-position: 0% 35%;
     text-align: center;
-    padding: 80px 60px;
+    padding: 80px 0;
     color: white;
     z-index: 1;
     position: relative;
@@ -683,7 +677,7 @@ canvas {
 /* our work */
 .row.our-work-section {
     text-align: center;
-    padding: 80px;
+    padding: 80px 0;
 
 }
     .our-work-header {
