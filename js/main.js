@@ -1,22 +1,23 @@
 // header import
-import headerEffect from "./headerJS.js";
-import sandwich from "./heroSandwich.js"
+import headerEffect from "./components/header/headerJS.js";
+import sandwich from "./components/hero/heroSandwich.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
-import heroTextTransform from "./heroTextTransform.js";
+import heroTextTransform from "./components/hero/heroTextTransform.js";
 
 // about me import
 import bar from './data/dataBar.js';
-import renderProgressBar from './renderProgressBar.js';
+import renderProgressBar from './components/about-me/renderProgressBar.js';
 
 // services import
 import servicesData from './services.js'
 import renderServices from './renderServices.js'
 import renderSingleService from './renderSingleService.js'
 // statistics import
-import statisticsData from './statistics-data.js';
-import renderStatistics from './renderStatistics-function.js';
+import statisticsData from './data/statistics.js';
+console.log(statisticsData);
+import renderStatistics from './components/statistics/renderStatistics.js';
 
 // hire me import
 
