@@ -26,7 +26,8 @@ import renderStatistics from './components/statistics/renderStatistics.js';
 // trusties import
 
 // subscribe import
-
+import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
+subscribeEmailValidation ();
 // blog import
 
 // contact import
