@@ -76,12 +76,32 @@ body {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-areas:
-                "edu-12 edu-12";
-                background-color: aquamarine;
+                "edu-1 edu-2";
+                column-gap: 200px;
             }
-            .edu-12 {
-                grid-area: edu-12;
+            .edu-1 {
+                grid-area: edu-1;
+                grid-template-rows: 1fr 1fr 1fr;
             }
+            .edu-2 {
+                grid-area: edu-2;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            @media (max-width: 768px) {
+                .container {
+                    grid-template-columns: 15px 1fr 15px;
+                }
+                .edu-main-section {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                    "edu-1" 
+                    "edu-2";
+                    margin-bottom: 20px;
+                }
+            }
+
+
         /* hire me */
 
         /* our work */

@@ -18,8 +18,8 @@ console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
 
 // education import
-import {eduData} from "./data-education.js";
-import {renderEducation} from './renderEducation.js';
+import {eduData} from "./data/data-education.js";
+import {renderEducation} from './components/education/renderEducation.js';
 
 // hire me import
 
