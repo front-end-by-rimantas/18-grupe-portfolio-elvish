@@ -15,6 +15,8 @@ import servicesData from './services.js'
 import renderServices from './renderServices.js'
 import renderSingleService from './renderSingleService.js'
 // statistics import
+import statisticsData from './statistics-data.js';
+import renderStatistics from './renderStatistics-function.js';
 
 // hire me import
 
@@ -49,6 +51,8 @@ renderProgressBar(bar);
 renderServices(servicesData)
 renderSingleService
 // statistics logic
+// console.log(statisticsData);
+renderStatistics(statisticsData);
 
 // hire me logic
 
