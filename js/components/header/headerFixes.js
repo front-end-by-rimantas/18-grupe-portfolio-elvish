@@ -1,3 +1,4 @@
+
 function headerFixes () {
     let burger = document.querySelectorAll("#burger");
     let burgerArray = Array.from(burger)
