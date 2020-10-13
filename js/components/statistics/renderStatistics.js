@@ -1,4 +1,4 @@
-import renderStatisticsItem from './renderStatisticsItem-function.js'
+import renderStatisticsItem from './renderStatisticsItem.js'
 
 function renderStatistics(statisticsData) {
     // console.log(statisticsData);
