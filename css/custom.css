@@ -234,12 +234,12 @@ ul li:hover:after {
     color: white;
     position: relative;
 }
-svg {
+/* svg {
     width: 100%;
     position: absolute;
     bottom: -50px;
     z-index: 1;
-}
+} */
 
 
 .bg-overlay {
@@ -410,30 +410,27 @@ canvas {
 .row.aboutMe {
     text-align: center;
     margin: 0 60px;
+    z-index: 5;
     
 }
     .row.aboutMe > .about-section {
-        padding: 80px 80px 30px 80px;
-        position: relative;
+        padding: 0 80px 0 80px;
         z-index: 2;
-        
-        
-    }
-        .row.aboutMe > .about-section > .curve > svg {
-            width: 100%;
-            position: absolute;
-            top: -80px;
-            left: 0;
-            z-index: -1;
-        }
 
-        .row.aboutMe > .about-section > .curve > svg > path {
+    }
+        .curve-box-container {
+            z-index: 10;
+            margin-top: -140px;
+
+        }
+        #about-me-curve {
             z-index: 1;
+            height: 100%;
+            width: 100%;
         }
 
         .row.aboutMe > .about-section > h2 {
-            
-            
+ 
 
         }
 
@@ -463,8 +460,13 @@ canvas {
     
 
     .row.aboutMe > .hello-section {
-        padding: 30px 60px;
+        padding: 0 60px 30px 60px;
         
+    }
+
+    #Elvish-sig {
+        width: 250px;
+        margin-bottom: 10px;
     }
         .row.aboutMe > .about-section > h2 {
             margin-bottom: 30px;
@@ -555,6 +557,16 @@ canvas {
                     }
                 }
 
+                @media (min-width: 1200px) {
+                    .curve-box-container {
+                        margin-top: -210px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .curve-box-container {
+                        margin-top: -100px;
+                    }
+                }
 
 /* services */
 
@@ -696,6 +708,42 @@ canvas {
 
 
 /* hire me */
+.hire-me-row {
+    background-image: url(../Images/background/Background-stat-hire.png);
+    background-size: cover;
+    background-position: 0% 35%;
+    text-align: center;
+    padding: 80px 60px;
+    color: white;
+    z-index: 1;
+    position: relative;
+    
+}
+
+    .hire-me-row > .bg-overlay {
+        position: absolute;
+        z-index: -1;
+    }
+
+    #hire-me-h1 {
+        font-weight: normal;
+        font-size: 40px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+    }
+    #hire-me-a {
+        padding: 10px 25px;
+        border: 2px solid white;
+        border-radius: 3px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    #hire-me-a:hover {
+        background-color: white;
+        color: black;
+        transition: 0.8s;  
+    }
 
 /* our work */
 
