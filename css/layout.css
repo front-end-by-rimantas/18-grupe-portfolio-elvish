@@ -58,6 +58,7 @@ body {
                 .aboutMe {
                     display: grid;
                     grid-template-columns: 1fr;
+                    gap: 0;
                     grid-template-areas:
                     "about"
                     "hello"
