@@ -69,10 +69,85 @@ body {
             }
 
         /* services */
-
+    /* reikia sutvarkyti responsive */
+            .services {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                background-color: #F8F9FA;
+                gap: 30px;
+            }
+            @media (max-width: 1400px) {
+                .services {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            @media (max-width: 990px) {
+                .services {
+                    grid-template-columns: 1fr;
+                    /* width: 690px; */
+                        /* }
+            @media (max-width: 768px) {
+                .services {
+                    /* width: 510px; */
+                            }
+            /* @media (max-width: 575px) {
+                .services { */
+                    /* width: 350px; */
+                                }
+            /* @media (max-width: 1400px) {
+                .services {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr; */
+     }
         /* statistics */
 
         /* education */
+            .edu-main-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                "edu-1 edu-2";
+                column-gap: 200px;
+            }
+            .edu-1 {
+                grid-area: edu-1;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            .edu-2 {
+                grid-area: edu-2;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            /* pirminis responsive pridetas, bet dar reikes papildyti*/
+            
+            @media (max-width: 960px) {
+                .container {
+                    grid-template-columns: 1fr 770px 1fr;
+                }
+                .edu-main-section {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                    "edu-1" 
+                    "edu-2"
+                }
+                .left-side {
+                    margin-bottom: 40px;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .container {
+                    grid-template-columns: 15px 1fr 15px;
+                }
+                .edu-main-section {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                    "edu-1" 
+                    "edu-2";
+                }
+            }
+
 
         /* hire me */
 

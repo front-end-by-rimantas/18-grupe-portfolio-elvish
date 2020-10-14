@@ -1,6 +1,28 @@
 
 /* header */
-
+h1, h2, h3, h5, strong{
+    font-family: 'Montserrat', sans-serif;
+}
+bold {
+    font-weight: 700;
+}
+h4 {
+     font-weight: 500;
+}
+.to-top {
+    height: 35px;
+    line-height: 43px;
+    width: 35px;
+    font-size: 34px;
+    text-align: center;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 25px;
+    right:25px;
+    cursor: pointer;
+}
 header {
     position: fixed;
     top:0;
@@ -12,6 +34,11 @@ header {
     transition: 0.6s;
     z-index: 10000;
     padding: 30px 100px;
+}
+.changing-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700 !important;
+    font-size: 72px;
 }
 .header-container {
     width: 100%;
@@ -34,20 +61,20 @@ text-transform: uppercase;
 font-weight: 700;
 font-size: 30px;
 }
-header ul {
+header .header-ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header ul li {
+header .header-ul .header-list {
     position: relative;
     list-style: none;
     color: white;
     padding: 5px;
     
 }
-header ul li a {
+header .header-ul .header-list a {
     text-decoration: none;
     margin: 0 15px;
     color: white;
@@ -56,7 +83,7 @@ header ul li a {
     transition: 0.5s; 
 }
 
-header.sticky ul li a {
+header.sticky .header-ul .header-list a {
     color: black;
     margin-left: 10%;
 }
@@ -66,7 +93,7 @@ header.sticky a {
 .nav-links {
     position: relative;
 }
-ul li:hover:after {
+.header-ul .header-list:hover:after {
     content: "";
     position: absolute;
     top: 30px;
@@ -146,7 +173,7 @@ ul li:hover:after {
     background-color: black;
 }
 /* ______________________________________________Sita reiks pakeist kai idesim JS ant nav baro, kad uzsidetu taskiukai, jeigu pamirsiu, priminkit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* ul li::after {
+/* .header-ul .header-list::after {
     content: "";
     position: absolute;
     top: 30px;
@@ -164,7 +191,7 @@ ul li:hover:after {
 }
 /* ____________________________________________________________Header resposnisvnes custom__________________________________________________________________ */
 @media (max-width:980px) {
-        ul li a {
+        ul .header-list a {
             display: none;
         }
         ul {
@@ -220,6 +247,9 @@ ul li:hover:after {
 }
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
 /* hero */
+.hero-fluid {
+    padding-bottom: 35px;
+}
 .hero {
     width: 100%;
     height: 100vh;
@@ -227,7 +257,7 @@ ul li:hover:after {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(../images/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
+    background-image: url(../img/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -338,7 +368,7 @@ canvas {
 }
 
 .changing-text {
-    font-weight: 50 !important;
+    font-weight: 600 !important;
     opacity: 1;
     transition: opacity 2s;
    
@@ -563,11 +593,56 @@ canvas {
                 }
 
 /* services */
-
+.servicesStar {
+    margin-bottom: 80px;
+}
+.servicesStar > .line-break::before, 
+.servicesStar > .line-break::after {
+    border-top: 1px solid #6c757d; 
+} 
+.servicesStar > h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+.servicesStar > p {
+    font-size: 18px;
+    color: #6c757d;
+}
+.bg-services {
+    background-color: #F8F9FA;
+}
+.row.servicesRow {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.servicesjs {
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* display: inline-block; */
+    margin-top: 10px;
+    padding: 24px;
+    text-align: center;
+    border: 1px dotted #e7e7e7;
+    }
+.servicesjs > p {
+    margin-top: 24px;
+    color: #6c757d;
+}
+.servicesjs > h5 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+}
+.servicesjs > span {
+    margin-bottom: 1rem;
+    font-size: 40px;   
+}
 /* statistics */
     .statistics{
         width:100%;
-        background-image: url(../images/background/Background-stat-hire.png);
+        background-image: url(../img/background/Background-stat-hire.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0% 40%;
@@ -577,10 +652,6 @@ canvas {
 
     .bg-stats-overlay {
         background: rgba(0, 0, 0, 0.7);
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
         width: 100%;
         height: 100%;
         }
@@ -599,7 +670,8 @@ canvas {
             margin-bottom: 1rem;
             font-size: 40px;
         }
-        .statistics-item > h2{
+
+        .statistics-item > .counter{
             font-size: 40px;
             margin-bottom: 4px;
             font-weight: 500;
@@ -633,12 +705,79 @@ canvas {
         }
     }
 
+    @media (max-width: 768px) {
+        .statistics-item{
+            width:90%;
+        }
+    }
+
 
 /* education */
+.row.edu-top-section {
+    text-align: center;
+    padding: 30px 0px;
+}
+    .edu-top-section > h2 {
+        margin-bottom: 30px;
+        font-size: 32px; 
+        font-weight: bold;
+    }
+
+    .edu-top-section > p { 
+        color: #6c757d;
+        font-size: 18px;
+        margin: 30px 15px 30px 15px;
+    }
+
+    .edu {
+        border: 1px solid  #e7e7e7;
+        margin: 24px 0px 0px 20px;
+        padding: 20px;
+        text-align: left;
+        position: relative;
+        border-radius: 5px;
+    }
+    .edu > .year-edu  { 
+        color: #000000;
+        font-size: 16px;
+        margin: 0px 0px 10px 15px;
+        font-weight: 600;
+    }
+    .edu > h4  { 
+        color: #000000;
+        font-size: 18px;
+        margin: 0px 0px 8px 15px;
+        font-weight: 600;
+    }
+    .edu > p { 
+        color: #6c757d;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .edu::before {
+        content: '';
+        border-left: 1px solid #e7e7e7;
+        position: absolute;
+        top: -20px;
+        bottom: -17px;
+        left: -20px;
+    }
+    .edu::after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid #ffffff;
+        position: absolute;
+        top: 20px;
+        left: -28px;
+     }
+
 
 /* hire me */
 .hire-me-row {
-    background-image: url(../Images/background/Background-stat-hire.png);
+    background-image: url(../img/background/Background-stat-hire.png);
     background-size: cover;
     background-position: 0% 35%;
     text-align: center;
@@ -735,11 +874,172 @@ canvas {
 
 
 /* our clients */
+    .clients{
+        width:100%;
+        padding: 60px;
+        background-image: url(../img/background/background-client.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 40%;
+        text-align: center;
+        color:white;
+        position: relative;
+        z-index: 1;
+    }
+
+    .clients > .bg-overlay {
+        position: absolute;
+        z-index: -1;
+    }
+
+        .clients-texts{
+            display: inline-block;
+            width: 570px;
+            margin-left: calc((100% - 570px))/2;
+            margin-right: calc((100% - 570px))/2;
+            text-align:  center;
+        }
+
+            .clients-texts > h2{
+                font-size: 32px;
+                font-weight: normal;
+            }
+
+            .clients-texts > p{
+                font-size: 18px;
+            }
+
+            .star{
+                line-height: 30px;
+                font-size: 30px;
+                margin-top: 10px;
+            }
+
+            .line-break {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+        
+            .line-break::before, .line-break::after {
+                content: '';  
+                width: 20px;   
+                /* flex: 1;      */
+                border-top: 1px solid white; 
+            } 
+            
+            .line-break::before {     
+                margin-right: 10px; 
+            } 
+            .line-break::after {     
+                margin-left: 10px; 
+            }
+
+        .clients-pagination{
+            padding: 30px;
+        }
+
+    @media (max-width: 690px) {
+        .clients{
+            padding: 50px 0px;
+        }
+        .clients-texts{
+            width: 90%;
+        }
+    }
 
 /* trusties */
 
 /* subscribe */
+.subscribe-section > h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+.subscribe-section {
+    text-align: center;
+    margin: 0 auto;
+}
+.subscribe-section > h2 {
+    margin-bottom: 30px;
+}
+.subscribe-section > p {
+    color: #6c757d;
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 18px;
+}
+.subscribe-form {
+    margin-top: 50px;
+    height: 115px;
+    position: relative;
 
+    
+}
+.subscribe-input {
+    height: 50px;
+    width: 60%;
+    border-radius: 30px;
+    outline: none;
+    margin-left: 20%;
+    margin-right: 25%;
+    background-color: #e8e8e8 ;
+    border: none;
+    font-size: 20px;
+   padding-left: 22px;
+  
+}
+
+.subscribe-input::placeholder {
+   font-size: 18px;
+   position: absolute;
+  text-align: left;
+}
+.subscribe-submit[type="submit"] {
+    background: black;
+    color: white;
+    width: 147px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 33px;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 157px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+.subscribe-submit:hover {
+    background-color: white;
+    color: black;
+    border: 3px black solid;
+}
+.subscribe-error {
+    color: red;
+    padding: 20px;
+    position: relative;
+}
+.subscribe-errorIcon {
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    left: 32%;
+    border-radius: 50%;
+    display: none;
+}
+
+@media (max-width:750px) {
+    .subscribe-submit, #subscribe-click {
+        right: 65px;
+    }
+  
+}
 /* blog */
 
 /* contact */
