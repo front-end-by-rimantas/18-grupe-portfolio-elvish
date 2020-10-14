@@ -664,12 +664,12 @@ canvas {
     }
 
     .edu {
-        border: 1px solid #e7e7e7;
+        border: 1px solid  #e7e7e7;
         margin: 24px 0px 0px 20px;
         padding: 20px;
         text-align: left;
         position: relative;
-        border-radius: 15px;
+        border-radius: 5px;
     }
     .edu > .year-edu  { 
         color: #000000;
@@ -690,7 +690,7 @@ canvas {
     }
     .edu::before {
         content: '';
-        border-left: 2px solid #e7e7e7;
+        border-left: 1px solid #e7e7e7;
         position: absolute;
          top: -20px;
          bottom: -17px;
