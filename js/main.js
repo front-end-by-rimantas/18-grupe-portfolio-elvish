@@ -21,6 +21,10 @@ import statisticsData from './data/statistics.js';
 import renderStatistics from './components/statistics/renderStatistics.js';
 import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
 
+// education import
+import {eduData} from "./data/data-education.js";
+import {renderEducation} from './components/education/renderEducation.js';
+
 // hire me import
 
 // our work import
@@ -59,6 +63,9 @@ renderServices(servicesData)
 // console.log(statisticsData);
 renderStatistics(statisticsData);
 statisticsNumberTransform();
+
+// education logic
+renderEducation(eduData);
 
 // hire me logic
 
