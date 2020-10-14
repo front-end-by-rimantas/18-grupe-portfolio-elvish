@@ -1,6 +1,19 @@
 
 /* header */
-
+.to-top {
+    height: 35px;
+    line-height: 43px;
+    width: 35px;
+    font-size: 34px;
+    text-align: center;
+    background: #000;;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 25px;
+    right:25px;
+    cursor: pointer;
+}
 header {
     position: fixed;
     top:0;
@@ -234,12 +247,12 @@ ul li:hover:after {
     color: white;
     position: relative;
 }
-svg {
+/* svg {
     width: 100%;
     position: absolute;
     bottom: -50px;
     z-index: 1;
-}
+} */
 
 
 .bg-overlay {
@@ -410,30 +423,27 @@ canvas {
 .row.aboutMe {
     text-align: center;
     margin: 0 60px;
+    z-index: 5;
     
 }
     .row.aboutMe > .about-section {
-        padding: 80px 80px 30px 80px;
-        position: relative;
+        padding: 0 80px 0 80px;
         z-index: 2;
-        
-        
-    }
-        .row.aboutMe > .about-section > .curve > svg {
-            width: 100%;
-            position: absolute;
-            top: -80px;
-            left: 0;
-            z-index: -1;
-        }
 
-        .row.aboutMe > .about-section > .curve > svg > path {
+    }
+        .curve-box-container {
+            z-index: 10;
+            margin-top: -140px;
+
+        }
+        #about-me-curve {
             z-index: 1;
+            height: 100%;
+            width: 100%;
         }
 
         .row.aboutMe > .about-section > h2 {
-            
-            
+ 
 
         }
 
@@ -463,8 +473,13 @@ canvas {
     
 
     .row.aboutMe > .hello-section {
-        padding: 30px 60px;
+        padding: 0 60px 30px 60px;
         
+    }
+
+    #Elvish-sig {
+        width: 250px;
+        margin-bottom: 10px;
     }
         .row.aboutMe > .about-section > h2 {
             margin-bottom: 30px;
@@ -555,6 +570,16 @@ canvas {
                     }
                 }
 
+                @media (min-width: 1200px) {
+                    .curve-box-container {
+                        margin-top: -210px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .curve-box-container {
+                        margin-top: -100px;
+                    }
+                }
 
 /* services */
 
@@ -594,10 +619,6 @@ canvas {
 
     .bg-stats-overlay {
         background: rgba(0, 0, 0, 0.7);
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
         width: 100%;
         height: 100%;
         }
@@ -650,14 +671,131 @@ canvas {
         }
     }
 
+    @media (max-width: 768px) {
+        .statistics-item{
+            width:90%;
+        }
+    }
+
 
 /* education */
 
 /* hire me */
+.hire-me-row {
+    background-image: url(../Images/background/Background-stat-hire.png);
+    background-size: cover;
+    background-position: 0% 35%;
+    text-align: center;
+    padding: 80px 60px;
+    color: white;
+    z-index: 1;
+    position: relative;
+    
+}
+
+    .hire-me-row > .bg-overlay {
+        position: absolute;
+        z-index: -1;
+    }
+
+    #hire-me-h1 {
+        font-weight: normal;
+        font-size: 40px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+    }
+    #hire-me-a {
+        padding: 10px 25px;
+        border: 2px solid white;
+        border-radius: 3px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    #hire-me-a:hover {
+        background-color: white;
+        color: black;
+        transition: 0.8s;  
+    }
 
 /* our work */
 
 /* our clients */
+    .clients{
+        width:100%;
+        padding: 60px;
+        background-image: url(../images/background/background-client.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 40%;
+        text-align: center;
+        color:white;
+        position: relative;
+        z-index: 1;
+    }
+
+    .clients > .bg-overlay {
+        position: absolute;
+        z-index: -1;
+    }
+
+        .clients-texts{
+            display: inline-block;
+            width: 570px;
+            margin-left: calc((100% - 570px))/2;
+            margin-right: calc((100% - 570px))/2;
+            text-align:  center;
+            background-color: lightblue;
+        }
+
+            .clients-texts > h2{
+                font-size: 32px;
+                font-weight: normal;
+            }
+
+            .clients-texts > p{
+                font-size: 18px;
+            }
+
+            .star{
+                line-height: 30px;
+                font-size: 30px;
+                margin-top: 10px;
+            }
+
+            .line-break {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+        
+            .line-break::before, .line-break::after {
+                content: '';  
+                width: 20px;   
+                /* flex: 1;      */
+                border-top: 1px solid white; 
+            } 
+            
+            .line-break::before {     
+                margin-right: 10px; 
+            } 
+            .line-break::after {     
+                margin-left: 10px; 
+            }
+
+        .clients-pagination{
+            padding: 30px;
+            background-color: lightcoral;
+        }
+
+    @media (max-width: 690px) {
+        .clients{
+            padding: 50px 0px;
+        }
+        .clients-texts{
+            width: 90%;
+        }
+    }
 
 /* trusties */
 

@@ -10,7 +10,7 @@ function renderStatistics(statisticsData) {
         HTML += renderStatisticsItem(item);
     }
 
-    console.log(HTML);
+    // console.log(HTML);
 
     //susirandame elementa, kuriame norime perrasyti turini
     const statisticsDOM = document.querySelector('.statistics-container');

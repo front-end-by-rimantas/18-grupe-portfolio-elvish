@@ -31,9 +31,6 @@ While following given design template we had to use our best judgment for styles
 
 This meant that in order to finish our project we had to train our eyes to perceive differences in spacings,colors and sizes.
 
-Below is a process and workflow that we tried to follow.
-
-
 
 ## Site published at:
 https://front-end-by-rimantas.github.io/18-grupe-portfolio-elvish/

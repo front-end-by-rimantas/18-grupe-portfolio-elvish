@@ -1,6 +1,8 @@
 // header import
 import headerEffect from "./components/header/headerJS.js";
 import sandwich from "./components/hero/heroSandwich.js"
+import HeroScroll from "./components/header/scrollFromHero.js"
+import scrollToTop from "./components/back-to-top/scrollToTop.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
@@ -16,8 +18,9 @@ import renderServices from './components/services/renderServices.js'
 import renderSingleService from './components/services/renderSingleService.js'
 // statistics import
 import statisticsData from './data/statistics.js';
-console.log(statisticsData);
+// console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
+import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
 
 // hire me import
 
@@ -39,6 +42,8 @@ import renderStatistics from './components/statistics/renderStatistics.js';
 
 // header logic
 headerEffect();
+HeroScroll();
+scrollToTop();
 // headerFixes();
 // sandwich();
 // hero logic
@@ -54,6 +59,7 @@ renderSingleService
 // statistics logic
 // console.log(statisticsData);
 renderStatistics(statisticsData);
+statisticsNumberTransform();
 
 // hire me logic
 
