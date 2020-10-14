@@ -81,28 +81,23 @@ body {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                 }
-            @media (max-width: 1200px) {
-                .services {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    }
             @media (max-width: 990px) {
                 .services {
                     grid-template-columns: 1fr;
-                    width: 690px;
-                        }
+                    /* width: 690px; */
+                        /* }
             @media (max-width: 768px) {
                 .services {
-                    width: 510px;
+                    /* width: 510px; */
                             }
-            @media (max-width: 575px) {
-                .services {
-                    width: 350px;
+            /* @media (max-width: 575px) {
+                .services { */
+                    /* width: 350px; */
                                 }
             /* @media (max-width: 1400px) {
                 .services {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr; */
      }
         /* statistics */
 

@@ -579,13 +579,35 @@ canvas {
                 }
 
 /* services */
-
+.servicesStar {
+    margin-bottom: 80px;
+}
+.servicesStar > .line-break::before, 
+.servicesStar > .line-break::after {
+    border-top: 1px solid #6c757d; 
+} 
+.servicesStar > h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+.servicesStar > p {
+    font-size: 18px;
+    color: #6c757d;
+}
 .bg-services {
     background-color: #F8F9FA;
 }
+.row.servicesRow {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 .servicesjs {
     
-    display: inline-block;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* display: inline-block; */
     margin-top: 10px;
     padding: 24px;
     text-align: center;

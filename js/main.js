@@ -15,7 +15,6 @@ import renderProgressBar from './components/about-me/renderProgressBar.js';
 // services import
 import servicesData from './data/services.js'
 import renderServices from './components/services/renderServices.js'
-import renderSingleService from './components/services/renderSingleService.js'
 // statistics import
 import statisticsData from './data/statistics.js';
 // console.log(statisticsData);
@@ -56,7 +55,6 @@ renderProgressBar(bar);
 
 // services logic
 renderServices(servicesData)
-renderSingleService
 // statistics logic
 // console.log(statisticsData);
 renderStatistics(statisticsData);
