@@ -1,10 +1,13 @@
 
 /* header */
-h1, h2, h3, h4, h5, strong{
+h1, h2, h3, h5, strong{
     font-family: 'Montserrat', sans-serif;
 }
 bold {
     font-weight: 700;
+}
+h4 {
+     font-weight: 500;
 }
 .to-top {
     height: 35px;
