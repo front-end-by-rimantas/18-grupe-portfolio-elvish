@@ -16,8 +16,9 @@ import renderProgressBar from './components/about-me/renderProgressBar.js';
 
 // statistics import
 import statisticsData from './data/statistics.js';
-console.log(statisticsData);
+// console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
+import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
 
 // hire me import
 
@@ -56,6 +57,7 @@ renderProgressBar(bar);
 // statistics logic
 // console.log(statisticsData);
 renderStatistics(statisticsData);
+statisticsNumberTransform();
 
 // hire me logic
 

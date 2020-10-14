@@ -593,10 +593,6 @@ canvas {
 
     .bg-stats-overlay {
         background: rgba(0, 0, 0, 0.7);
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
         width: 100%;
         height: 100%;
         }
@@ -646,6 +642,12 @@ canvas {
     @media (max-width: 768px) {
         .statistics-item{
             width:508px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .statistics-item{
+            width:90%;
         }
     }
 
@@ -768,6 +770,81 @@ canvas {
 
 
 /* our clients */
+    .clients{
+        width:100%;
+        padding: 60px;
+        background-image: url(../images/background/background-client.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 40%;
+        text-align: center;
+        color:white;
+        position: relative;
+        z-index: 1;
+    }
+
+    .clients > .bg-overlay {
+        position: absolute;
+        z-index: -1;
+    }
+
+        .clients-texts{
+            display: inline-block;
+            width: 570px;
+            margin-left: calc((100% - 570px))/2;
+            margin-right: calc((100% - 570px))/2;
+            text-align:  center;
+            background-color: lightblue;
+        }
+
+            .clients-texts > h2{
+                font-size: 32px;
+                font-weight: normal;
+            }
+
+            .clients-texts > p{
+                font-size: 18px;
+            }
+
+            .star{
+                line-height: 30px;
+                font-size: 30px;
+                margin-top: 10px;
+            }
+
+            .line-break {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+        
+            .line-break::before, .line-break::after {
+                content: '';  
+                width: 20px;   
+                /* flex: 1;      */
+                border-top: 1px solid white; 
+            } 
+            
+            .line-break::before {     
+                margin-right: 10px; 
+            } 
+            .line-break::after {     
+                margin-left: 10px; 
+            }
+
+        .clients-pagination{
+            padding: 30px;
+            background-color: lightcoral;
+        }
+
+    @media (max-width: 690px) {
+        .clients{
+            padding: 50px 0px;
+        }
+        .clients-texts{
+            width: 90%;
+        }
+    }
 
 /* trusties */
 
