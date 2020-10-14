@@ -1,6 +1,6 @@
 
 /* header */
-h1, h2, h3, h5, strong{
+h1, h2, h3, h4, h5, strong{
     font-family: 'Montserrat', sans-serif;
 }
 bold {
@@ -713,17 +713,18 @@ canvas {
 
 
 /* education */
-.row.edu-top-section {
-    text-align: center;
+.container.education.section-padding {
+    padding: 80px 0px;
 }
-    /* section padding reikalingas sekcijom su vidiniais headeriais*/
-    .section-padding {
-        padding: 80px 0px;
-    }
-    /* inner header margin atstumia vidini header nuo sonu*/
-    .inner-header-margin {
-        margin: 0px 60px;
-    }
+.row.edu-top-section {
+    width: 70%;
+    display: block;
+    text-align: center; 
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 50px;
+
+}  
     .row.edu-top-section > .line-break::before, 
     .row.edu-top-section > .line-break::after {
         content: '';  
@@ -737,6 +738,7 @@ canvas {
     }
 
     .edu-top-section > p { 
+        display: block;
         color: #6c757d;
         font-size: 18px;
         margin: 8px 0px 16px;
@@ -745,7 +747,7 @@ canvas {
 
     .edu {
         border: 1px solid  #e7e7e7;
-        margin: 24px 0px 0px 20px;
+        margin: 24px 30px 0px 50px;
         padding: 20px;
         text-align: left;
         position: relative;
@@ -755,13 +757,14 @@ canvas {
         color: #000000;
         font-size: 16px;
         margin: 0px 0px 10px 15px;
-        font-weight: 600;
+        font-weight: 700;
     }
     .edu > h4  { 
         color: #000000;
         font-size: 18px;
         margin: 0px 0px 8px 15px;
         font-weight: 600;
+        text-transform: capitalize;
     }
     .edu > p { 
         color: #6c757d;
