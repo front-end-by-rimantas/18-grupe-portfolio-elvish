@@ -583,7 +583,7 @@ canvas {
 /* statistics */
     .statistics{
         width:100%;
-        background-image: url(../images/background/Background-stat-hire.png);
+        background-image: url(../img/background/Background-stat-hire.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0% 40%;
@@ -611,7 +611,8 @@ canvas {
             margin-bottom: 1rem;
             font-size: 40px;
         }
-        .statistics-item > h2{
+
+        .statistics-item > .counter{
             font-size: 40px;
             margin-bottom: 4px;
             font-weight: 500;
@@ -656,7 +657,7 @@ canvas {
 
 /* hire me */
 .hire-me-row {
-    background-image: url(../Images/background/Background-stat-hire.png);
+    background-image: url(../img/background/Background-stat-hire.png);
     background-size: cover;
     background-position: 0% 35%;
     text-align: center;
@@ -773,7 +774,7 @@ canvas {
     .clients{
         width:100%;
         padding: 60px;
-        background-image: url(../images/background/background-client.jpg);
+        background-image: url(../img/background/background-client.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0% 40%;
@@ -794,7 +795,6 @@ canvas {
             margin-left: calc((100% - 570px))/2;
             margin-right: calc((100% - 570px))/2;
             text-align:  center;
-            background-color: lightblue;
         }
 
             .clients-texts > h2{
@@ -834,7 +834,6 @@ canvas {
 
         .clients-pagination{
             padding: 30px;
-            background-color: lightcoral;
         }
 
     @media (max-width: 690px) {
@@ -861,6 +860,7 @@ canvas {
     margin-bottom: 30px;
 }
 .subscribe-section > p {
+    color: #6c757d;
     margin-top: 30px;
     width: 70%;
     margin-left: 15%;
