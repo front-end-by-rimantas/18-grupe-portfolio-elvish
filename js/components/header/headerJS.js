@@ -20,7 +20,7 @@ function headerEffects () {
         }
         headerFixes ();
         })
-        
+      
 }
   export default headerEffects;
    

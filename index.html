@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/layout.css">
     <!-- 3rd party -->
+    <link rel="icon" href="./img/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="./css/mobirise-icons-style.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <!-- components -->
@@ -17,6 +18,7 @@
 
 <body>
     <!-- header -->
+    <div class="to-top">^</div>
     <header class="container-fluid">
         <div class="row">
                    
@@ -28,15 +30,15 @@
                         
                     </div>
                 <a class="logo" href="#">Elvish</a>
-                      <ul>
-                          <li><a class="nav-links" href="">Home</a></li>
-                          <li><a class="nav-links" href="">About</a></li>
-                          <li><a class="nav-links" href="">Services</a></li>
-                          <li><a class="nav-links" href="">Education</a></li>
-                          <li><a class="nav-links"  href="">Work</a></li>
-                          <li><a class="nav-links" href="">Client</a></li>
-                          <li><a class="nav-links" href="">Blog</a></li>
-                          <li><a class="nav-links"href="">Contact</a></li>
+                      <ul class="header-ul">
+                          <li class="header-list"><a class="nav-links" href="#">Home</a></li>
+                          <li class="header-list"><a class="nav-links" href="#">About</a></li>
+                          <li class="header-list"><a class="nav-links" href="#">Services</a></li>
+                          <li class="header-list"><a class="nav-links" href="#">Education</a></li>
+                          <li class="header-list"><a class="nav-links"  href="#">Work</a></li>
+                          <li class="header-list"><a class="nav-links" href="#">Client</a></li>
+                          <li class="header-list"><a class="nav-links" href="#">Blog</a></li>
+                          <li class="header-list"><a class="nav-links"href="#">Contact</a></li>
                       </ul>
                     </div>
                     </div>
@@ -58,7 +60,7 @@
         
     </header>
     <!-- hero -->
-    <div class="container-fluid">
+    <div class="container-fluid hero-fluid">
         <div class="row">
             <div class="hero">
                 <div class="bg-overlay">
@@ -114,7 +116,7 @@
                 
                     
                 
-                <h2><strong>About</strong> Me</h2>
+                <h2><bold>About</bold> Me</h2>
                 <div class="flex-parent snowflake">
                     <div class="flex-child-edge"></div>
                     <div class="flex-child-text">&#42;</div>
@@ -125,7 +127,7 @@
 
             <div class="hello-section">
                 <img id="Elvish-sig" src="./images/Elvish-signature.png" alt="Elvish signature">
-                <h2>Hello! <strong>'m Elvish Walters.</strong></h2>
+                <h2>Hello! <bold>I'm Elvish Walters.</bold></h2>
                 <div class="hello-list">
                     <div>UI/UX Designer</div>
                     <div class="hello-list-middle"><span class="hello-dot">&middot;</span>Photographer<span class="hello-dot">&middot;</span></div>
@@ -138,9 +140,14 @@
         </div>
     </div>
     <!-- services -->
-    <div class="container">
-        <div class="row">
-            SERVICES
+    <div class="container bg-services">
+        <div class="row servicesRow">
+            <div class="servicesStar">
+                <h2>Our <strong>Services</strong></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="services"></div>
         </div>
     </div>
     <!-- statistics -->
@@ -191,15 +198,47 @@
     </div>
     <!-- our work -->
     <div class="container">
-        <div class="row">
-            OUR WORK GALLERY
+        <div class="row our-work-section">
+            <div class="our-work-header">
+                <h2>Our <bold>Work</bold></h2>
+                <div class="flex-parent snowflake">
+                    <div class="flex-child-edge"></div>
+                    <div class="flex-child-text">&#42;</div>
+                    <div class="flex-child-edge"></div>
+                </div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+                <div class="filter-box">
+                    <ul class="filter-ul">
+                        <li class="filter-list-item"><a href="">All</a></li>
+                        <li class="star">&#42;</li>
+                        <li class="filter-list-item"><a href="">Seo</a></li>
+                        <li class="star">&#42;</li>
+                        <li class="filter-list-item"><a href="">Webdesign</a></li>
+                        <li class="star">&#42;</li>
+                        <li class="filter-list-item"><a href="">Work</a></li>
+                        <li class="star">&#42;</li>
+                        <li class="filter-list-item"><a href="">Wordpress</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gallery">GALLERY</div>
         </div>
     </div>
     <!-- our clients -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            CLIENTS
-        </div>
+            <div class="clients">
+                <div class="bg-overlay"></div>
+                <div class="clients-texts">
+                    <h2>Our <bold>Clients</bold></h2>
+                    <div class="line-break"><p class="star">&#42;</p></div>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clients-pagination">
+                    CLIENTS PAGINATION
+                    </div>
+                </div>    
+            </div>   
+        </div>    
     </div>
     <!-- trusties -->
     <div class="container">
@@ -208,11 +247,27 @@
         </div>
     </div>
     <!-- subscribe -->
-    <div class="container">
-        <div class="row">
-            SUBSCRIBE
+    <div class="row subscribe-section">
+        <div class="subscribe-section">
+            <h2><bold>Subscribe</bold> to newsletter</h2>
+            <div class="flex-parent snowflake">
+                <div class="flex-child-edge"></div>
+                <div class="flex-child-text">&#42;</div>
+                <div class="flex-child-edge"></div>
+               
+              </div>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+        </div>
+        <div class="subscribe-form">
+            <form id ="subscribeform" action="#" NoValidate>
+                <input class="subscribe-input" id="subscribe-email" type="email" placeholder="Email">
+                <div class="subscribe-error"></div>
+                <div class="subscribe-errorIcon">!</div>
+                <button class="subscribe-submit" id="subscribe-click" type="submit"> Subscribe</button>
+              </form>
         </div>
     </div>
+</div>
     <!-- blog -->
     <div class="container">
         <div class="row">
