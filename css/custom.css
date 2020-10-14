@@ -663,10 +663,10 @@ canvas {
     .row.education > .edu-main-section {
         position: left; 
     }
-    .left-side, .right-side {
+    /* .left-side, .right-side {
         border: none;
         border-left: 1px solid #e7e7e7;
-    }
+    } */
     .right-side {
         /* margin-left: 20px; */
     }
@@ -696,15 +696,35 @@ canvas {
         font-size: 15px;
         margin-left: 15px;
     }
+    .edu::before {
+        content: '';
+        border-left: 2px solid #e7e7e7;
+        position: absolute;
+         top: -20px;
+         bottom: -17px;
+         left: -20px;
+    }
+    .edu::after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid #ffffff;
+        position: absolute;
+         top: 50px;
+         left: -28px;
+     
+     }
     
 
-    #circl {
+    /* #circl {
         color: #000000;
         position: absolute;
         top: 0px;
         left: -36px;
         padding-top: 20px;
-    }
+    } */
 
 
 /* hire me */
