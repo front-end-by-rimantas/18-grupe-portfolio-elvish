@@ -5,7 +5,6 @@ function scrollTop () {
             top:0,
             behavior: 'smooth'
         })
-        console.log("labas");
     })
 }
 export default scrollTop;
