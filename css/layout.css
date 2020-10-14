@@ -68,23 +68,41 @@ body {
             }
 
         /* services */
+    /* reikia sutvarkyti responsive */
             .services {
                 display: grid;
-                grid-template-rows: 1fr 1fr 1fr;
-                grid-template-areas:
-                "topas topas topas"
-                "bot bot bot";
+                grid-template-columns: 1fr 1fr 1fr;
                 background-color: #F8F9FA;
-                gap: 20px;
+                gap: 30px;
             }
-                .services-topas {
-                    grid-area: topas;
-                    background-color: red;
+            @media (max-width: 1400px) {
+                .services {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                 }
-                .services-bot {
-                    grid-area: bot;
-                    background-color: green;
-                }
+            @media (max-width: 1200px) {
+                .services {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    }
+            @media (max-width: 990px) {
+                .services {
+                    grid-template-columns: 1fr;
+                    width: 690px;
+                        }
+            @media (max-width: 768px) {
+                .services {
+                    width: 510px;
+                            }
+            @media (max-width: 575px) {
+                .services {
+                    width: 350px;
+                                }
+            /* @media (max-width: 1400px) {
+                .services {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+     }
         /* statistics */
 
         /* education */

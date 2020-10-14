@@ -1,36 +1,36 @@
 const list = [
     {
-        icon: 'a',
-        h3: 'Graphic Design',
+        icon: "mbri-database",
+        header: 'Graphic Design',
         paragraph: 'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
     {
-        icon: 'b',
+        icon: "mbri-website-theme",
         header: 'Unlimited Color',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested..',
 
     },
     {
-        icon: 'c',
+        icon: "mbri-growing-chart",
         header: 'Media Marketing',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
     {
-        icon: 'd',
+        icon: "mbri-wifi",
         header: 'Unlimited Wifi',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
     {
-        icon: 'e',
+        icon: "mbri-responsive",
         header: 'Responsive Design',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 
     },
     {
-        icon: 'f',
+        icon: "mbri-edit",
         header: 'Easy to customize',
         paragraph:'The standard chunk of Lorem Ipsum used since the is reproduced below for those interested.',
 

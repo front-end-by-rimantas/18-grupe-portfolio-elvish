@@ -11,9 +11,9 @@ import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
 
 // services import
-import servicesData from './services.js'
-import renderServices from './renderServices.js'
-import renderSingleService from './renderSingleService.js'
+import servicesData from './data/services.js'
+import renderServices from './components/services/renderServices.js'
+import renderSingleService from './components/services/renderSingleService.js'
 // statistics import
 import statisticsData from './data/statistics.js';
 console.log(statisticsData);
