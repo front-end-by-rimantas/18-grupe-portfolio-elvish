@@ -117,7 +117,7 @@ body {
                 grid-area: edu-2;
                 grid-template-rows: 1fr 1fr 1fr;
             }
-            // pirminis responsive pridetas, bet dar reikes papildyti
+            /* pirminis responsive pridetas, bet dar reikes papildyti*/
             
             @media (max-width: 960px) {
                 .container {
@@ -128,7 +128,7 @@ body {
                     grid-template-columns: 1fr;
                     grid-template-areas:
                     "edu-1" 
-                    "edu-2";
+                    "edu-2"
                 }
                 .left-side {
                     margin-bottom: 40px;
