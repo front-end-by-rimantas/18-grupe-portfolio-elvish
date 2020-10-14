@@ -47,20 +47,20 @@ text-transform: uppercase;
 font-weight: 700;
 font-size: 30px;
 }
-header ul {
+header .header-ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header ul li {
+header .header-ul .header-list {
     position: relative;
     list-style: none;
     color: white;
     padding: 5px;
     
 }
-header ul li a {
+header .header-ul .header-list a {
     text-decoration: none;
     margin: 0 15px;
     color: white;
@@ -69,7 +69,7 @@ header ul li a {
     transition: 0.5s; 
 }
 
-header.sticky ul li a {
+header.sticky .header-ul .header-list a {
     color: black;
     margin-left: 10%;
 }
@@ -79,7 +79,7 @@ header.sticky a {
 .nav-links {
     position: relative;
 }
-ul li:hover:after {
+.header-ul .header-list:hover:after {
     content: "";
     position: absolute;
     top: 30px;
@@ -159,7 +159,7 @@ ul li:hover:after {
     background-color: black;
 }
 /* ______________________________________________Sita reiks pakeist kai idesim JS ant nav baro, kad uzsidetu taskiukai, jeigu pamirsiu, priminkit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* ul li::after {
+/* .header-ul .header-list::after {
     content: "";
     position: absolute;
     top: 30px;
@@ -177,7 +177,7 @@ ul li:hover:after {
 }
 /* ____________________________________________________________Header resposnisvnes custom__________________________________________________________________ */
 @media (max-width:980px) {
-        ul li a {
+        ul .header-list a {
             display: none;
         }
         ul {
@@ -793,22 +793,27 @@ canvas {
     margin-top: 50px;
     height: 115px;
     position: relative;
+
+    
 }
 .subscribe-input {
     height: 50px;
-    width: 70%;
+    width: 60%;
     border-radius: 30px;
     outline: none;
-    margin-left: 20px;
+    margin-left: 20%;
+    margin-right: 25%;
     background-color: #e8e8e8 ;
     border: none;
     font-size: 20px;
-    padding:0.8em;
+   padding-left: 22px;
   
 }
 
 .subscribe-input::placeholder {
-   right: 10px;
+   font-size: 18px;
+   position: absolute;
+  text-align: left;
 }
 .subscribe-submit[type="submit"] {
     background: black;
@@ -821,11 +826,16 @@ canvas {
     background-position: center;
     position: absolute;
     top: 0;
-    right: 105px;
+    right: 157px;
     border: 0;
     outline: 0;
     cursor: pointer;
     font-size: 18px;
+}
+.subscribe-submit:hover {
+    background-color: white;
+    color: black;
+    border: 3px black solid;
 }
 .subscribe-error {
     color: red;
