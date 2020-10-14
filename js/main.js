@@ -13,7 +13,8 @@ import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
 
 // services import
-
+import servicesData from './data/services.js'
+import renderServices from './components/services/renderServices.js'
 // statistics import
 import statisticsData from './data/statistics.js';
 // console.log(statisticsData);
@@ -53,7 +54,7 @@ scrollToTop();
 renderProgressBar(bar);
 
 // services logic
-
+renderServices(servicesData)
 // statistics logic
 // console.log(statisticsData);
 renderStatistics(statisticsData);
