@@ -958,6 +958,7 @@ canvas {
 .subscribe-section {
     text-align: center;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .subscribe-section > h2 {
     margin-bottom: 30px;
