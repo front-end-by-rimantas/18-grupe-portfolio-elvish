@@ -73,8 +73,17 @@ body {
             .services {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "service1 service1 service1"
+                "service2 service2 service2";
                 background-color: #F8F9FA;
                 gap: 30px;
+            }
+            .services1 {
+                grid-area: service1;
+            }
+            .services2 {
+                grid-area: service2;
             }
             @media (max-width: 1400px) {
                 .services {
