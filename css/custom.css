@@ -1063,6 +1063,7 @@ footer {
     position: absolute;
     bottom: 15px;
     margin-left: 25px;
+    color:#6c757d ;
 }
 .footer-social-icons {
     display: inline-block;
@@ -1078,35 +1079,20 @@ footer {
     transition: all 0.5s;
     width: 42px;
     height: 42px;
-    /* display: inline
-    font-size: 18px; */
     line-height: 38px;
     text-align: center;
     margin-right:10px;
     color: #868e96;
-    
 }
 .footer-social-icons > .fa:hover {
     color: black;
     background: white;
     border: black 2px solid;
     animation:spin 0.5s 1 ;
-    
 }
 .rotate-back {
     animation:spinBack 0.5s 1 ;
 }
-
-
-/* animation-name: spin;
-animation-duration: 5000ms;
-animation-iteration-count: infinite;
-animation-timing-function: linear;  */
-/* transform: rotate(3deg); */
- /* transform: rotate(0.3rad);/ */
- /* transform: rotate(3grad); */ 
- /* transform: rotate(.03turn);  */
-/* } */
 
 @keyframes spin {
   from {

@@ -82,5 +82,4 @@ renderEducation(eduData);
 // contact logic
 
 // footer logic
-
 hoverAnimation();
