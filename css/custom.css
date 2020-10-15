@@ -949,7 +949,30 @@ canvas {
     }
 
 /* trusties */
-
+.trusties-img {
+    display: flex;
+    justify-content: space-around;
+}
+.trustie-avatar {
+    width: 180px;
+    height: 130px;
+}
+.trustie-avatar > img {
+    width: 180px;
+    height: 130px;
+}
+@media (max-width:960px) {
+    .trustie-avatar {
+        width: 100%;
+        height: 130px;
+    }
+    .trustie-avatar > img {
+        width: 180px;
+        height: 130px;
+    }
+    .trusties-img {display: block;}
+    .trustie-avatar:nth-child(1) {margin-top: 50px;}
+}
 /* subscribe */
 .subscribe-section > h2 {
     font-weight: normal;
@@ -959,6 +982,7 @@ canvas {
     text-align: center;
     margin: 0 auto;
     margin-top: 50px;
+
 }
 .subscribe-section > h2 {
     margin-bottom: 30px;

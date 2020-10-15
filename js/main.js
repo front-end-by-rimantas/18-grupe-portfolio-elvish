@@ -32,10 +32,9 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our clients import
 
 // trusties import
-
+import trustie1 from "./components/trusties/newTrusties.js";
 // subscribe import
 import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
-subscribeEmailValidation ();
 // blog import
 
 // contact import
@@ -74,9 +73,15 @@ renderEducation(eduData);
 // our clients logic
 
 // trusties logic
+let trustieHTML="";
+let getInterface = document.querySelector(".trusties-img ");
+for ( let i =0; i < trustie1.length;i++) {
+    trustieHTML += trustie1[i].showImage();
+}
+getInterface.innerHTML=trustieHTML;
 
 // subscribe logic
-
+subscribeEmailValidation ();
 // blog logic
 
 // contact logic
