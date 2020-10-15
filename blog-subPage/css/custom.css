@@ -4,12 +4,23 @@ h1, h2, h3, h5 {
 
 header{
     /* background-color: lightcoral; */
+    background-color: transparent;
     padding: 15px 50px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 10000;
+}
 
+header.active{
+    background-color: white;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
 }
 
     header .logo{
@@ -23,13 +34,21 @@ header{
     }
 
     header a{
-        float:right;
-        color: white;
-        line-height: 30px;
+            float:right;
+        line-height: 30px;    
     }
 
+    .headerLinks > a {
+        color: white;
+    }
+
+    .headerLinks.active > a{
+        color: black;
+    }
+
+
 .hero{
-    background-image: url(./img/blog-subPage-hero-background.jpg);
+    background-image: url(../img/blog-subPage-hero-background.jpg);
     background-position: 0% 40%;
     background-size: cover;
     background-repeat: no-repeat;
