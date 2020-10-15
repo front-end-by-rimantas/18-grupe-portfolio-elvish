@@ -1,4 +1,3 @@
-
 class Trusty  {
         constructor (params) {
             this.img = params.img;
@@ -8,7 +7,6 @@ class Trusty  {
              return`<div class="${this.id}"> <img src="./img/client-logos/${this.img}" alt=" Client logo"> </div> `;
         }
 }
-
 export default Trusty;
 
 
