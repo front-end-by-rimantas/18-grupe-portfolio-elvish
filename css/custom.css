@@ -952,6 +952,7 @@ canvas {
 .trusties-img {
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .trustie-avatar {
     width: 180px;
