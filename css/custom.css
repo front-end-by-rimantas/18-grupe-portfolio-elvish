@@ -951,6 +951,7 @@ canvas {
 /* trusties */
 .trusties-section {
     background-color:#F8F9FA;
+    padding-bottom: 48px;
 }
 .trusties-img {
     display: flex;
