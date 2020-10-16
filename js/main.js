@@ -41,6 +41,8 @@ subscribeEmailValidation ();
 // contact import
 import { renderIcons } from "./components/contact-us/renderIcons.js";
 import { leftIcons } from "./data/left-icons.js";
+import { renderForm } from "./components/contact-us/renderForm.js";
+import { formData } from "./data/contact-us-data.js";
 
 // footer import
 
@@ -83,5 +85,6 @@ renderEducation(eduData);
 
 // contact logic
 renderIcons(leftIcons);
+renderForm(FormData);
 
 // footer logic
