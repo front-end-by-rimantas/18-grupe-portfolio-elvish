@@ -7,7 +7,7 @@ h1, h2, h3, h5 {
 }
 
     header{
-        /* background-color: lightcoral; */
+        height: 70px;
         background-color: transparent;
         padding: 20px 50px;
         position: fixed;
@@ -15,6 +15,7 @@ h1, h2, h3, h5 {
         left: 0;
         width: 100%;
         z-index: 10000;
+        align-items: center;
     }
 
     header.active{
@@ -41,16 +42,16 @@ h1, h2, h3, h5 {
             line-height: 30px; 
         }
 
-        .headerLinks > a {
-            color: white;
-        }
+            .headerLinks > a {
+                color: white;
+            }
 
-        .headerLinks.active > a,
-        .headerLinks.active #burger{
-            color: black;
-        }
+            .headerLinks.active > a,
+            .headerLinks.active #burger{
+                color: black;
+            }
 
-        #burger{
+        .dropdown{
             display: none;
             float: right;
             color: white;
@@ -58,13 +59,46 @@ h1, h2, h3, h5 {
         }
 
 @media (max-width: 900px) {
-    header .go-home{
-        display: none;
-    }
-    #burger{
-        display: block;
-        cursor: pointer;
-    }
+        .headerLinks{
+        position: relative;
+        } 
+
+            header .go-home{
+                display: none;
+            }
+
+            .dropdown{
+                display: block;
+                cursor: pointer;
+            }
+  
+                .dropdown-content {
+                    display: none;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                }
+                
+                    .dropdown-content a {
+                        color: white;
+                        padding: 6px 6px;
+                        text-decoration: none;
+                        display: block;
+                        font-size: 16px;
+                    }
+
+                .dropdown-content.active {
+                    background-color: white;
+                }
+
+                    .dropdown-content.active > a {
+                        color: black;
+                    }
+                    
+                    .show {
+                        display:block;
+                        }
+
 }
  
     .hero{
