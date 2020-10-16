@@ -1078,15 +1078,6 @@ footer {
     color: #868e96;
     margin-right: 20px;
 }
-.footer-social-icons .fa {
-    /* height: 100%;
-    float: right;
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%; */
-
-    
-}
 .footer-social-icons > .fa:hover {
     color: black;
     background: white;
@@ -1136,23 +1127,4 @@ footer {
         display: flex;
       }
   }
-  /* @media ( max-width:960px) {
-            .footer-container {height:60%;}
-            .footer-social-icons {
-               bottom: 0%;
-                right: 50%;
-                left: 50%;
-                transform: translate(-50%, -12px);
-                display: inline;
-                width: 100%;
-            }
-            .copyright {
-                top: 0%;
-                right: 50%;
-                left: 50%;
-                transform: translate(-50%, -12px);
-                display: inline;
-                width: 100%;
-            }
-         
-  } */
+
