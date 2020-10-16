@@ -961,20 +961,17 @@ canvas {
 .trustie-avatar {
     width: 160px;
     height: 130px;
+    margin-right: 35px;
 }
 .trustie-avatar > img {
     width: 160px;
     height: 130px;
 }
-@media (max-width:965px) {
+@media (max-width:1050px) {
     .trustie-avatar {
         width: 100%;
         height: 130px;
         padding: 5px;
-    }
-    .trustie-avatar > img {
-        width: 180px;
-        height: 130px;
     }
     .trusties-img {display: block;}
     .trustie-avatar:nth-child(1) {margin-top: 50px;}
