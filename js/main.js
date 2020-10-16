@@ -28,6 +28,8 @@ import {renderEducation} from './components/education/renderEducation.js';
 // hire me import
 
 // our work import
+import { galleryData } from './data/gallery.js';
+import { renderGallery } from './components/gallery/renderGallery.js';
 
 // our clients import
 
@@ -70,6 +72,7 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
+renderGallery(galleryData);
 
 // our clients logic
 

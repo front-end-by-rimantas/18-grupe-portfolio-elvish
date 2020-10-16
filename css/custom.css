@@ -819,15 +819,16 @@ canvas {
     padding: 80px 0;
 
 }
-        .row.our-work-section > h2 {
+        .our-work-header > h2 {
             font-size: 32px;
             font-weight: normal;
             margin-bottom: 30px;
         }
 
-        .row.our-work-section > p { 
+        .our-work-header > p { 
             color: #6c757d;
             font-size: 18px;
+            margin-top: 30px;
             margin: 20px 0;
             line-height: 25px;
         }
@@ -871,6 +872,59 @@ canvas {
                     color: white;
                     cursor: pointer;
                 }
+
+        #work-gallery {
+            display: inline-block;
+            text-align: center;  
+        }
+                
+                .gallery-image {
+                    display: inline-block;
+                    margin: 20px;
+                    z-index: 1;
+                    position: relative;
+                    width: 400px;
+                    height: 300px;
+                    border-radius: 5px;
+                    background-size: 100%;
+                    background-position: center;
+                    -webkit-transition: all 0.5s ease-in-out; 
+                }
+                
+                .gallery-image:hover {
+                    background-size: 110%;
+                }
+                
+                    .overlay {
+                        width: 94%;
+                        height: 94%;
+                        opacity: 0;
+                        transition: all 200ms;
+                        position: absolute;
+                        z-index: -1;
+                        top: 3%;
+                        left: 3%;
+                        border-radius: 5px;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        text-align: right;
+                        transition-duration: 0.2s;
+                        transition-delay: 0.3s;
+                    }
+                
+                    .overlay:hover { 
+                        opacity: 1;
+                    }
+                
+                        .gallery-image-titles {  
+                            margin: 30px 30px 0 0;   
+                        }
+                
+                            .gallery-image-titles > h3,
+                            .gallery-image-titles > h4 {
+                                margin: 0;
+                                font-size: 20px;
+                                color: white;
+                            }   
 
 
 /* our clients */
