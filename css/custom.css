@@ -949,6 +949,9 @@ canvas {
     }
 
 /* trusties */
+.trusties-section {
+    background-color:#F8F9FA;
+}
 .trusties-img {
     display: flex;
     justify-content: space-around;
