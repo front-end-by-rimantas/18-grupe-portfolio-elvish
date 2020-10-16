@@ -39,6 +39,8 @@ subscribeEmailValidation ();
 // blog import
 
 // contact import
+import { renderIcons } from "./components/contact-us/renderIcons.js";
+import { leftIcons } from "./data/left-icons.js";
 
 // footer import
 
@@ -80,5 +82,6 @@ renderEducation(eduData);
 // blog logic
 
 // contact logic
+renderIcons(leftIcons);
 
 // footer logic
