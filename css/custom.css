@@ -1114,10 +1114,6 @@ footer {
   @media ( max-width:960px) {
             .footer-container {height:60%;}
             .footer-social-icons {
-                display: inline-block;
-                float: right;
-                margin-right: 5px;
-                position: absolute;
                 bottom: 0;
                 right: 33%;
             }
