@@ -1042,32 +1042,29 @@ canvas {
 
 /* footer */
 footer { 
+    width: 100%;
     height: 15vh;
-    display: inline-block;
     background-color:  #f8f9fa ;
 }
 .footer-container {
-   width: 100%;
-   height: 50%;
-   position: relative;
-   margin-top: 25px;
+   width: 90%;
+   height: 100%;
+   margin: 0 auto;
+   display: block
 }
 .copyright {
-    display: inline-block;
+    display: table;
     float: left;
-    width: 30%;
-    position: absolute;
-    bottom: 15px;
-    margin-left: 25px;
     color:#6c757d ;
 }
+.copyright > p {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
 .footer-social-icons {
-    display: inline-block;
     float: right;
-    margin-right: 5px;
-    position: absolute;
-    bottom: 11px;
-    right: 85px;
+    height: 100%;
 }
 .footer-social-icons > .fa {
     border: 2px solid #868e96;
@@ -1079,6 +1076,16 @@ footer {
     text-align: center;
     margin-right:10px;
     color: #868e96;
+    margin-right: 20px;
+}
+.footer-social-icons .fa {
+    /* height: 100%;
+    float: right;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%; */
+
+    
 }
 .footer-social-icons > .fa:hover {
     color: black;
@@ -1107,16 +1114,45 @@ footer {
         transform:rotate(0deg);
     }
   }
-  @media ( max-width:960px) {
+  @media (max-width:950px) {
+      .footer-container {
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+      }
+      .footer-social-icons {
+          width: 100%;
+          float: none;
+          justify-content: center;
+                align-items: center;
+                display: flex;
+      }
+      .copyright {
+          width: 100%;
+          float: none;
+          justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+  }
+  /* @media ( max-width:960px) {
             .footer-container {height:60%;}
             .footer-social-icons {
-                bottom: 0;
-                right: 33%;
+               bottom: 0%;
+                right: 50%;
+                left: 50%;
+                transform: translate(-50%, -12px);
+                display: inline;
+                width: 100%;
             }
             .copyright {
-                width: auto;
-                bottom: 0;
-                top: 0;
-                right: 30%;
+                top: 0%;
+                right: 50%;
+                left: 50%;
+                transform: translate(-50%, -12px);
+                display: inline;
+                width: 100%;
             }
-  }
+         
+  } */
