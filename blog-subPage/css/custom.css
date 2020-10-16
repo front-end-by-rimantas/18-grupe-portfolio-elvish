@@ -101,9 +101,69 @@ main{
 }
 
     main .blog{
-        background-color: grey;
-        padding: 10px;
+
     }
+
+        .blog > .blogItem{
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+            .blog > .blogItem >img{
+                width: 100%;
+
+            }
+
+            .blog > .blogItem >h4{
+                font-size: 20px;
+                color: black;
+            }
+
+            .blog > .blogItem > .blogCategory{
+                font-weight: 700;
+                color: black;
+
+            }
+
+            .blog > .blogItem > .blogDate >.author{
+                color: black;
+                font-weight: 700;
+            }
+
+            .blog > .blogItem > .blogText{
+
+            }
+
+            .blog > .blogItem > .readMore{
+                font-weight: 700;
+                color: #6c757d;
+                text-transform: capitalize;
+            }
+
+    main .nav{
+        text-align: center;
+        margin: 15px 0px;
+    }        
+
+        main .nav a{
+            padding: 8px 15px;
+            border-radius: 3px;
+            color: grey;
+        }
+
+        main .nav a:active{
+            padding: 8px 15px;
+            border-radius: 3px;
+            color: white;
+            background-color: black;
+        }
+
+
+
+
 
     main aside{
         background-color: white;
