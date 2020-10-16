@@ -1,4 +1,4 @@
-import { fixingHeader } from './components/stickyHeader.js';
+import { fixingHeader } from './components/header/stickyHeader.js';
 
 import { blogData } from './data/blog.js';
 import { renderBlog } from './components/blog/renderBlog.js';

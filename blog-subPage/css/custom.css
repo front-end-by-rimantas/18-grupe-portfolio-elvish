@@ -6,166 +6,179 @@ h1, h2, h3, h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
-header{
-    /* background-color: lightcoral; */
-    background-color: transparent;
-    padding: 15px 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10000;
-}
-
-header.active{
-    background-color: white;
-    padding: 15px 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10000;
-    transition: all 0.5s ease-in-out;
-}
-
-    header .logo{
-        float: left;
-        height: 30px;
-        font-size: 30px;
+    header{
+        /* background-color: lightcoral; */
+        background-color: transparent;
+        padding: 20px 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
     }
 
-    header .logo{
-        font-weight: bold;
-    }
-
-    header a{
-            float:right;
-        line-height: 30px;    
-    }
-
-    .headerLinks > a {
-        color: white;
-    }
-
-    .headerLinks.active > a{
-        color: black;
-    }
-
-
-.hero{
-    background-image: url(../img/blog-subPage-hero-background.jpg);
-    background-position: 0% 40%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 200px 0px 120px 0px;
-    color: white;
-    position: relative;
-}
-
-.bg-overlay{
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-    .hero-texts{
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-    }
-
-        .hero-texts > h1{
-            font-size: 32px;
-            font-weight: 600;
-            margin: 10px 0px;
-        }
-
-        .hero-texts a {
-            text-transform: uppercase;
-            margin: 5px 5px;
-        }
-
-        /* .hero-texts a:visited {
-            color: grey;
-        } */
-
-main{
-    background-color: #f8f9fa;
-}
-
-    main .blog{
-
-    }
-
-        .blog > .blogItem{
-            background-color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 16px;
-            color: #6c757d;
-        }
-
-            .blog > .blogItem >img{
-                width: 100%;
-
-            }
-
-            .blog > .blogItem >h4{
-                font-size: 20px;
-                color: black;
-            }
-
-            .blog > .blogItem > .blogCategory{
-                font-weight: 700;
-                color: black;
-
-            }
-
-            .blog > .blogItem > .blogDate >.author{
-                color: black;
-                font-weight: 700;
-            }
-
-            .blog > .blogItem > .blogText{
-
-            }
-
-            .blog > .blogItem > .readMore{
-                font-weight: 700;
-                color: #6c757d;
-                text-transform: capitalize;
-            }
-
-    main .nav{
-        text-align: center;
-        margin: 15px 0px;
-    }        
-
-        main .nav a{
-            padding: 8px 15px;
-            border-radius: 3px;
-            color: grey;
-        }
-
-        main .nav a:active{
-            padding: 8px 15px;
-            border-radius: 3px;
-            color: white;
-            background-color: black;
-        }
-
-
-
-
-
-    main aside{
+    header.active{
         background-color: white;
-        padding: 25px;
+        padding: 15px 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        transition: all 0.5s ease-in-out;
     }
+
+        header .logo{
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+
+        header .go-home{
+            float: right;
+            font: 16px;
+            line-height: 30px; 
+        }
+
+        .headerLinks > a {
+            color: white;
+        }
+
+        .headerLinks.active > a,
+        .headerLinks.active #burger{
+            color: black;
+        }
+
+        #burger{
+            display: none;
+            float: right;
+            color: white;
+            font-size: 30px;
+        }
+
+@media (max-width: 900px) {
+    header .go-home{
+        display: none;
+    }
+    #burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+ 
+    .hero{
+        background-image: url(../img/blog-subPage-hero-background.jpg);
+        background-position: 0% 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 200px 0px 120px 0px;
+        color: white;
+        position: relative;
+    }
+
+    .bg-overlay{
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+        .hero-texts{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+
+            .hero-texts > h1{
+                font-size: 32px;
+                font-weight: 600;
+                margin: 10px 0px;
+            }
+
+            .hero-texts a {
+                text-transform: uppercase;
+                margin: 5px 5px;
+            }
+
+            /* .hero-texts a:visited {
+                color: grey;
+            } */
+
+    main{
+        background-color: #f8f9fa;
+        padding: 80px;
+    }
+
+        main .blog{
+
+        }
+
+            .blog > .blogItem{
+                background-color: white;
+                padding: 10px;
+                text-align: center;
+                font-size: 16px;
+                color: #6c757d;
+            }
+
+                .blog > .blogItem >img{
+                    width: 100%;
+
+                }
+
+                .blog > .blogItem >h4{
+                    font-size: 20px;
+                    color: black;
+                }
+
+                .blog > .blogItem > .blogCategory{
+                    font-weight: 700;
+                    color: black;
+
+                }
+
+                .blog > .blogItem > .blogDate >.author{
+                    color: black;
+                    font-weight: 700;
+                }
+
+                .blog > .blogItem > .blogText{
+
+                }
+
+                .blog > .blogItem > .readMore{
+                    font-weight: 700;
+                    color: #6c757d;
+                    text-transform: capitalize;
+                }
+
+        main .nav{
+            text-align: center;
+            margin: 15px 0px;
+        }        
+
+            main .nav a{
+                padding: 8px 15px;
+                border-radius: 3px;
+                color: grey;
+            }
+
+            main .nav a:active{
+                padding: 8px 15px;
+                border-radius: 3px;
+                color: white;
+                background-color: black;
+            }
+
+
+        main aside .aside-container{
+            background-color: white;
+            padding: 25px;
+        }
