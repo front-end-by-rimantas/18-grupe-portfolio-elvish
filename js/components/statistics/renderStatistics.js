@@ -6,7 +6,7 @@ function renderStatistics(statisticsData) {
     let HTML = '';
     let count = statisticsData.length;
     for (let i = 0; i < count;  i++) {
-        const item = statisticsData[i];
+        let item = statisticsData[i];
         HTML += renderStatisticsItem(item);
     }
 

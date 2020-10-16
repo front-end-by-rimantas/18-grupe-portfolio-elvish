@@ -955,17 +955,18 @@ canvas {
     margin-top: 50px;
 }
 .trustie-avatar {
-    width: 180px;
+    width: 160px;
     height: 130px;
 }
 .trustie-avatar > img {
-    width: 180px;
+    width: 160px;
     height: 130px;
 }
 @media (max-width:960px) {
     .trustie-avatar {
         width: 100%;
         height: 130px;
+        padding: 5px;
     }
     .trustie-avatar > img {
         width: 180px;
