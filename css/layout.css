@@ -102,10 +102,6 @@ body {
         /* statistics */
 
         /* education */
-            .row.edu-top-section {
-                display: flex;
-            
-            }
             .edu-main-section {
                 display: grid;
                 grid-template-columns: 1fr 1fr;

@@ -718,7 +718,7 @@ canvas {
 }
 .row.edu-top-section {
     width: 70%;
-    display: block;
+    /* display: block; */
     text-align: center;
     align-self: center;
     justify-self: center;
@@ -738,7 +738,6 @@ canvas {
     }
 
     .edu-top-section > p { 
-        display: block;
         color: #6c757d;
         font-size: 18px;
         margin: 8px 0px 16px;
