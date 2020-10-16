@@ -701,10 +701,12 @@ canvas {
     }
 
 /* education */
-.container.education.section-padding {
+.container.education.section-padding,
+.container.section-padding {
     padding: 80px 0px;
 }
-.row.edu-top-section {
+.row.edu-top-section, 
+.row.contact-us {
     width: 70%;
     display: block;
     text-align: center;
@@ -714,16 +716,20 @@ canvas {
 
 }  
     .row.edu-top-section > .line-break::before, 
-    .row.edu-top-section > .line-break::after {
+    .row.edu-top-section > .line-break::after,
+    .row.contact-us > .line-break::before,
+    .row.contact-us > .line-break::after {
         border-top: 1px solid #6c757d; 
     } 
-    .edu-top-section > h2 {
+    .edu-top-section > h2,
+    .contact-us > h2 {
         font-size: 32px; 
         font-weight: normal;
         margin: 0px 0px 8px;
     }
 
-    .edu-top-section > p { 
+    .edu-top-section > p,
+    .contact-us > p { 
         display: block;
         color: #6c757d;
         font-size: 18px;
