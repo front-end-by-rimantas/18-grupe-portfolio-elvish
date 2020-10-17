@@ -5,14 +5,14 @@ function burgerDropdpwn() {
     // const dropdownDOM = document.getElementById("myDropdown");
     // console.log(dropdownDOM);
     const dropdownContentDOM = document.querySelector(".dropdown-content");
-    console.log(dropdownContentDOM);
+    // console.log(dropdownContentDOM);
 
     const burger = document.getElementById("burger");
-    console.log(burger);
+    // console.log(burger);
 
     burger.addEventListener('click', () => {
         dropdownContentDOM.classList.add('show');
-        console.log(dropdownContentDOM);
+        // console.log(dropdownContentDOM);
   })
 }
 

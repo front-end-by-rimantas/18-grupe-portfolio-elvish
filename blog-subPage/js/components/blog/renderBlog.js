@@ -1,26 +1,30 @@
 import {generateBlogItem} from './generateBlogItem.js';
 
-function renderBlog(blogData) {
-    // console.log(blogData);
+function renderBlog(blogData, pageButton) {
+    let pageIndex = Number (pageButton.innerHTML)
+    // console.log(pageIndex);
 
     let HTML = '';
-    let count = blogData.blogItems.length;
-    // console.log(count);
-    for (let i = 0; i < count;  i++) {
+
+    let i = pageIndex - 1;
+    let itemFrom = i * blogData.blogItemsInPage;
+    let itemTo = pageIndex * blogData.blogItemsInPage < blogData.blogItems.length ? pageIndex * blogData.blogItemsInPage : blogData.blogItems.length;
+    
+    for (let i = itemFrom; i < itemTo;  i++) {
         const item = blogData.blogItems[i];
         // console.log(item);
         HTML += generateBlogItem(item, blogData.imagePath, blogData.videoPath );
+        
+        let allLinks = document.querySelectorAll('a');
+        allLinks.forEach(element => {
+            element.classList.remove('active-page')});
+
+        pageButton.classList.add('active-page');
     }
 
-    // console.log(HTML);
-
-    //susirandame elementa, kuriame norime perrasyti turini
     const blogDOM = document.querySelector(`${blogData.selector}`);
-    // console.log(blogDOM);
 
-    //i ta elementa ikeliame HTML kintamojo reiksme
     blogDOM.innerHTML = HTML;
-    // renderStatisticsItem(statisticsData);
 }
 
 export {renderBlog};
