@@ -1,4 +1,4 @@
-import renderStatisticsItem from './renderStatisticsItem.js'
+import { generateStatisticsItem } from './generateStatisticsItem.js'
 
 function renderStatistics(statisticsData) {
     // console.log(statisticsData);
@@ -7,7 +7,7 @@ function renderStatistics(statisticsData) {
     let count = statisticsData.length;
     for (let i = 0; i < count;  i++) {
         const item = statisticsData[i];
-        HTML += renderStatisticsItem(item);
+        HTML += generateStatisticsItem(item);
     }
 
     // console.log(HTML);

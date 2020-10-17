@@ -15,11 +15,11 @@ import renderProgressBar from './components/about-me/renderProgressBar.js';
 // services import
 import servicesData from './data/services.js'
 import renderServices from './components/services/renderServices.js'
+
 // statistics import
 import statisticsData from './data/statistics.js';
-// console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
-import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
+import { NumberTransformOnscroll } from './components/statistics/numberTransformOnscroll.js'
 
 // education import
 import {eduData} from "./data/data-education.js";
@@ -59,10 +59,10 @@ renderProgressBar(bar);
 
 // services logic
 renderServices(servicesData)
+
 // statistics logic
-// console.log(statisticsData);
 renderStatistics(statisticsData);
-statisticsNumberTransform();
+NumberTransformOnscroll()
 
 // education logic
 renderEducation(eduData);
