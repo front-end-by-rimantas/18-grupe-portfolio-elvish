@@ -1,6 +1,4 @@
 function generateBlogItem(item, imagePath, videoPath) {
-    // console.log(item, imagePath, videoPath); 
-    // console.log(imagePath + item.image);
     return `<div class="row blogItem">
     <img class="col-12" src=${imagePath + item.image} alt="">
     <h4 class='col-12'>${item.title}</h4>

@@ -6,7 +6,7 @@ const blogData = {
     blogItems: [
         {
             image:'blogItem-image1.png',
-            title: 'There are many variations',
+            title: '1 Active There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -17,7 +17,7 @@ const blogData = {
         },
         {
             image:'blogItem2-video.png',
-            title: 'Contrary to popular belief',
+            title: '2 Active Contrary to popular belief',
             category: 'Travel',
             date: '13 February 2018',
             author: 'Envato', 
@@ -28,7 +28,7 @@ const blogData = {
         },
         {
             image:'blogItem3-image1.PNG',
-            title: 'There are many variations',
+            title: '3 Active There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -39,7 +39,7 @@ const blogData = {
         },
         {
             image:'blogItem-image1.png',
-            title: 'There are many variations',
+            title: '4 Active There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -50,7 +50,7 @@ const blogData = {
         },
         {
             image:'blogItem2-video.png',
-            title: 'Contrary to popular belief',
+            title: '5 Active Contrary to popular belief',
             category: 'Travel',
             date: '13 February 2018',
             author: 'Envato', 
@@ -61,7 +61,7 @@ const blogData = {
         },
         {
             image:'blogItem3-image1.PNG',
-            title: 'There are many variations',
+            title: '6 Not There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -72,7 +72,7 @@ const blogData = {
         },
         {
             image:'blogItem3-image1.PNG',
-            title: 'There are many variations',
+            title: '7 Active There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -83,7 +83,7 @@ const blogData = {
         },
         {
             image:'blogItem-image1.png',
-            title: 'There are many variations',
+            title: '8 Not There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -94,7 +94,7 @@ const blogData = {
         },
         {
             image:'blogItem2-video.png',
-            title: 'Contrary to popular belief',
+            title: '9 Active Contrary to popular belief',
             category: 'Travel',
             date: '13 February 2018',
             author: 'Envato', 
@@ -105,7 +105,7 @@ const blogData = {
         },
         {
             image:'blogItem3-image1.PNG',
-            title: 'There are many variations',
+            title: '10 Not There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 
@@ -116,7 +116,7 @@ const blogData = {
         },
         {
             image:'blogItem3-image1.PNG',
-            title: 'There are many variations',
+            title: '11 Not There are many variations',
             category: 'Lifestyle',
             date: '13 February 2018',
             author: 'Envato', 

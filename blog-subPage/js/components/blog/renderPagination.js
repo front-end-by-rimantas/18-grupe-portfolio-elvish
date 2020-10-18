@@ -1,14 +1,12 @@
+import { getActiveBlogItemsIndexes } from './getActiveItemsIndexes.js'
 import { renderBlog } from './renderBlog.js'
 
 function renderPagination(blogData) {
     let blogItemsInPage = blogData.blogItemsInPage;
-    let numberOfBlogItems = blogData.blogItems.length;
-
-    // console.log(blogItemsInPage);
-    // console.log(numberOfBlogItems);
+    let activeBlogItemsIndexes = getActiveBlogItemsIndexes(blogData);
+    let numberOfBlogItems = activeBlogItemsIndexes.length;
 
     let pageCount = Math.ceil(numberOfBlogItems / blogItemsInPage);
-    // console.log(pageCount);
 
     let HTML = '';
 
@@ -16,43 +14,26 @@ function renderPagination(blogData) {
         HTML+= `<a href="#">${i}</a>\n`        
     }
 
-    // console.log(HTML);
-
     const pagesDOM = document.querySelector('.pages');
-    // console.log(pagesDOM);
 
     pagesDOM.innerHTML = HTML;
 
     let pages = document.querySelectorAll('.pages > a');
-    // console.log(pages);
 
     pages.forEach(pageButton => {
         pageButton.addEventListener('click', () => {
-            // pageButton.classList.add('active-page');
-            // let pageIndex = Number (pageButton.innerHTML)
-            // console.log(typeof activePage);
-            renderBlog(blogData, pageButton)
 
+            let pageIndex = Number (pageButton.innerHTML);
+            renderBlog(blogData, pageIndex, activeBlogItemsIndexes);
+
+            let allLinks = document.querySelectorAll('a');
+            allLinks.forEach(element => {
+                element.classList.remove('active-page')});
+    
+            pageButton.classList.add('active-page');
     })
 })
 }
 
 export {renderPagination};
 
-// burger.addEventListener('click', () => {
-//     dropdownContentDOM.classList.add('active');
-
-// items.forEach(counter => {
-//     const updateCount = () => {
-//         const target = +counter.getAttribute('data-target');
-//         const count = +counter.innerText;
-
-//         const inc = Math.round(target / speed);
-
-//         if (count < target ){
-//             counter.innerText = count+inc;
-//             setTimeout(updateCount, 50)
-//         } else {
-//             count.innerText = target
-//         }
-// }
