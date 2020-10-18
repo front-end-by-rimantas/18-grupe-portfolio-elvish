@@ -24,108 +24,60 @@ h4 {
     cursor: pointer;
 }
 header {
-    position: fixed;
-    top:0;
     width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 10000;
-    padding: 30px 100px;
-}
-.changing-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700 !important;
-    font-size: 72px;
+    height: 80px;
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999999;
 }
 .header-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
 }
-
+.sticky .navigation a li, .sticky .logo-container h1 {
+    color: black;
+}
 .sticky {
-    background-color: white;
-    color: black;
-    z-index: 9999999;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    height: 60px;
-
+    background-color: white;
+    color:black;
+    position: fixed;
 }
-
-header .logo {
-position: relative;
-text-transform: uppercase;
-font-weight: 700;
-font-size: 30px;
+.logo-container {
+    height: 100%;
+    display: table;
+    float: left;
+    font-weight: 400;
 }
-header .header-ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header .header-ul .header-list {
-    position: relative;
-    list-style: none;
+.logo-container > h1 {
     color: white;
-    padding: 5px;
-    
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 32px;
 }
-header .header-ul .header-list a {
+.navigation {
+    float: right;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0 20px;
     text-decoration: none;
-    margin: 0 15px;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: 500;
-    transition: 0.5s; 
 }
 
-header.sticky .header-ul .header-list a {
-    color: black;
-    margin-left: 10%;
-}
-header.sticky a {
-    color: black;
-}
-.nav-links {
-    position: relative;
-}
-.header-ul .header-list:hover:after {
-    content: "";
-    position: absolute;
-    top: 30px;
-    background: white;
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    left:calc(50% - 8px);
-}
-.mobile-navigation {
-    width: 100%;
-    height: 75vh;
-    z-index: 99;
-    background-color: transparent;
-    margin-top: 5%;
-    display: none;
-    transition: height 2s;
-    animation: mobileNav 1s ;
-    position: absolute;
-    top: 10px;
-}
-
-.mobile-nav-links {
-    width: 67%;
-    height: 11.5%;
-    margin-top: 7px;
+.navigation a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
     color: white;
-    margin-left: 102px;
-}
-.mobile-navigation .sticky {
-    color: black;
-    background: transparent;
 }
 
 .header-sandwhich {
