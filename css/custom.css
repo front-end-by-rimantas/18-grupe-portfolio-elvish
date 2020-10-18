@@ -78,6 +78,20 @@ header {
     vertical-align: middle;
     height: 100%;
     color: white;
+    position: relative;
+}
+.navigation a li:hover:before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    background: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    left: calc(50% - 4px);
+}
+.sticky .navigation a li:hover::before {
+    background: black;
 }
 
 .header-sandwhich {
