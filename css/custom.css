@@ -30,6 +30,7 @@ header {
     background-color: transparent;
     position: absolute;
     z-index: 9999999;
+    transition: 0.5s;
 }
 .header-container {
     width: 90%;
@@ -45,7 +46,13 @@ header {
     background-color: white;
     color:black;
     position: fixed;
+    animation: headOpc 1s;
 }
+@keyframes headOpc {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .logo-container {
     height: 100%;
     display: table;
