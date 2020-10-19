@@ -1061,6 +1061,13 @@ canvas {
 .icons3 > span {
     font-size: 30px;
 }
+.icons3 > .icon-title {
+    font-weight: 700;
+}
+.icons3 > .icon-content-line {
+    font-weight: 400;
+    color: #6c757d;
+}
 
 .contact-form {
     background-color: plum;
