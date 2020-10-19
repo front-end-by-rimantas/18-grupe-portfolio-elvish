@@ -33,7 +33,7 @@ header {
     transition: 0.5s;
 }
 .header-container {
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -47,6 +47,12 @@ header {
     color:black;
     position: fixed;
     animation: headOpc 1s;
+}
+.sticky .mobile-navigation .mob-nav-items {
+    color: black;
+}
+.sticky .mobile-navigation {
+    background: white;
 }
 @keyframes headOpc {
     0% {opacity: 0;}
@@ -100,15 +106,15 @@ header {
 .sticky .navigation a li:hover::before {
     background: black;
 }
-
 .header-sandwhich {
     position: absolute;
-    right: 150px;
+    right: 15px;
     top: 25px;
     cursor: pointer;
     width: 70px;
     height: 35px;
     display: none;
+    z-index: 99999;
 }
 .sandwhcih-icon {
     width: 17px;
@@ -118,9 +124,7 @@ header {
     position: absolute;
     right: 53px;
     top: 6px;
-  
 }
-
 .sandwhcih-icon1 {
     content: "";
     width: 17px;
@@ -130,7 +134,6 @@ header {
     top: -1px;
     float: right;
     position: absolute;
-    
 }
 .sandwhcih-icon2 {
     content: "";
@@ -141,27 +144,44 @@ header {
     top: 13px;
     position: absolute;
 }
-
 .black-burger {
     background-color: black;
 }
-/* ______________________________________________Sita reiks pakeist kai idesim JS ant nav baro, kad uzsidetu taskiukai, jeigu pamirsiu, priminkit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* .header-ul .header-list::after {
+.mobile-navigation {
+    height: 75vh;
+    background-color: transparent;
+    margin-top: 78px;
+    animation: mobileSlide 1s;
+    display: none;
+} 
+.mob-nav-items {
+    padding: 20px 20px;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+    padding: 15px 40px;
+    transition: 2s;
+    animation: mobNavItems 2s;
+    position: relative;
+}
+.mobile-navigation .mob-nav-items:hover:before {
     content: "";
     position: absolute;
-    top: 30px;
-    background: white;
-    width: 5px;
-    height: 5px;
+    top: 23.5px;
+    background: black;
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
-    left:calc(50% - 8px);
-    display: none;
-} __________________________________________________________________________________________________________________________________________________________________*/
-@keyframes mobileNav {
-0% {height: 1vh;}
-
-/* 100% {height: 90vh;} */
+    left: 153px;
 }
+@keyframes mobNavItems {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes mobileSlide {
+    0% {height: 0;}
+}
+
 /* ____________________________________________________________Header resposnisvnes custom__________________________________________________________________ */
 @media (max-width:980px) {
         ul .header-list a {
@@ -184,27 +204,37 @@ header {
         .header-sandwhich {
             display: block;
         }
-
+        .logo-container h1 {
+            padding-left: 30px;
+        }
+        .mobile-navigation .mob-nav-items:hover:before {
+            background-color: white;
+        }
+  
+}
+@media ( min-width:981px) {
+    .mobile-navigation {
+        display: none !important;
+    }
+    .mob-nav-items {
+        display: none !important;
+    }
 }
 @media (max-width:780px) {
     .mobile-navigation {
         width: 100%;
-        height: 55vh;
+        height: 70vh;
         background-color: white;
-        margin-top: 6%;
+        margin-top: 10%;
         display: none;
         transition: height 2s;
         position: fixed;
         left: 0;
     }
 
-    .mobile-nav-links {
-        width: 73%;
-        height: 7.5%;
-        margin-top: 5px;
+    .mob-nav-items {
         color: grey;
-        margin-left: 101px;
-        padding-bottom: 35px;
+     
     }
     header {
         background: white;
@@ -213,10 +243,21 @@ header {
         color: black;
     }
     #burger {
-        background: black;
+        background: black !important;
+    }
+    .logo-container h1 {
+        color: black;
+        padding-left: 30px;
+    }
+    .mobile-navigation .mob-nav-items:hover:before {
+        background-color: black;
     }
 
-
+}
+@media (max-width:580px) {
+    .mobile-navigation {
+        margin-top: 13%;
+    }
 }
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
 /* hero */

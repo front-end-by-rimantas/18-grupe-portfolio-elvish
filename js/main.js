@@ -1,6 +1,8 @@
 // header import
 import headerEffect from "./components/header/headerJS.js";
 import sandwich from "./components/hero/heroSandwich.js"
+import headerFixes from "./components/header/headerFixes.js"
+import mobileNav from "./components/header/mobileNavigation.js"
 import scrollToTop from "./components/back-to-top/scrollToTop.js"
 import sectionHeights from "./data/section-heigths.js"
 import scrollFromTop from "./components/header/scrollFromTop.js"
@@ -46,10 +48,11 @@ subscribeEmailValidation ();
 
 
 // header logic
-console.log(sectionHeights);
 scrollFromTop();
 headerEffect();
 scrollToTop();
+mobileNav();
+headerFixes();
 // headerFixes();
 // sandwich();
 // hero logic
