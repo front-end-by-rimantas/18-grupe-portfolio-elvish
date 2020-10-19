@@ -1044,7 +1044,7 @@ canvas {
 /* footer */
 footer { 
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color:  #f8f9fa ;
 }
 .footer-container {
@@ -1062,6 +1062,7 @@ footer {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
+    line-height: 38px;
 }
 .footer-social-icons {
     float: right;
