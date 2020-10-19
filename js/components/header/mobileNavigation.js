@@ -10,8 +10,6 @@ function mobNavigation () {
     <div class="mob-nav-items">Blog</div>
     <div class="mob-nav-items">Contact</div>`
     mobNav.innerHTML=HTML
-
-
 }
 
 export default mobNavigation;

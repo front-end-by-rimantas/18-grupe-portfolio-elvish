@@ -6,6 +6,7 @@ import mobileNav from "./components/header/mobileNavigation.js"
 import scrollToTop from "./components/back-to-top/scrollToTop.js"
 import sectionHeights from "./data/section-heigths.js"
 import scrollFromTop from "./components/header/scrollFromTop.js"
+import scrollFromMobileNav from "./components/header/scrollFromMobileNav.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
@@ -52,6 +53,7 @@ scrollFromTop();
 headerEffect();
 scrollToTop();
 mobileNav();
+scrollFromMobileNav();
 headerFixes();
 // headerFixes();
 // sandwich();
