@@ -106,6 +106,27 @@ header {
 .sticky .navigation a li:hover::before {
     background: black;
 }
+.navigation .single-dot li::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    background: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    left: calc(50% - 4px);
+}
+.sticky .navigation .single-dot li::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    background: black;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    left: calc(50% - 4px);
+}
+
 .header-sandwhich {
     position: absolute;
     right: 15px;
@@ -151,7 +172,7 @@ header {
 
 .change .sandwhcih-icon {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(2px, -4px);
+    transform: rotate(-45deg) translate(3px, -4px);
 
   }
   

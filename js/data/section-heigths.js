@@ -14,7 +14,7 @@ const sectionHeights = [
     },
     {
         name: "education",
-        height: document.querySelector(".education").offsetTop
+        height: document.querySelector(".edu-top-section").offsetTop
     },
     {
         name: "work",
