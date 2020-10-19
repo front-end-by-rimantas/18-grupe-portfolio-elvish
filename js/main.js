@@ -37,7 +37,8 @@ import {renderEducation} from './components/education/renderEducation.js';
 import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
 subscribeEmailValidation ();
 // blog import
-
+import { renderBlog } from "./components/blog/renderBlog.js";
+import { blogData } from "./data/blog.js";
 // contact import
 
 // footer import
@@ -78,7 +79,7 @@ renderEducation(eduData);
 // subscribe logic
 
 // blog logic
-
+renderBlog(blogData);
 // contact logic
 
 // footer logic
