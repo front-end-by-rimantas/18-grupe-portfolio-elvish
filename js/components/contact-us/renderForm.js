@@ -1,4 +1,4 @@
-import {renderFormInputs} from './renderFormInputs';
+import {renderFormInputs} from './renderFormInputs.js';
 
 function renderForm(formData) {
 
