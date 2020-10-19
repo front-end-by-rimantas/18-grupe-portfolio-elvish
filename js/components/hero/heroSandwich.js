@@ -10,11 +10,13 @@ function sandwich ()
     {
         mobileNavBar.style.display="block";
         clickCount++;
+        sandwichIcon.classList.add("change")
        
     }
     else if (clickCount == 1 || window.innerWidth > 980) 
     {
     mobileNavBar.style.display="none";
+    sandwichIcon.classList.remove("change")
     return clickCount=0;
     }
   

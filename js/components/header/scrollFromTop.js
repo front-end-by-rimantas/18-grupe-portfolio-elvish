@@ -5,6 +5,7 @@ function scrollFromTop () {
     for ( let i=0; i < navArray.length;i++) {
         // console.log(sectionHeights[i].height);
         navArray[i].addEventListener('click', function (e) {
+            console.log(sectionHeights[i].height);
             e.preventDefault();
             window.scrollTo ({
                 top:sectionHeights[i].height,

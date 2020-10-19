@@ -23,7 +23,7 @@ const sectionHeights = [
     {
         name:"client",
         height: document.querySelector(".clients").offsetTop
-    },
+    }
     // {
     //     name: "blog",
     //     height: document.querySelector("") //reiks papildyti kai turesim
