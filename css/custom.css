@@ -701,13 +701,13 @@ canvas {
     }
 
 /* education */
-.container.education.section-padding,
-.container.section-padding {
+.container.education.section-padding {
     padding: 80px 0px;
 }
-.row.edu-top-section, 
-.row.contact-us {
+.row.edu-top-section,
+.row.contact-us-top {
     width: 70%;
+    display: block;
     text-align: center;
     align-self: center;
     justify-self: center;
@@ -716,20 +716,20 @@ canvas {
 }  
     .row.edu-top-section > .line-break::before, 
     .row.edu-top-section > .line-break::after,
-    .row.contact-us > .line-break::before,
-    .row.contact-us > .line-break::after {
+    .row.contact-us-top > .line-break::before,
+    .row.contact-us-top > .line-break::after {
         border-top: 1px solid #6c757d; 
     } 
     .edu-top-section > h2,
-    .contact-us > h2 {
+    .contact-us-top > h2 {
         font-size: 32px; 
         font-weight: normal;
         margin: 0px 0px 8px;
     }
 
     .edu-top-section > p,
-    .contact-us > p { 
-        /* display: block; */
+    .contact-us-top > p { 
+        display: block;
         color: #6c757d;
         font-size: 18px;
         margin: 8px 0px 16px;
@@ -1042,7 +1042,38 @@ canvas {
   
 }
 /* blog */
+.icons-left {
+    text-align: center;
+    background-color: antiquewhite;
+}
+.icons-left >  {
+    text-align: center;
+    background-color: antiquewhite;
+}
+/* .icons-left > .icons3  {
+   font-size: 30px;
+   color: #000;
+   background-color: blueviolet;
+} */
+.icons3 {
+    margin: 24px 0px 0px;
+}
+.icons3 > span {
+    font-size: 30px;
+}
+
+.contact-form {
+    background-color: plum;
+}
+.contact-form > .form-row {
+    background-color: yellowgreen;
+    line-height: 20px;
+    padding: 10px;
+    margin: 15px;
+}
+
 
 /* contact */
+
 
 /* footer */
