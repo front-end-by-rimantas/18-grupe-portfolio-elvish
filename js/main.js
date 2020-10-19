@@ -30,6 +30,8 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our work import
 import { galleryData } from './data/gallery.js';
 import { renderGallery } from './components/gallery/renderGallery.js';
+import { galleryFilter } from './data/galleryFilter.js';
+import { renderFilter } from './components/gallery/renderFilter.js';
 
 // our clients import
 
@@ -72,7 +74,8 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
-renderGallery(galleryData);
+const onFilterChange = () => renderGallery(galleryData,  );
+renderFilter(galleryFilter, onFilterChange);
 
 // our clients logic
 

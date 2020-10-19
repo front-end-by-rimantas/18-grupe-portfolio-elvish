@@ -1,6 +1,5 @@
 import { generateGalleryItem } from './generateGalleryItem.js';
 
-
 function renderGallery(data) {
 
     
