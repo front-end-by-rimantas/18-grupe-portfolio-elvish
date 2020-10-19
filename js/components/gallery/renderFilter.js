@@ -15,8 +15,12 @@ function renderFilter(galleryFilter, onFilterChange) {
     
     on('.filter-ul .filter-list-item', 'click', (event) => {
         const el = event.target;
-        // console.log(el.dataset.filter);
-        onFilterChange()
+        const filter = el.dataset.filter;
+        if (filter === 'all') {
+            onFilterChange();
+        } else {
+            onFilterChange(filter);
+        }
     })
 
 }

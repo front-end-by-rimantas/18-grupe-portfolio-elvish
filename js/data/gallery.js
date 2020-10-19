@@ -6,37 +6,44 @@ const galleryData = {
             image: 'notepad.png',
             imageAlt: 'Studio & Art image',
             title: 'Studio & Art',
-            content: 'UI Elements, Icons'
+            content: 'UI Elements, Icons',
+            filter: 'webdesign wordpress'
+            
         },
         {
-            image: 'Frame.png',
+            image: 'frame.png',
             imageAlt: 'Creative & Art image',
             title: 'Creative & Art',
-            content: 'Illustrations'
+            content: 'Illustrations',
+            filter: 'seo webdesign'
         },
         {
             image: 'vinyl.png',
             imageAlt: 'Open Imagination image',
             title: 'Open Imagination',
-            content: 'Media, Icons'
+            content: 'Media, Icons',
+            filter: 'work'
         },
         {
             image: 'paper-cup.png',
             imageAlt: 'Locked Steel Gate image',
             title: 'Locked Steel Gate',
-            content: 'Graphics, UI Elements'
+            content: 'Graphics, UI Elements',
+            filter: 'seo webdesign'
         },
         {
             image: 'notebook-black.png',
             imageAlt: 'Mac Sunglasses image',
             title: 'Mac Sunglasses',
-            content: 'Illustrations, Graphics'
+            content: 'Illustrations, Graphics',
+            filter: 'seo work'
         },
         {
             image: 'notebook-with-clips.png',
             imageAlt: 'Backpack Contents image',
             title: 'Backpack Contents',
-            content: 'UI Elements, Media'
+            content: 'UI Elements, Media',
+            filter: 'wordpress'
         }
 
     ]

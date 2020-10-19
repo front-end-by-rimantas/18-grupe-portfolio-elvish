@@ -74,8 +74,11 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
-const onFilterChange = () => renderGallery(galleryData,  );
+function onFilterChange (filter) {
+    renderGallery(galleryData, filter);
+}
 renderFilter(galleryFilter, onFilterChange);
+renderGallery(galleryData);
 
 // our clients logic
 

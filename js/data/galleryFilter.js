@@ -21,6 +21,5 @@ const galleryFilter = [
     },
 
 ];
-console.log(galleryFilter);
-console.log(galleryFilter.filter);
+
 export { galleryFilter };
