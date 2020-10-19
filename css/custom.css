@@ -879,8 +879,8 @@ canvas {
                 }
 
         #work-gallery {
-            display: inline-block;
-            text-align: center; 
+            /* display: inline-block; */
+            /* text-align: center;  */
             /* margin: 0 20px;  */
             
         }
@@ -894,7 +894,7 @@ canvas {
                 height: 300px;
                 background-size: 100%;
                 background-position: center;
-                -webkit-transition: all 0.5s ease-in-out; 
+                transition: background-size 0.5s ease-in-out; 
             }
             
             .gallery-image:hover {
@@ -905,7 +905,8 @@ canvas {
                     width: 94%;
                     height: 94%;
                     opacity: 0;
-                    transition: all 200ms;
+                    transition: opacity 200ms, transform 200ms;
+                    transition-delay: 0.3s;
                     position: absolute;
                     z-index: -1;
                     top: 3%;
@@ -914,53 +915,67 @@ canvas {
                     background-color: rgba(0, 0, 0, 0.8);
                     background-size: 100%;
                     text-align: right;
-                    transition-duration: 0.2s;
-                    transition-delay: 0.3s;
-    
+                    transform: scale(0.4);
                 }
             
                 .overlay:hover { 
                     opacity: 1;
-                    
+                    transform: scale(1);
                 }
 
                     .gallery-image-titles {  
                         margin: 30px 30px 0 0;
                         display: flex;
                         flex-direction: column;
-                        float: right;
+                        align-items: flex-end;
+                        
 
                     }
             
-                        .gallery-image-titles > #h3 > h3,
-                        .gallery-image-titles > #h4 > h4 {
+                        .gallery-image-titles > h3,
+                        .gallery-image-titles > h4 {
                             margin: 0;
                             font-size: 18px;
                             color: white;
-                            padding-right: 10px;
                             line-height: 25px;
                             font-weight: normal;
+                            position: relative;
+                            overflow: hidden;
+
+                            
                         }
-                        .gallery-image-titles #h4 > h4 {
+                        .gallery-image-titles > h4 {
                             font-size: 13px;
                             color: #d5d7da;
+                            
                         }
 
-                        #h3,
-                        #h4 {
+                        .gallery-image-titles > h3::after,
+                        .gallery-image-titles > h4::after {
+                            content: ' ' ;
                             background-color: white;
-                            animation: load-bg;
-                            animation-duration: 2s;
+                            width: 100%;
+                            position: absolute;
+                            top: 2px;
+                            bottom: 2px;
+                            right: -100%;
+                            transition: right 700ms ease-in-out;
+                            transition-delay: 0.3s;
+                            
                         }
-                        
-                        
-                        @keyframes load-bg {
-                            0% {
-                                width: 0%;
-                            }
-                            100% {
-                                width: 100%;
-                            }
+
+                        .gallery-image-titles > h4::after {
+                            left: -100%;
+                            transition: left 700ms ease-in-out;
+                        }
+
+                        .gallery-image:hover h3::after {
+                            right: 100%;
+                            
+                        }
+
+                        .gallery-image:hover h4::after {
+                            left: 100%;
                         }
 
 /* our clients */
