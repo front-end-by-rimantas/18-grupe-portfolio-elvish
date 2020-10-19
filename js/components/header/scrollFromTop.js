@@ -5,7 +5,7 @@ function scrollFromTop () {
     for ( let i=0; i < navArray.length;i++) {
         // console.log(sectionHeights[i].height);
         navArray[i].addEventListener('click', function (e) {
-            e.preventDefault;
+            e.preventDefault();
             window.scrollTo ({
                 top:sectionHeights[i].height,
                 behavior: 'smooth'
@@ -13,7 +13,7 @@ function scrollFromTop () {
         })
     }
 }
-
+// preventDefault
 export default scrollFromTop;
 
 
