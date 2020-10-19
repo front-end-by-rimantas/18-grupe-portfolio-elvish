@@ -816,7 +816,7 @@ canvas {
 /* our work */
 .row.our-work-section {
     text-align: center;
-    padding: 80px 0;
+    
 }
         .our-work-header > h2 {
             font-size: 32px;
@@ -832,13 +832,19 @@ canvas {
             line-height: 25px;
         }
 
+        .row.filter {
+            text-align: center;
+            margin: 30px 0;
+        }
+
         .filter-ul {
             display: flex;
             flex-direction: row;
             justify-content: center;
             width: 100%;
             list-style: none;
-            margin: 60px 0;
+            
+
         }
 
             li.filter-list-item{
@@ -874,7 +880,9 @@ canvas {
 
         #work-gallery {
             display: inline-block;
-            text-align: center;  
+            text-align: center; 
+            /* margin: 0 20px;  */
+            
         }
                 
             .gallery-image {
@@ -924,27 +932,36 @@ canvas {
 
                     }
             
-                        .gallery-image-titles > h3,
-                        .gallery-image-titles > h4 {
+                        .gallery-image-titles > #h3 > h3,
+                        .gallery-image-titles > #h4 > h4 {
                             margin: 0;
                             font-size: 18px;
                             color: white;
                             padding-right: 10px;
                             line-height: 25px;
                             font-weight: normal;
-                            
-                            
                         }
-                        .gallery-image-titles > h3 {
-
-                        }
-
-                        .gallery-image-titles > h4 {
+                        .gallery-image-titles #h4 > h4 {
                             font-size: 13px;
                             color: #d5d7da;
                         }
-                        
 
+                        #h3,
+                        #h4 {
+                            background-color: white;
+                            animation: load-bg;
+                            animation-duration: 2s;
+                        }
+                        
+                        
+                        @keyframes load-bg {
+                            0% {
+                                width: 0%;
+                            }
+                            100% {
+                                width: 100%;
+                            }
+                        }
 
 /* our clients */
     .clients{
