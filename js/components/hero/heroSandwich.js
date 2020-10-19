@@ -3,7 +3,6 @@ let sandwichIcon = document.querySelector(".header-sandwhich")
 const mobileNavBar = document.querySelector(".mobile-navigation ")
 let clickCount=0;
 let windowWidth = window.innerWidth;
-
 function sandwich () 
 {
    
