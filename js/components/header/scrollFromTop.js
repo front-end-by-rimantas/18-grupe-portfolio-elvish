@@ -13,18 +13,4 @@ function scrollFromTop () {
         })
     }
 }
-// preventDefault
 export default scrollFromTop;
-
-
-// let footerSocials = document.querySelectorAll("#footer-socials");
-// let socialList = Array.from(footerSocials)
-
-// window.scrollTo({
-//     top: 100,
-//     left: 100,
-//     behavior: 'smooth'
-//   });
-// yes_js_login = function(e) {
-//     e.preventDefault();
-//   }
