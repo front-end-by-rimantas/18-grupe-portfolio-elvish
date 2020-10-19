@@ -85,6 +85,6 @@ renderEducation(eduData);
 
 // contact logic
 renderIcons(leftIcons);
-renderForm(FormData);
+renderForm(formData);
 
 // footer logic

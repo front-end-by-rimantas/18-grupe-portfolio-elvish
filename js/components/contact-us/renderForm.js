@@ -13,4 +13,4 @@ function renderForm(formData) {
 };
 
 
-export {renderForm};
+export { renderForm };
