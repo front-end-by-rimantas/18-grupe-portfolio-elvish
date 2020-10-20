@@ -10,10 +10,12 @@ function renderPagination(blogData) {
 
     let HTML = '';
 
-    for (let i = 1; i <= pageCount; i++) {
-        HTML+= `<a href="#">${i}</a>\n`        
+    if (pageCount !==1) {
+        for (let i = 1; i <= pageCount; i++) {
+            HTML+= `<a href="#">${i}</a>\n`        
+        }
     }
-
+    
     const pagesDOM = document.querySelector('.pages');
 
     pagesDOM.innerHTML = HTML;

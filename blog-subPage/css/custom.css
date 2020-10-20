@@ -44,6 +44,25 @@ h1, h2, h3, h5 {
 
             .headerLinks > a {
                 color: white;
+                position: relative;
+                text-transform: capitalize;
+            }
+
+            .headerLinks > .go-home:hover::after {
+                display: block;
+                content: '';
+                width: 7px;
+                height: 7px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transform: translate(-50%, 0); 
+            }
+
+            .headerLinks.active > .go-home:hover::after {
+                background-color:black;
             }
 
             .headerLinks.active > a,
@@ -56,12 +75,11 @@ h1, h2, h3, h5 {
             float: right;
             color: white;
             font-size: 30px;
+            line-height: 35px;
+            text-transform: capitalize;
         }
 
 @media (max-width: 900px) {
-        .headerLinks{
-        position: relative;
-        } 
 
             header .go-home{
                 display: none;
@@ -75,8 +93,11 @@ h1, h2, h3, h5 {
                 .dropdown-content {
                     display: none;
                     width: 100%;
-                    position: absolute;
+                    position: fixed;
                     left: 0;
+                    right: 0;
+                    top: 70px;
+                    text-align: center;
                 }
                 
                     .dropdown-content a {
