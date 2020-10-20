@@ -14,7 +14,7 @@ const sectionHeights = [
     },
     {
         name: "education",
-        height: document.querySelector(".edu-top-section").offsetTop
+        height: document.querySelector(".education").offsetTop
     },
     {
         name: "work",
@@ -23,14 +23,14 @@ const sectionHeights = [
     {
         name:"client",
         height: document.querySelector(".clients").offsetTop
+    },
+    {
+        name: "blog",
+        height: document.querySelector(".subscribe-form").offsetTop-600//reiks papildyti kai turesim kolkas cia placeholderis
+    },
+    {
+        name:"contact",
+        height: document.querySelector(".subscribe-form").offsetTop //papildyti
     }
-    // {
-    //     name: "blog",
-    //     height: document.querySelector("") //reiks papildyti kai turesim
-    // },
-    // {
-    //     name:"contact",
-    //     height: document.querySelector("") //papildyti
-    // }
 ]
 export default sectionHeights;
