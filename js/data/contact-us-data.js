@@ -2,30 +2,39 @@ const formData = [
     {
         labelFor: 'name',
         labelContent: 'Name',
-        inputId: 'name',
-        inputType: 'text',
-        inputPlaceholder: 'Your name...'
+        sectionType: 'input',
+        id: 'name',
+        type: 'text',
+        placeholder: 'Your name...'
     },
     {
         labelFor: 'email',
         labelContent: 'Email address',
-        inputId: 'email',
-        inputType: 'email',
-        inputPlaceholder: 'Your email...'
+        sectionType: 'input',
+        id: 'email',
+        type: 'email',
+        placeholder: 'Your email...'
     },
     {
         labelFor: 'subject',
         labelContent: 'Subject',
-        inputId: 'subject',
-        inputType: 'text',
-        inputPlaceholder: 'Your subject...'
+        sectionType: 'input',
+        id: 'subject',
+        type: 'text',
+        placeholder: 'Your subject...'
     },
     {
         labelFor: 'message',
         labelContent: 'Message',
-        inputId: 'message',
-        inputType: 'text',
-        inputPlaceholder: 'Your message...'
+        sectionType: 'textarea',
+        name:'message',
+        id:'message',
+        placeholder: 'Your message...'
+    },
+    {
+        sectionType: 'button',
+        type:'submit',
+        value: 'Send Message'
     }
 ];
 

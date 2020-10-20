@@ -988,7 +988,6 @@ canvas {
     border: none;
     font-size: 20px;
     padding-left: 22px;
-  
 }
 
 .subscribe-input::placeholder {
@@ -1066,19 +1065,16 @@ canvas {
 }
 
 .contact-form {
-    background-color: plum;
     padding: 0px 15px;
     margin: 8px 0px 16px;
 }
 .contact-form > .form-row {
-    background-color: yellowgreen;
     line-height: 20px;
     padding: 10px;
     margin: 15px;
 }
 .contact-form > .form-row:nth-child(1),
 .contact-form > .form-row:nth-child(2) {
-    background-color: yellowgreen;
     width: 46%;
     display: inline-block;
 }
@@ -1094,26 +1090,34 @@ canvas {
     font-weight: 400;
     width: 100%;
     cursor: text;
+    outline: none;
 }
-/* .form-row > input:nth-child(4) {
-    height: 44px;
-    background-color: red;
+/* .form-row > input:focus {
+    border-color: #000000;
 } */
-.message-btn {
-    text-align: right;
-}
+
+
 .m-btn {
-    border: 1px solid #000;
+    /* place-self: end; */
+    justify-content: end;
+    border: 2px solid #000;
     border-radius: 5px;
     background-color: #000000;
     color: #ffffff;
-    cursor: pointer;
     padding: 12px 26px;
     font-size:  15px;
     text-transform: capitalize;
     font-weight: 400;
-    /* text-align: center; */
+    outline: none;
 }
+    .m-btn:hover {
+        cursor: pointer;
+        background-color: #ffffff ;
+        color: #000000
+    }
+    /* .m-btn:focus {
+        border-color: #000;
+    } */
 
 
 /* footer */
