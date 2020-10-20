@@ -497,7 +497,7 @@ canvas {
         .row.aboutMe > .hello-section > p,
         .row.aboutMe > .hello-section > .hello-list { 
             color: #6c757d;
-            font-size: 18px;
+            font-size: 16px;
             margin: 20px 0;
             line-height: 25px;
         }
@@ -506,7 +506,7 @@ canvas {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         span.hello-dot {
@@ -544,36 +544,22 @@ canvas {
                 background-color: lightgrey;
                 border-radius: 2px;
             }
-                .progressBar > .bottom > .progress {
-                    display: block;
-                    height: 100%;
-                    background-color: transparent;
-                    border-radius: 2px;
-                }
-                    .progressBar > .bottom > .progress > .bar {
+
+                    .progressBar > .bottom > .bar {
                         display: block;
                         width: 100%;
                         height: 100%;
                         background-color: black;
                         border-radius: 2px;
-                        animation-name: loading;
-                        animation-duration: 2s;
+                        color:transparent;
                     }
-
-                @keyframes loading{
-                    0% {
-                        width: 0%;
-                    }
-                    100% {
-                        width: 100%;
-                    }
-                }
-
+                
                 @media (min-width: 1200px) {
                     .curve-box-container {
                         margin-top: -210px;
                     }
                 }
+
                 @media (max-width: 768px) {
                     .curve-box-container {
                         margin-top: -100px;
@@ -826,7 +812,7 @@ canvas {
 
         .our-work-header > p { 
             color: #6c757d;
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 30px;
             margin: 20px 0;
             line-height: 25px;
@@ -843,8 +829,6 @@ canvas {
             justify-content: center;
             width: 100%;
             list-style: none;
-            
-
         }
 
             li.filter-list-item{
@@ -853,8 +837,8 @@ canvas {
                 align-items: center;
                 color: black;
                 text-decoration: none;
-                font-size: 18px;
-                padding: 5px 15px;
+                font-size: 14px;
+                padding: 2px 15px;
                 margin: 0 10px;
                 position: relative;
                 list-style: none;
@@ -870,7 +854,12 @@ canvas {
                 margin-left: 5px;
             }
 
-                li.filter-list-item:hover {
+            li.filter-list-item.star:hover::before{
+                cursor: auto;
+            }
+
+                li.filter-list-item:hover,
+                li.filter-list-item.active {
                     background-color: black;
                     transition: 0.6s;
                     border-radius: 10px;
@@ -879,28 +868,70 @@ canvas {
                 }
 
         #work-gallery {
-            /* display: inline-block; */
-            /* text-align: center;  */
-            /* margin: 0 20px;  */
-            
+            text-align: center;   
         }
-                
+
             .gallery-image {
-                display: inline-block;
-                margin: 20px;
-                z-index: 1;
                 position: relative;
-                width: 400px;
-                height: 300px;
+                z-index: 1;
+                width: 100%;
+                padding-top: 75%;
+                height: 200px;
+                border-radius: 5px;
                 background-size: 100%;
                 background-position: center;
-                transition: background-size 0.5s ease-in-out; 
+                transition: background-size 0.5s ease-in-out;
             }
             
             .gallery-image:hover {
                 background-size: 110%;
             }
-            
+            .overlay:hover { 
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* .modal {
+                display: none;
+                position: fixed;
+                z-index: 5;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.9);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @keyframes zoom {
+                from {transform:scale(0)}
+                to {transform:(scale(1))}
+            }
+
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #fff;
+                text-decoration: none;
+            } */
+
                 .overlay {
                     width: 94%;
                     height: 94%;
@@ -918,18 +949,13 @@ canvas {
                     transform: scale(0.4);
                 }
             
-                .overlay:hover { 
-                    opacity: 1;
-                    transform: scale(1);
-                }
+              
 
                     .gallery-image-titles {  
                         margin: 30px 30px 0 0;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
-                        
-
                     }
             
                         .gallery-image-titles > h3,
@@ -940,14 +966,11 @@ canvas {
                             line-height: 25px;
                             font-weight: normal;
                             position: relative;
-                            overflow: hidden;
-
-                            
+                            overflow: hidden;   
                         }
                         .gallery-image-titles > h4 {
                             font-size: 13px;
                             color: #d5d7da;
-                            
                         }
 
                         .gallery-image-titles > h3::after,
@@ -961,7 +984,6 @@ canvas {
                             right: -100%;
                             transition: right 700ms ease-in-out;
                             transition-delay: 0.3s;
-                            
                         }
 
                         .gallery-image-titles > h4::after {
@@ -970,13 +992,27 @@ canvas {
                         }
 
                         .gallery-image:hover h3::after {
-                            right: 100%;
-                            
+                            right: 100%; 
                         }
 
                         .gallery-image:hover h4::after {
                             left: 100%;
                         }
+
+    @media (max-width: 1200px) {
+        .gallery-image {
+            width: 100%;
+            padding-top: 75%;
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .gallery-image {
+            height: 200px;
+            margin: 20px 0px;
+        }
+    }
 
 /* our clients */
     .clients{

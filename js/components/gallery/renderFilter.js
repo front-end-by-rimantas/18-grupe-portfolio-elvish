@@ -16,6 +16,7 @@ function renderFilter(galleryFilter, onFilterChange) {
     on('.filter-ul .filter-list-item', 'click', (event) => {
         const el = event.target;
         const filter = el.dataset.filter;
+        
         if (filter === 'all') {
             onFilterChange();
         } else {

@@ -14,7 +14,7 @@ items.forEach(counter => {
                 counter.innerText = count+inc;
                 setTimeout(updateCount, 50)
             } else {
-                count.innerText = target
+                counter.innerText = target
             }
     }
 

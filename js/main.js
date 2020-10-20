@@ -11,6 +11,7 @@ import heroTextTransform from "./components/hero/heroTextTransform.js";
 // about me import
 import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
+import progressBarLoad from './components/about-me/progressBarLoad.js';
 
 // services import
 import servicesData from './data/services.js'
@@ -60,6 +61,7 @@ scrollToTop();
 // HeroTextChanging();
 // about logic
 renderProgressBar(bar);
+progressBarLoad();
 
 // services logic
 renderServices(servicesData)
