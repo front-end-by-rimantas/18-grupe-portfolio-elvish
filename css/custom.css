@@ -1044,17 +1044,9 @@ canvas {
 /* blog */
 .icons-left {
     text-align: center;
-    background-color: antiquewhite;
+    padding: 0px 15px;
 }
-.icons-left >  {
-    text-align: center;
-    background-color: antiquewhite;
-}
-/* .icons-left > .icons3  {
-   font-size: 30px;
-   color: #000;
-   background-color: blueviolet;
-} */
+
 .icons3 {
     margin: 24px 0px 0px;
 }
