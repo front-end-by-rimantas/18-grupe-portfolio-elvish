@@ -1064,7 +1064,7 @@ footer {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    line-height: 38px;
+    line-height: 37px;
     margin-bottom: 25px;
 }
 .footer-social-icons {
@@ -1075,9 +1075,9 @@ footer {
     border: 2px solid #868e96;
     border-radius: 50%;
     transition: all 0.5s;
-    width: 42px;
-    height: 42px;
-    line-height: 38px;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
     text-align: center;
     margin-right:10px;
     color: #868e96;
