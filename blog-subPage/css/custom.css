@@ -6,122 +6,6 @@ h1, h2, h3, h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
-    header{
-        height: 70px;
-        background-color: transparent;
-        padding: 20px 50px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10000;
-        align-items: center;
-    }
-
-    header.active{
-        background-color: white;
-        padding: 15px 50px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10000;
-        transition: all 0.5s ease-in-out;
-    }
-
-        header .logo{
-            float: left;
-            font-size: 30px;
-            font-weight: bold;
-            line-height: 30px;
-        }
-
-        header .go-home{
-            float: right;
-            font: 16px;
-            line-height: 30px; 
-        }
-
-            .headerLinks > a {
-                color: white;
-                position: relative;
-                text-transform: capitalize;
-            }
-
-            .headerLinks > .go-home:hover::after {
-                display: block;
-                content: '';
-                width: 7px;
-                height: 7px;
-                background-color: white;
-                border-radius: 50%;
-                position: absolute;
-                bottom: -7px;
-                left: 50%;
-                transform: translate(-50%, 0); 
-            }
-
-            .headerLinks.active > .go-home:hover::after {
-                background-color:black;
-            }
-
-            .headerLinks.active > a,
-            .headerLinks.active #burger{
-                color: black;
-            }
-
-        .dropdown{
-            display: none;
-            float: right;
-            color: white;
-            font-size: 30px;
-            line-height: 35px;
-            text-transform: capitalize;
-        }
-
-@media (max-width: 900px) {
-
-            header .go-home{
-                display: none;
-            }
-
-            .dropdown{
-                display: block;
-                cursor: pointer;
-            }
-  
-                .dropdown-content {
-                    display: none;
-                    width: 100%;
-                    position: fixed;
-                    left: 0;
-                    right: 0;
-                    top: 70px;
-                    text-align: center;
-                }
-                
-                    .dropdown-content a {
-                        color: white;
-                        padding: 6px 6px;
-                        text-decoration: none;
-                        display: block;
-                        font-size: 16px;
-                    }
-
-                .dropdown-content.active {
-                    background-color: white;
-                }
-
-                    .dropdown-content.active > a {
-                        color: black;
-                    }
-                    
-                    .show {
-                        display:block;
-                        }
-
-}
- 
     .hero{
         background-image: url(../img/blog-subPage-hero-background.jpg);
         background-position: 0% 40%;
@@ -160,6 +44,7 @@ h1, h2, h3, h5 {
             .hero-texts a {
                 text-transform: uppercase;
                 margin: 5px 5px;
+                color: white;
             }
 
             /* .hero-texts a:visited {
@@ -215,13 +100,13 @@ h1, h2, h3, h5 {
                     padding-bottom: 16px;
                 }
 
-        main .nav{
+        main .blog-pages{
             text-align: center;
             margin: 15px 0px;
         }        
 
         /* Pagination links */
-        .nav a {
+        .blog-pages a {
             color: grey;
             padding: 8px 16px;
             text-decoration: none;
@@ -230,13 +115,13 @@ h1, h2, h3, h5 {
         }
         
         /* Style the active/current link */
-        .nav a.active-page {
+        .blog-pages a.active-page {
             background-color: black;
             color: white;
         }
         
         /* Add a grey background color on mouse-over */
-        .nav a:hover:not(.active-page) {background-color: #ddd;}
+        .blog-pages a:hover:not(.active-page) {background-color: #ddd;}
 
 
         aside .aside-container{

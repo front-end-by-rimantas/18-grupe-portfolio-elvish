@@ -1,9 +1,17 @@
 const headerData = {
-    selector: '.headerLinks',
+    selector: '.header',
     logoText: 'Elvish',
     menu: [
         {
             text: 'Go home',
+            link: '#',
+        },        
+        {
+            text: 'Pirmas',
+            link: '#',
+        },
+        {
+            text: 'Antras',
             link: '#',
         }
     ]
