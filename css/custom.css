@@ -9,6 +9,9 @@ bold {
 h4 {
      font-weight: 500;
 }
+html {
+    scroll-behavior: smooth;
+  }
 .to-top {
     height: 35px;
     line-height: 43px;

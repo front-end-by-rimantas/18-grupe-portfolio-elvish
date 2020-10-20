@@ -10,14 +10,14 @@ function scrollFromTop () {
             else navArray[i].classList.remove("single-dot")
         })
     }
-    for ( let i=0; i < navArray.length;i++) {
-        navArray[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scrollTo ({
-                top:sectionHeights[i].height,
-                behavior: 'smooth'
-            })
-        })
-    }
+    // for ( let i=0; i < navArray.length;i++) {
+    //     navArray[i].addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         window.scrollTo ({
+    //             top:sectionHeights[i].height,
+    //             behavior: 'smooth'
+    //         })
+    //     })
+    // }
 }
 export default scrollFromTop;
