@@ -241,7 +241,6 @@ header {
     position: absolute;
     top: 22px;
         }
-
         .header-container {
         position: absolute;
     top: 0;
@@ -303,6 +302,9 @@ header {
 @media (max-width:580px) {
     .mobile-navigation {
         margin-top: 13%;
+    } 
+    .header-sandwhich {
+        right: 0;
     }
 }
 /*--------------------------------------------- End of resposvines-------------------------------------------------------------------------------------- */
