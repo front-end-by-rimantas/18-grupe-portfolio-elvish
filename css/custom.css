@@ -1042,6 +1042,10 @@ canvas {
   
 }
 /* blog */
+
+
+
+/* contact */
 .icons-left {
     text-align: center;
     padding: 0px 15px;
@@ -1063,6 +1067,8 @@ canvas {
 
 .contact-form {
     background-color: plum;
+    padding: 0px 15px;
+    margin: 8px 0px 16px;
 }
 .contact-form > .form-row {
     background-color: yellowgreen;
@@ -1070,9 +1076,44 @@ canvas {
     padding: 10px;
     margin: 15px;
 }
+.contact-form > .form-row:nth-child(1),
+.contact-form > .form-row:nth-child(2) {
+    background-color: yellowgreen;
+    width: 46%;
+    display: inline-block;
+}
+.form-row > label {
+    display: inline-block;
+    margin: 0px 0px 8px;
+    font-weight: 700;
 
-
-/* contact */
+}
+.form-row > input {
+    display: block;
+    padding: 6px 12px;
+    font-weight: 400;
+    width: 100%;
+    cursor: text;
+}
+/* .form-row > input:nth-child(4) {
+    height: 44px;
+    background-color: red;
+} */
+.message-btn {
+    text-align: right;
+}
+.m-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 12px 26px;
+    font-size:  15px;
+    text-transform: capitalize;
+    font-weight: 400;
+    /* text-align: center; */
+}
 
 
 /* footer */
