@@ -1,36 +1,37 @@
-
+// var height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+// document.body.scrollTop || document.documentElement.scrollTop;
 const sectionHeights = [
     {
         name: "home",
-        height: 0,
+        height: document.getElementById("home").offsetTop
     },
     {
         name: "about",
-        height: document.querySelector(".aboutMe").offsetTop
+        height: document.getElementById("about").offsetTop
     },
     {
         name: "services",
-        height: document.querySelector(".servicesRow").offsetTop
+        height: document.getElementById("services").offsetTop
     },
     {
         name: "education",
-        height: document.querySelector(".education").offsetTop
+        height: document.getElementById("education").offsetTop
     },
     {
         name: "work",
-        height: document.querySelector(".our-work-section").offsetTop
+        height: (document.getElementById("work").offsetTop+70)
     },
     {
         name:"client",
-        height: document.querySelector(".clients").offsetTop
+        height: document.getElementById("client").offsetTop
     },
     {
         name: "blog",
-        height: document.querySelector(".subscribe-form").offsetTop-600//reiks papildyti kai turesim kolkas cia placeholderis
+        height: document.getElementById("blog").offsetTop//reiks papildyti kai turesim kolkas cia placeholderis
     },
     {
         name:"contact",
-        height: document.querySelector(".subscribe-form").offsetTop //papildyti
+        height: document.getElementById("contact").offsetTop //papildyti
     }
 ]
 export default sectionHeights;

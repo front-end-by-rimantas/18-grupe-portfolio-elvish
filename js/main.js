@@ -49,7 +49,7 @@ subscribeEmailValidation ();
 
 
 // header logic
-scrollFromTop();
+
 headerEffect();
 scrollToTop();
 mobileNav();
@@ -89,3 +89,4 @@ renderEducation(eduData);
 // contact logic
 
 // footer logic
+scrollFromTop();
