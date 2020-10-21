@@ -1,6 +1,6 @@
 import statisticsNumberTransform from './statisticsNumberTransform.js'
 
-function NumberTransformOnscroll() {
+function numberTransformOnscroll() {
     
     window.addEventListener('scroll', function() {
         let element = document.querySelectorAll('.statistics-item');
@@ -18,4 +18,4 @@ function NumberTransformOnscroll() {
     });
 }
 
-export { NumberTransformOnscroll };
+export { numberTransformOnscroll };

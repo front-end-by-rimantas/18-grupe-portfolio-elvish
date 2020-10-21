@@ -19,7 +19,7 @@ import renderServices from './components/services/renderServices.js'
 // statistics import
 import statisticsData from './data/statistics.js';
 import renderStatistics from './components/statistics/renderStatistics.js';
-import { NumberTransformOnscroll } from './components/statistics/numberTransformOnscroll.js'
+import { numberTransformOnscroll } from './components/statistics/numberTransformOnscroll.js'
 
 // education import
 import {eduData} from "./data/data-education.js";
@@ -62,7 +62,7 @@ renderServices(servicesData)
 
 // statistics logic
 renderStatistics(statisticsData);
-NumberTransformOnscroll()
+numberTransformOnscroll()
 
 // education logic
 renderEducation(eduData);

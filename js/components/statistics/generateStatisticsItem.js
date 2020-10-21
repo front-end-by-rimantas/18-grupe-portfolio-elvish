@@ -1,5 +1,4 @@
 function generateStatisticsItem(statisticsData) {
-            // console.log(statisticsData); 
             return `<div class='statistics-item'>
                         <span class="${statisticsData.icon}"></span>
                         <div class="counter" data-target=${statisticsData.number}>0</div>
