@@ -18,7 +18,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
     row-gap: 20px;
-    padding: 60px 60px;
+    padding: 60px 0px;
 }
     .container > .row {
         display: grid;
@@ -189,9 +189,9 @@ body {
         grid-column: span 1;
     }
 }
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     .container {
-        grid-template-columns: 1fr 770px 1fr;
+        grid-template-columns: 1fr 800px 1fr;
     }
     .container-fluid > .row,
     .container > .row {
@@ -246,7 +246,7 @@ body {
         grid-column: span 1;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .container {
         grid-template-columns: 15px 1fr 15px;
     }

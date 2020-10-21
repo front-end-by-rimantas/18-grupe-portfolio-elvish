@@ -704,8 +704,8 @@ canvas {
 .container.education.section-padding {
     padding: 80px 0px;
 }
-.row.edu-top-section,
-.row.contact-us-top {
+.edu-top-section,
+.contact-us-top {
     width: 70%;
     display: block;
     text-align: center;
@@ -714,10 +714,10 @@ canvas {
     margin-bottom: 50px;
 
 }  
-    .row.edu-top-section > .line-break::before, 
-    .row.edu-top-section > .line-break::after,
-    .row.contact-us-top > .line-break::before,
-    .row.contact-us-top > .line-break::after {
+    .edu-top-section > .line-break::before, 
+    .edu-top-section > .line-break::after,
+    .contact-us-top > .line-break::before,
+    .contact-us-top > .line-break::after {
         border-top: 1px solid #6c757d; 
     } 
     .edu-top-section > h2,
@@ -1069,14 +1069,25 @@ canvas {
     margin: 8px 0px 16px;
 }
 .contact-form > .form-row {
-    line-height: 20px;
-    padding: 10px;
-    margin: 15px;
+    line-height: 25px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
 }
+.contact-form > #error-message {
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: lightsalmon;
+    transition: all 0.5s ease;
+}
+
 .contact-form > .form-row:nth-child(1),
 .contact-form > .form-row:nth-child(2) {
-    width: 46%;
+    width: calc((100%-10px) / 2);
     display: inline-block;
+    
 }
 .form-row > label {
     display: inline-block;
@@ -1096,10 +1107,17 @@ canvas {
     border-color: #000000;
 } */
 
-
-.m-btn {
-    /* place-self: end; */
-    justify-content: end;
+.textAr {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 6px 12px;
+    resize: vertical;
+    outline: none;
+}
+input.m-btn {
+    float: right;
     border: 2px solid #000;
     border-radius: 5px;
     background-color: #000000;
@@ -1109,15 +1127,24 @@ canvas {
     text-transform: capitalize;
     font-weight: 400;
     outline: none;
+    width: auto;
 }
     .m-btn:hover {
         cursor: pointer;
         background-color: #ffffff ;
         color: #000000
     }
-    /* .m-btn:focus {
+    .m-btn:focus,
+    input:focus,
+    .textAr:focus {
         border-color: #000;
-    } */
-
+    }
+@media (max-width: 1000px) {
+    .contact-form > .form-row:nth-child(1),
+    .contact-form > .form-row:nth-child(2) {
+        width: 100%;
+        display: block;
+    }
+} 
 
 /* footer */
