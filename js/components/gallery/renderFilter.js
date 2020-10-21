@@ -12,18 +12,24 @@ function renderFilter(galleryFilter, onFilterChange) {
 
     const filterDOM = document.querySelector('.filter-ul');
     filterDOM.innerHTML = HTML;
-    
+
     on('.filter-ul .filter-list-item', 'click', (event) => {
         const el = event.target;
         const filter = el.dataset.filter;
         
+        let allFilter = document.querySelectorAll('.filter-list-item')
+        allFilter.forEach(filter => {
+           filter.classList.remove('active')
+        })
+
+       el.classList.add('active')
+
         if (filter === 'all') {
             onFilterChange();
         } else {
             onFilterChange(filter);
         }
     })
-
 }
 
 function on(elementSelector, eventName, handler) {

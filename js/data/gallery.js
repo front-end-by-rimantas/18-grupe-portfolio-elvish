@@ -8,7 +8,6 @@ const galleryData = {
             title: 'Studio & Art',
             content: 'UI Elements, Icons',
             filter: 'webdesign wordpress'
-            
         },
         {
             image: 'frame.png',

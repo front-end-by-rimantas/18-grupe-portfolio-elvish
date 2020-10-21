@@ -33,6 +33,7 @@ import { galleryData } from './data/gallery.js';
 import { renderGallery } from './components/gallery/renderGallery.js';
 import { galleryFilter } from './data/galleryFilter.js';
 import { renderFilter } from './components/gallery/renderFilter.js';
+import { findDefaultFilter } from './components/gallery/findDefaultFilter.js'
 
 // our clients import
 
@@ -81,6 +82,7 @@ function onFilterChange (filter) {
 }
 renderFilter(galleryFilter, onFilterChange);
 renderGallery(galleryData);
+findDefaultFilter();
 
 // our clients logic
 
