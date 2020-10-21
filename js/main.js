@@ -34,7 +34,7 @@ import { renderGallery } from './components/gallery/renderGallery.js';
 import { galleryFilter } from './data/galleryFilter.js';
 import { renderFilter } from './components/gallery/renderFilter.js';
 import { findDefaultFilter } from './components/gallery/findDefaultFilter.js'
-
+import { generateModal } from './components/gallery/modal.js';
 // our clients import
 
 // trusties import
@@ -83,6 +83,7 @@ function onFilterChange (filter) {
 renderFilter(galleryFilter, onFilterChange);
 renderGallery(galleryData);
 findDefaultFilter();
+generateModal(galleryData.imagePath, galleryData.gallery);
 
 // our clients logic
 
