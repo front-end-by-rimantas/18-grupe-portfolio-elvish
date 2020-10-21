@@ -1,5 +1,5 @@
 import { Search } from './Search.js'
-import { Categories } from './Categories.js'
+// import { Categories } from './Categories.js'
 
 class Aside{
     constructor (asideData, blogItems){
@@ -22,10 +22,11 @@ class Aside{
         const search = new Search(this.search);
         const searchHTML = search.generateHTML();
 
-        const categories = new Categories(this.categories, this.blogItems);
-        const categoriesHTML = categories.generateHTML();
+        // const categories = new Categories(this.categories, this.blogItems);
+        // const categoriesHTML = categories.generateHTML();
 
-        return searchHTML + categoriesHTML;
+        return searchHTML
+        //  + categoriesHTML;
     }
 
     isValidSelector() {
