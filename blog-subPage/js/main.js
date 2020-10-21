@@ -10,7 +10,7 @@ import { Aside } from './components/aside/Aside.js'
 
 new Header(headerData);
 
-new Aside(asideData);
+new Aside(asideData, blogData.blogItems);
 
 
 renderPagination(blogData);
