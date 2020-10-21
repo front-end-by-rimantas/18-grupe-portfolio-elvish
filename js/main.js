@@ -77,10 +77,11 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
-function onFilterChange (filter) {
-    renderGallery(galleryData, filter);
-}
-renderFilter(galleryFilter, onFilterChange);
+
+// function onFilterChange (filter) {
+//     renderGallery(galleryData, filter);
+// }
+// renderFilter(galleryFilter);
 renderGallery(galleryData);
 findDefaultFilter();
 generateModal(galleryData.imagePath, galleryData.gallery);

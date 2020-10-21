@@ -3,7 +3,7 @@ function generateGalleryItem(data, imagePath) {
     
     const HTML = document.createElement('div');
     HTML.className = 'gallery-image col-4 col-md-12';
-    HTML.id = 'gallery-image',
+    HTML.id = 'gallery-image';
     HTML.innerHTML = `<div id="myModal" class="modal">
                         <span class="closeImage">&times;</span>
                         <img class="modal-content" id="imgModal">
