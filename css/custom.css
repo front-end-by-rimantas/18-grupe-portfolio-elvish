@@ -45,7 +45,8 @@ header {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     background-color: white;
     color:black;
-    position: fixed;
+    position: sticky;
+    top: 0;
     animation: headOpc 1s;
 }
     .sticky .navigation a li, .sticky .logo-container h1 {
