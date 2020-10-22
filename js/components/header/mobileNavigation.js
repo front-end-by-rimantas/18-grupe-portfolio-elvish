@@ -1,14 +1,15 @@
 
 function mobNavigation () {
     const mobNav = document.querySelector(".mobile-navigation")
-    let HTML= `  <div class="mob-nav-items">Home</div>
-    <div class="mob-nav-items">About</div>
-    <div class="mob-nav-items">Services</div>
-    <div class="mob-nav-items">Education</div>
-    <div class="mob-nav-items">Work</div>
-    <div class="mob-nav-items">Client</div>
-    <div class="mob-nav-items">Blog</div>
-    <div class="mob-nav-items">Contact</div>`
+    let HTML= 
+    `<a href="#home"> <div class="mob-nav-items">Home</div> </a>
+    <a href="#about"> <div class="mob-nav-items">About</div>
+    <a href="#services"> <div class="mob-nav-items">Services</div>
+    <a href="#education">  <div class="mob-nav-items">Education</div>
+    <a href="#work"> <div class="mob-nav-items">Work</div>
+    <a href="#client">  <div class="mob-nav-items">Client</div>
+    <a href="#blog">  <div class="mob-nav-items">Blog</div>
+    <a href="#contact">  <div class="mob-nav-items">Contact</div>`
     mobNav.innerHTML=HTML
 }
 

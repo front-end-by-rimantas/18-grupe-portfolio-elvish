@@ -267,13 +267,10 @@ header {
         margin-top: 10%;
         display: none;
         transition: height 2s;
-        position: fixed;
         left: 0;
     }
-
     .mob-nav-items {
         color: grey;
-     
     }
     header {
         background: white;
@@ -291,7 +288,6 @@ header {
     .mobile-navigation .mob-nav-items:hover:before {
         background-color: black;
     }
-
 }
 @media (max-width:580px) {
     .mobile-navigation {
