@@ -43,7 +43,7 @@ import { renderIcons } from "./components/contact-us/renderIcons.js";
 import { leftIcons } from "./data/left-icons.js";
 import { renderForm } from "./components/contact-us/renderForm.js";
 import { formData } from "./data/contact-us-data.js";
-import { contactFormValidation } from "./components/contact-us/formValidation.js"; 
+// import { contactFormValidation } from "./components/contact-us/formValidation.js"; 
 
 // footer import
 import hoverAnimation from "./components/footer/footerHoverAnimation.js"
@@ -87,7 +87,7 @@ renderEducation(eduData);
 // contact logic
 renderIcons(leftIcons);
 renderForm(formData);
-contactFormValidation();
+// contactFormValidation();
 
 // footer logic
 hoverAnimation();

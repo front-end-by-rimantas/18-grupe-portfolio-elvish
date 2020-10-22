@@ -1074,15 +1074,16 @@ canvas {
     padding: 5px;
     display: inline-block;
     width: 100%;
+    position: relative;
 }
-.contact-form > #error-message {
+/* .contact-form > #error-message {
     padding: 0px;
     margin-bottom: 10px;
     font-size: 14px;
     text-align: center;
     background-color: lightsalmon;
     transition: all 0.5s ease;
-}
+} */
 
 .contact-form > .form-row:nth-child(1),
 .contact-form > .form-row:nth-child(2) {
@@ -1104,9 +1105,39 @@ canvas {
     cursor: text;
     outline: none;
 }
-/* .form-row > input:focus {
-    border-color: #000000;
-} */
+.form-row.success input {
+    border: green;
+}
+.form-row.error input {
+    border: red;
+}
+.form-row.success i.fa-check-circle {
+    color: green;
+    visibility: visible;
+}
+.form-row.error i.fa-exclamation-circle {
+    color: red;
+    visibility: visible;
+}
+.form-row.error small {
+    color: red;
+    visibility: visible;
+}
+
+.form-row i.fa-check-circle,
+.form-row i.fa-exclamation-circle {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    color: black;
+    visibility: hidden;
+}
+.form-row small {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    visibility: hidden;
+}
 
 .textAr {
     display: block;
@@ -1140,6 +1171,12 @@ input.m-btn {
     .textAr:focus {
         border-color: #000;
     }
+    #message-error {
+        background-color: red;
+        padding: 20px;
+        position: absolute;
+    }
+
 @media (max-width: 1000px) {
     .contact-form > .form-row:nth-child(1),
     .contact-form > .form-row:nth-child(2) {
