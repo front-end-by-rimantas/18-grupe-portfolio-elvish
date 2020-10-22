@@ -34,7 +34,8 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our clients import
 
 // trusties import
-
+import trustieData from "./data/dataTrusties.js"
+import createTrustieRow from "./components/trusties/createTrustieRow.js"
 // subscribe import
 import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
 subscribeEmailValidation ();
@@ -75,7 +76,7 @@ renderEducation(eduData);
 // our clients logic
 
 // trusties logic
-
+createTrustieRow(trustieData);
 // subscribe logic
 
 // blog logic
