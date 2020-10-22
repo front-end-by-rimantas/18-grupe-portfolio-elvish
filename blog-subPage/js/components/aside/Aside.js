@@ -11,7 +11,7 @@ class Aside{
         this.blogData = params.blogData;
         // console.log(this.blogData);
 
-        this.getActiveBlogItemsIndexes = params.getActiveBlogItemsIndexes;
+        this.getActiveBlogItemsIndexes = getActiveBlogItemsIndexes;
 
         this.selector = this.asideData.selector;
         // console.log(this.selector);

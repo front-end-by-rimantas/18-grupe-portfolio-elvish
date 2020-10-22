@@ -7,7 +7,7 @@ import { asideData } from './data/aside.js'
 //Logic
 import { Header } from './components/header/Header.js'
 
-import { getActiveBlogItemsIndexes } from './components/blog/getActiveItemsIndexes.js'
+// import { getActiveBlogItemsIndexes } from './components/blog/getActiveItemsIndexes.js'
 
 import { renderBlog } from './components/blog/renderBlog.js';
 import { renderPagination } from './components/blog/renderPagination.js'
@@ -28,10 +28,11 @@ document.querySelector('.pages > a').classList.add('active-page');
 //Aside
 new Aside ({
     asideData: asideData,
-    blogData: blogData,
-    getActiveBlogItemsIndexes: getActiveBlogItemsIndexes
+    blogData: blogData
 });
 
+// ,
+//     getActiveBlogItemsIndexes: getActiveBlogItemsIndexes
 
 
 
