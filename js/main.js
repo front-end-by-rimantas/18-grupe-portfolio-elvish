@@ -41,7 +41,7 @@ subscribeEmailValidation ();
 // contact import
 
 // footer import
-
+import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 
 
 // header logic
@@ -82,3 +82,4 @@ renderEducation(eduData);
 // contact logic
 
 // footer logic
+hoverAnimation();
