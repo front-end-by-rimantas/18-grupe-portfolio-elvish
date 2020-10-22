@@ -43,6 +43,7 @@ subscribeEmailValidation ();
 
 // footer import
 import hoverAnimation from "./components/footer/footerHoverAnimation.js"
+import validateData from "./data-assertations/dataAssert.js";
 
 
 // header logic
@@ -84,3 +85,4 @@ createTrustieRow(trustieData);
 
 // footer logic
 hoverAnimation();
+validateData();
