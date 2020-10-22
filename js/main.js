@@ -29,10 +29,11 @@ import {renderEducation} from './components/education/renderEducation.js';
 // hire me import
 
 // our work import
+import { Gallery } from './components/gallery/Gallery.js';
 import { galleryData } from './data/gallery.js';
-import { renderGallery } from './components/gallery/renderGallery.js';
-import { galleryFilter } from './data/galleryFilter.js';
-import { renderFilter } from './components/gallery/renderFilter.js';
+// import { renderGallery } from './components/gallery/renderGallery.js';
+// import { galleryFilter } from './data/galleryFilter.js';
+// import { renderFilter } from './components/gallery/renderFilter.js';
 import { findDefaultFilter } from './components/gallery/findDefaultFilter.js'
 import { generateModal } from './components/gallery/modal.js';
 // our clients import
@@ -82,7 +83,8 @@ renderEducation(eduData);
 //     renderGallery(galleryData, filter);
 // }
 // renderFilter(galleryFilter);
-renderGallery(galleryData);
+// renderGallery(galleryData);
+new Gallery(galleryData);
 findDefaultFilter();
 generateModal(galleryData.imagePath, galleryData.gallery);
 

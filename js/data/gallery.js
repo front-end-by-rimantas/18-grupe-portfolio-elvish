@@ -1,7 +1,8 @@
 const galleryData = {
     selector: '#work-gallery', 
     imagePath: '../../img/gallery/',
-    gallery: [
+    defaultImg: 'default.jpg',
+    images: [
         {
             image: 'notepad.png',
             imageAlt: 'Studio & Art image',
