@@ -15,11 +15,11 @@ import renderProgressBar from './components/about-me/renderProgressBar.js';
 // services import
 import servicesData from './data/services.js'
 import renderServices from './components/services/renderServices.js'
+
 // statistics import
 import statisticsData from './data/statistics.js';
-// console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
-import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
+import { numberTransformOnscroll } from './components/statistics/numberTransformOnscroll.js'
 
 // education import
 import {eduData} from "./data/data-education.js";
@@ -46,7 +46,7 @@ import { formData } from "./data/contact-us-data.js";
 import { contactFormValidation } from "./components/contact-us/formValidation.js"; 
 
 // footer import
-
+import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 
 
 // header logic
@@ -64,10 +64,10 @@ renderProgressBar(bar);
 
 // services logic
 renderServices(servicesData)
+
 // statistics logic
-// console.log(statisticsData);
 renderStatistics(statisticsData);
-statisticsNumberTransform();
+numberTransformOnscroll()
 
 // education logic
 renderEducation(eduData);
@@ -90,3 +90,4 @@ renderForm(formData);
 contactFormValidation();
 
 // footer logic
+hoverAnimation();
