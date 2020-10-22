@@ -29,9 +29,11 @@ class Gallery {
     }
 
     render() {
-        const HTML = `
-                    <div class="filter-menu col-12">FILTER</div>
-                    <div class="images col-4">IMAGES</div>`;
+        const HTML = 
+                `<div class="row">
+                    <div class="filter-menu col-12"></div>
+                </div>
+                <div class="row images"></div>`;
 
         this.DOM.innerHTML = HTML;
         this.DOMfilter = this.DOM.querySelector('.filter-menu');
@@ -47,8 +49,9 @@ class Gallery {
         for (let i=0; i<this.params.images.length; i++) {
             const project = this.params.images[i];
             HTML +=`
-                <div class="gallery-item">
+                <div class="gallery-item col-4 col-sm-12">
                     <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
+                    <div class="gallery-image-overlay"></div>
                     <div class="text">
                         <h3>${project.title}</h3>
                         <h4>${project.content}</h4>
