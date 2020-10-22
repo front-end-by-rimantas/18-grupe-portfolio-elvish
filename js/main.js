@@ -52,7 +52,6 @@ import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 headerEffect();
 scrollToTop();
 mobileNav();
-scrollFromMobileNav();
 headerFixes();
 // headerFixes();
 // sandwich();

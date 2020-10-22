@@ -46,8 +46,9 @@ header {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     background-color: white;
     color:black;
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
     animation: headOpc 1s;
 }
     .sticky .navigation a li, .sticky .logo-container h1 {
@@ -69,6 +70,7 @@ header {
     display: table;
     float: left;
     font-weight: 400;
+    cursor: pointer;
 }
 .logo-container > h1 {
     color: white;
