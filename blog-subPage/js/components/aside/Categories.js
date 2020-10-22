@@ -1,69 +1,53 @@
-// class Categories {
-//     constructor(categories, blogItems) {
-//         this.title = categories.title
-//         this.blogItems = blogItems
-//         // console.log(this.blogItems);
+class Categories {
+    constructor(params) {
+        this.categoriesSection = params.categoriesSection;
+        this.blogData = params.blogData;
 
-//         this.generateHTML()
-//     }
+        this.getActiveBlogItemsIndexes = params.getActiveBlogItemsIndexes;
 
-//     // suranda kokių kategorijų blogo įrašų yra
-//     findAllCategories (){
-//         let categoryList = [];
-//         console.log(this.blogItems);
-//         console.log(this.blogItems[0].category );
-//         console.log(this.blogItems[0].active);
+        // this.findActiveCategories()
+        // this.generateCategoriesListHTML()
 
-//         for (let i=0; i<this.blogItems.length; i++) {
-
-//             if (this.blogItems[i].category && this.blogItems[i].active === 'true'){
-//                 if (!categoryList.includes(this.blogItems[i].category)){
-//                     categoryList.push(this.blogItems[i].category)
-//                 }
-//         }
-//     }
-//         // console.log(categoryList);
-//         return categoryList
-//     }
-
-//     // Generuoja kategorijų HTML'ą
-//     generateCategories(){
-//         let allCategories = this.findAllCategories();
-
-//         let categoriesHTML = ''
-//         if (allCategories.length!==0) {
-//              for (let category of allCategories){
-//             categoriesHTML += `<div class='category-item'>
-//                         <a class='arrows' href="#">&raquo;</a>
-//                         <span>${category}</span>
-//                     </div>`
-//             } 
-//         }
-      
-
-//         return categoriesHTML
+        this.generateHTML()
+        // console.log(this.generateHTML());
         
-//     }
+    }
 
-//     /**
-//      * Generuoja categories elemento HTML.
-//      */
-//     generateHTML() {
-//         let categoriesList = this.generateCategories()
+    findActiveCategories(){
 
-//         if(categoriesList == ''){
-//             return ''
-//         } else{
-//            return `<div class='aside-container aside-categories'>
-//                     <h4>${this.title}</h4>
-//                     <div class="categories">
-//                           ${categoriesList}
-//                     </div>
-//                  </div>`; 
-//         }
+        let activeIndexes = this.getActiveBlogItemsIndexes (this.blogData);
+        let categoriesList = [];
+        for (let i = 0; i < activeIndexes.length; i++) {
+            const item = this.blogData.blogItems[activeIndexes[i]].category;
+            if (!categoriesList.includes(item)) {
+                categoriesList.push(item)
+            }
+        }
+        return categoriesList
+    }
 
-        
-//     }
-// }
+    generateCategoriesListHTML(){
+        let categoriesList = this.findActiveCategories()
+        let categoriesHTML = '';
+        for (let i = 0; i < categoriesList.length; i++) {
+            categoriesHTML += `<div class="category-item" href="#"> &raquo; ${categoriesList[i]}</div>`
+        }
+        // console.log(categoriesHTML);
+        return categoriesHTML;
+    }
 
-// export { Categories }
+
+    generateHTML() {
+        return `<div class='aside-container aside-categories'>
+                    <h4>${this.categoriesSection.title}</h4>
+                    <div class="categories">
+                         ${this.generateCategoriesListHTML()}
+                    </div>
+                    </div>`;
+
+                
+    }
+
+}
+
+export { Categories }

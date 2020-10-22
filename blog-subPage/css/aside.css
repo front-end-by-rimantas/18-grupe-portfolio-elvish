@@ -30,13 +30,15 @@
             position: relative;
         }
 
-        .aside-search i{
-            font-size: 22px;
-            line-height: 40px;
-            color: grey;
-            cursor: pointer;
+        .aside-search .fa {
+            padding: 10px;
+            font-size: 20px;
             position: absolute;
-            right: 5px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: grey;
         }
 
 

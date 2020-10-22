@@ -1,8 +1,8 @@
 header{
     height: 70px;
-    background-color: transparent;
+    background-color: black;
     padding: 20px 50px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,18 +83,17 @@ header nav{
 }
 
 header.visible{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: black;
 }
 
-    .header .visible{
+    header .visible{
         display: block;
         text-align: center;
         position: fixed;
         left: 0;
         right: 0;
         top: 70px;
-        background-color: rgba(0, 0, 0, 0.8);
-        transition: all 0.5s;
+        background-color: black;
     }
 
     header.container.scroll .visible{
@@ -110,7 +109,7 @@ header.visible{
     header nav.visible >.nav-item{
         display:block;
         float: none;
-        margin: 4px 5px;
+        margin: 12px 5px;
     }
 
     nav.visible > .nav-item:hover::after{
@@ -120,6 +119,8 @@ header.visible{
     header nav > a::after {
         display: none;
     }
+
+    
 
 
 }

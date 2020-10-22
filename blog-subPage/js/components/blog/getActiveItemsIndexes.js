@@ -9,8 +9,9 @@ function getActiveBlogItemsIndexes(blogData) {
             activeBlogItemsIndexes.push(i)
         } 
     }
-    
+
     return activeBlogItemsIndexes;
+    
     
 }
 
