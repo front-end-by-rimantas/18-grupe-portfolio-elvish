@@ -30,11 +30,11 @@ class Gallery {
 
     render() {
         const HTML = `
-                    <div class="filter row">FILTER</div>
-                    <div class="images row">IMAGES</div>`;
+                    <div class="filter-menu col-12">FILTER</div>
+                    <div class="images col-4">IMAGES</div>`;
 
         this.DOM.innerHTML = HTML;
-        this.DOMfilter = this.DOM.querySelector('.filter');
+        this.DOMfilter = this.DOM.querySelector('.filter-menu');
         this.DOMimages = this.DOM.querySelector('.images');
 
         this.renderImages();
@@ -47,7 +47,7 @@ class Gallery {
         for (let i=0; i<this.params.images.length; i++) {
             const project = this.params.images[i];
             HTML +=`
-                <div class="item col-4">
+                <div class="gallery-item">
                     <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
                     <div class="text">
                         <h3>${project.title}</h3>
@@ -81,12 +81,13 @@ class Gallery {
                     }
             }
         }
-        console.log(uniqueTags);
-        let HTML = `<div class="filterItem active">All</div>`;
+        let HTML = `<div class="filter-item active">All</div>`;
         
         
         for (let i=0; i<uniqueTags.length; i++) {
-            HTML += `<div class="filterItem">${uniqueTags[i]}</div>`;
+            HTML += 
+                `<span class="filter-menu-star">&#65121</span>
+                 <div class="filter-item">${uniqueTags[i]}</div>`;
         }
         
         this.DOMfilter.innerHTML = HTML;
