@@ -1,4 +1,3 @@
-import headerFixes from "./headerFixes.js"
 function headerEffects () {
     window.addEventListener( "scroll", function()  { 
         let header = document.querySelector ("header");
@@ -15,7 +14,6 @@ function headerEffects () {
             burgerArray[i].style.background="white";
           }
         }
-        headerFixes ();
         })
       
 }

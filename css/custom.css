@@ -36,12 +36,12 @@ header {
     z-index: 9999999;
     transition: 0.5s;
 }
-.header-container {
-    width: 95%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-}
+        .header-container {
+            width: 95%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
 .sticky {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     background-color: white;
@@ -51,16 +51,16 @@ header {
     right: 0;
     animation: headOpc 1s;
 }
-    .sticky .navigation a li, .sticky .logo-container h1 {
-        color: black;
-    }
+        .sticky .navigation a li, .sticky .logo-container h1 {
+            color: black;
+        }
 
-    .sticky .mobile-navigation .mob-nav-items {
-        color: black;
-    }
-    .sticky .mobile-navigation {
-        background: white;
-    }
+        .sticky .mobile-navigation .mob-nav-items {
+            color: black;
+        }
+        .sticky .mobile-navigation {
+            background: white;
+        }
 @keyframes headOpc {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -72,68 +72,66 @@ header {
     font-weight: 400;
     cursor: pointer;
 }
-.logo-container > h1 {
-    color: white;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 32px;
-}
+    .logo-container > h1 {
+        color: white;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 32px;
+    }
 .navigation {
     float: right;
     height: 100%;
     font-size: 16px;
     font-weight: 600;
 }
-.navigation a {
-    height: 100%;
-    display: table;
-    float: left;
-    padding: 0 20px;
-    text-decoration: none;
-}
-
-.navigation a li {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    color: white;
-    position: relative;
-}
-.navigation a li:hover:before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    background: white;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    left: calc(50% - 4px);
-}
-.sticky .navigation a li:hover::before {
-    background: black;
-}
-.navigation .single-dot li::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    background: white;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    left: calc(50% - 4px);
-}
-.sticky .navigation .single-dot li::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    background: black;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    left: calc(50% - 4px);
-}
-
+    .navigation a {
+        height: 100%;
+        display: table;
+        float: left;
+        padding: 0 20px;
+        text-decoration: none;
+    }
+        .navigation a li {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            color: white;
+            position: relative;
+        }
+            .navigation a li:hover:before {
+                content: "";
+                position: absolute;
+                top: 60px;
+                background: white;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                left: calc(50% - 4px);
+            }
+            .sticky .navigation a li:hover::before {
+                background: black;
+            }
+            .navigation .single-dot li::before {
+                content: "";
+                position: absolute;
+                top: 60px;
+                background: white;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                left: calc(50% - 4px);
+            }
+            .sticky .navigation .single-dot li::before {
+                content: "";
+                position: absolute;
+                top: 60px;
+                background: black;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                left: calc(50% - 4px);
+            }
 .header-sandwhich {
     position: absolute;
     right: 15px;
@@ -145,37 +143,37 @@ header {
     z-index: 99999;
     transition: 0.5s;
 }
-.sandwhcih-icon {
-    width: 17px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    position: absolute;
-    right: 53px;
-    top: 6px;
-    transition: 0.4s;
-}
-.sandwhcih-icon1 {
-    content: "";
-    width: 17px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    top: -1px;
-    float: right;
-    position: absolute;
-    transition: 0.4s;
-}
-.sandwhcih-icon2 {
-    content: "";
-    width: 17px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    top: 13px;
-    position: absolute;
-    transition: 0.4s;
-}
+    .sandwhcih-icon {
+        width: 17px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        position: absolute;
+        right: 53px;
+        top: 6px;
+        transition: 0.4s;
+    }
+    .sandwhcih-icon1 {
+        content: "";
+        width: 17px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        top: -1px;
+        float: right;
+        position: absolute;
+        transition: 0.4s;
+    }
+    .sandwhcih-icon2 {
+        content: "";
+        width: 17px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        top: 13px;
+        position: absolute;
+        transition: 0.4s;
+    }
 
 .change .sandwhcih-icon {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
@@ -198,26 +196,26 @@ header {
     animation: mobileSlide 1s;
     display: none;
 } 
-.mob-nav-items {
-    padding: 20px 20px;
-    color: white;
-    cursor: pointer;
-    width: 20%;
-    padding: 15px 40px;
-    transition: 2s;
-    animation: mobNavItems 2s;
-    position: relative;
-}
-.mobile-navigation .mob-nav-items:hover:before {
-    content: "";
-    position: absolute;
-    top: 23.5px;
-    background: black;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    left: 153px;
-}
+    .mob-nav-items {
+        padding: 20px 20px;
+        color: white;
+        cursor: pointer;
+        width: 20%;
+        padding: 15px 40px;
+        transition: 2s;
+        animation: mobNavItems 2s;
+        position: relative;
+    }
+    .mobile-navigation .mob-nav-items:hover:before {
+        content: "";
+        position: absolute;
+        top: 23.5px;
+        background: black;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        left: 153px;
+    }
 @keyframes mobNavItems {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -386,6 +384,11 @@ header {
     font-weight: 300;
     line-height: 1.5;
     z-index: 99999;
+}
+.hero-btn:hover {
+    background: white;
+    transition: 0.5s;
+    color: black;
 }
 .rows {
     margin-bottom: 30px;

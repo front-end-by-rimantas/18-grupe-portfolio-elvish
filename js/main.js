@@ -1,7 +1,6 @@
 // header import
 import headerEffect from "./components/header/headerJS.js";
-import sandwich from "./components/hero/heroSandwich.js"
-import headerFixes from "./components/header/headerFixes.js"
+import sandwich from "./components/header/headerBurger.js"
 import mobileNav from "./components/header/mobileNavigation.js"
 import scrollToTop from "./components/back-to-top/scrollToTop.js"
 import sectionHeights from "./data/section-heigths.js"
@@ -52,9 +51,6 @@ import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 headerEffect();
 scrollToTop();
 mobileNav();
-headerFixes();
-// headerFixes();
-// sandwich();
 // hero logic
 // change();
 
