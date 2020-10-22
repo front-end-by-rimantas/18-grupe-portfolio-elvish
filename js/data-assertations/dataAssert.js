@@ -4,10 +4,7 @@ import Servicelist from "../data/services.js"
 import  bar from "../data/dataBar.js"
 import sectionHeights from "../data/section-heigths.js";
 import statisticsData from "../data/statistics.js"
-
-
 function validateData () {
-
    function isEduDataValid (){
         for ( let i=0;i<eduData.length;i++) {
             console.assert(typeof(eduData[i].year) =='string', `Faile:../data/data-education.js masyve, elemento nr:eduData[${i}].year reiksme turi buti String tipo. Gauta: ${typeof(eduData[i].year)}`)
@@ -18,9 +15,6 @@ function validateData () {
                                              
         }
     }
-   
-    isEduDataValid ();
-   
     function isServicesDataValid () {
         for ( let i=0;i<Servicelist.length;i++) {
             console.assert(typeof(Servicelist[i].icon) =='string', `Faile:../data/services.js masyve, elemento nr: list[${i}].icon reiksme turi buti String tipo. Gauta: ${typeof(Servicelist[i].icon)}`)
@@ -28,8 +22,6 @@ function validateData () {
             console.assert(typeof(Servicelist[i].paragraph) =='string', `Faile:../data/services.js masyve, elemento nr: list[${i}].paragraph reiksme turi buti String tipo. Gauta: ${typeof(Servicelist[i].paragraph)}`)
         }
     }
-isServicesDataValid();
-
     function isBarDataValid () {
         for ( let i=0;i<bar.length;i++) {
             console.assert(typeof(bar[i].label) =='string', `Faile:../data/dataBar.js masyve, elemento nr: bar[${i}].label reiksme turi buti String tipo. Gauta: ${typeof(bar[i].label)}`)
@@ -37,8 +29,6 @@ isServicesDataValid();
         }
       
     }
-    isBarDataValid ();
-
     function isSectionHeightsDataValid () {
         const navigationLinks = document.querySelectorAll(".nav-links");
         const navArray = Array.from(navigationLinks);
@@ -47,8 +37,6 @@ isServicesDataValid();
             console.assert(navArray[i].innerHTML.toLowerCase().includes(sectionHeights[i].name) , `Faile ../data/sectionHeigths.js masyve, elemto nr: sectionHeights[${i}].name nesutampa su navigaciniu elementu ${navArray[i].innerHTML}. Gauta: ${sectionHeights[i].name}`)
         }
     }
-    isSectionHeightsDataValid();
-
     function isStatisticsDataValid () {
 
             for ( let i=0;i<statisticsData.length;i++) {
@@ -58,10 +46,9 @@ isServicesDataValid();
     
     }
     isStatisticsDataValid();
-
-
-
-
+    isSectionHeightsDataValid();
+    isBarDataValid ();
+    isServicesDataValid();
+    isEduDataValid ();
 }
-
 export default validateData;
