@@ -3,6 +3,8 @@ function scrollFromTop () {
     const navigationLinks = document.querySelectorAll(".nav-links");
     const navArray = Array.from(navigationLinks);
     const elvish=document.querySelector(".logo-container");
+    // const mouse = document.querySelector("..hero-mouse");
+    // mouse.addEventListener('click' function (){window.scrollTo(0)})
     elvish.addEventListener('click',function(){window.scrollTo(0,0) })
     for ( let i=0; i < navArray.length-1;i++) {
         window.addEventListener('scroll', function (){

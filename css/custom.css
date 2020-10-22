@@ -252,6 +252,9 @@ header {
         .mobile-navigation .mob-nav-items:hover:before {
             background-color: white;
         }
+        .sticky .mobile-navigation .mob-nav-items:hover:before {
+            background-color: black;
+        }
 }
 @media ( min-width:981px) {
     .mobile-navigation {
@@ -403,6 +406,7 @@ canvas {
     height: 57px;
     border: 2px solid white;
     position: absolute;
+    z-index: 9999999;
     right: 50%;
     left: 48.5%;
     border-radius: 30px;
