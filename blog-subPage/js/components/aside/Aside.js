@@ -1,5 +1,6 @@
 import { Search } from './Search.js'
 import { Categories } from './Categories.js'
+import { getActiveBlogItemsIndexes } from '../blog/getActiveItemsIndexes.js'
 
 class Aside{
     constructor (params){
