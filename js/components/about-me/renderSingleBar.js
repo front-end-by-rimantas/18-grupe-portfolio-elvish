@@ -11,5 +11,4 @@ function renderSingleBar(bar, i) {
                     </div>
             </div>`
 }
-
 export default renderSingleBar;
