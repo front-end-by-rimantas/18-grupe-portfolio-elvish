@@ -16,7 +16,6 @@ function sandwich ()
     sandwichIcon.classList.remove("change")
     return clickCount=0;
     }
-   headerFixes ();
 }
 sandwichIcon.addEventListener('click', sandwich)
 export default sandwich;
