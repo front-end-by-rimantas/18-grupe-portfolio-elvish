@@ -1107,7 +1107,6 @@ canvas {
 .contact-form > .form-row:nth-child(2) {
     width: calc((100%-10px) / 2);
     display: inline-block;
-    
 }
 .form-row > label {
     display: inline-block;
@@ -1200,11 +1199,6 @@ input.m-btn {
     .textAr:focus {
         border-color: #000;
     }
-    /* #message-error {
-        background-color: red;
-        padding: 20px;
-        position: absolute;
-    } */
 
 @media (max-width: 1000px) {
     .contact-form > .form-row:nth-child(1),
