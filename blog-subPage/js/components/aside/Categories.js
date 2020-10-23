@@ -2,40 +2,19 @@ class Categories {
     constructor(params) {
         this.categoriesSection = params.categoriesSection;
         this.blogData = params.blogData;
-
-        this.getActiveBlogItemsIndexes = params.getActiveBlogItemsIndexes;
-
-        // this.findActiveCategories()
-        // this.generateCategoriesListHTML()
+        this.categoriesList = params.categoriesList;
 
         this.generateHTML()
-        // console.log(this.generateHTML());
         
     }
 
-    findActiveCategories(){
-
-        let activeIndexes = this.getActiveBlogItemsIndexes (this.blogData);
-        let categoriesList = [];
-        for (let i = 0; i < activeIndexes.length; i++) {
-            const item = this.blogData.blogItems[activeIndexes[i]].category;
-            if (!categoriesList.includes(item)) {
-                categoriesList.push(item)
-            }
-        }
-        return categoriesList
-    }
-
     generateCategoriesListHTML(){
-        let categoriesList = this.findActiveCategories()
         let categoriesHTML = '';
-        for (let i = 0; i < categoriesList.length; i++) {
-            categoriesHTML += `<div class="category-item" href="#"> &raquo; ${categoriesList[i]}</div>`
+        for (let i = 0; i < this.categoriesList.length; i++) {
+            categoriesHTML += `<div class="categories-item"> &raquo; ${this.categoriesList[i]}</div>`
         }
-        // console.log(categoriesHTML);
         return categoriesHTML;
     }
-
 
     generateHTML() {
         return `<div class='aside-container aside-categories'>
@@ -44,8 +23,6 @@ class Categories {
                          ${this.generateCategoriesListHTML()}
                     </div>
                     </div>`;
-
-                
     }
 
 }

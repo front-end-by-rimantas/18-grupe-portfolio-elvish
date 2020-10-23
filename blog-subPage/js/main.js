@@ -13,6 +13,7 @@ import { renderBlog } from './components/blog/renderBlog.js';
 import { renderPagination } from './components/blog/renderPagination.js'
 import { prevNext } from './components/blog/prevNextButtons.js'
 import { Aside } from './components/aside/Aside.js'
+import { Footer } from './components/footer/Footer.js'
 
 
 //Header
@@ -31,8 +32,8 @@ new Aside ({
     blogData: blogData
 });
 
-// ,
-//     getActiveBlogItemsIndexes: getActiveBlogItemsIndexes
+//Header
+new Footer();
 
 
 

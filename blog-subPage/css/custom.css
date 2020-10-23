@@ -73,7 +73,8 @@ h1, h2, h3, h5 {
 
                 }
 
-                .blog > .blogItem >h4{
+                .blog > .blogItem > h4{
+                    padding-top: 10px;
                     font-size: 20px;
                     color: black;
                 }
@@ -90,7 +91,7 @@ h1, h2, h3, h5 {
                 }
 
                 .blog > .blogItem > .blogText{
-
+                    line-height: 1.5;
                 }
 
                 .blog > .blogItem > .readMore{
@@ -102,7 +103,7 @@ h1, h2, h3, h5 {
 
         main .blog-pages{
             text-align: center;
-            margin: 15px 0px;
+            margin: 50px 0px;
         }        
 
         /* Pagination links */

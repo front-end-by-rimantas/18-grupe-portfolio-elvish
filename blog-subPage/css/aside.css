@@ -11,6 +11,8 @@
             font-weight: 700;
         }
 
+
+/* SEARCH */
         .aside-search #search{
             padding: 10px 12px;
             border: none;
@@ -25,9 +27,13 @@
             outline: none;
         }
 
-        .form{
+        .aside-search .form{
             border: 1px solid #ced4da;
             position: relative;
+        }
+
+        .aside-search input{
+            width: 100%;
         }
 
         .aside-search .fa {
@@ -39,6 +45,84 @@
             transform: translateY(-50%);
             cursor: pointer;
             color: grey;
+        }
+
+
+/* CATEGORIES */
+        .categories-item{
+            color: grey;
+            padding: 5px 20px 5px 0px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+
+/* RECENT POSTS */
+            .aside-recent-posts .recent-post-item {
+            padding: 15px;
+            width: 100%;
+            /* position: relative; */
+        }
+            
+            .aside-recent-posts .recent-post-item >*{
+                display: inline-block;
+            }
+
+        
+            .aside-recent-posts .recent-post-item + .recent-post-item{
+                border-top: 1px solid rgba(238, 238, 238, .7);
+            }
+
+            .aside-recent-posts .recent-post-item img{
+                width: 65px;
+                border-radius: 0.25rem;  
+                cursor: pointer;      
+                margin-right:10px;        
+            }
+
+            .aside-recent-posts .recent-post-item-texts > *{
+                line-height: 2;
+                /* position: absolute;
+                top: 15px;
+                bottom: 15px; */
+            }
+
+            .aside-recent-posts .recent-post-item-texts{
+                width: calc (100% - 65px);
+            }
+
+            .aside-recent-posts .recent-post-item-texts h4{
+                font-size: 14px;
+                font-weight: 700;
+                cursor: pointer;     
+                text-transform: none;
+                margin: 0px;
+                margin-top: -6px;
+
+            }
+
+            .aside-recent-posts .recent-post-item-texts p{
+                font-size: 12px;
+                color: grey;
+                /* position: absolute;
+                bottom: 0px; */
+            }
+
+
+/* TAGS */
+        .aside-tags .tags > *{
+            display: inline-block;
+            background-color: #f8f9fa;
+            border: 1px solid #e7e7e7;
+            border-radius: 2px;
+            text-transform: uppercase;
+            color: #9c9c9c;
+            font-size: 9px;
+            letter-spacing: 1px;
+            padding: 7px 10px;
+            margin: 5px 10px 5px 0px;
+            cursor: pointer;
         }
 
 
