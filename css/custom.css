@@ -953,7 +953,33 @@ canvas {
     }
 
 /* trusties */
-
+.trusties-section {
+    background-color:#F8F9FA;
+    padding-bottom: 48px;
+}
+.trusties-img {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.trustie-avatar {
+    width: 160px;
+    height: 130px;
+    margin-right: 35px;
+}
+.trustie-avatar > img {
+    width: 160px;
+    height: 130px;
+}
+@media (max-width:1050px) {
+    .trustie-avatar {
+        width: 100%;
+        height: 130px;
+        padding: 5px;
+    }
+    .trusties-img {display: block;}
+    .trustie-avatar:nth-child(1) {margin-top: 50px;}
+}
 /* subscribe */
 .subscribe-section > h2 {
     font-weight: normal;
