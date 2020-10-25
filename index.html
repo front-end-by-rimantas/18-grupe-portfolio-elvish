@@ -18,7 +18,7 @@
 
 <body>
     <!-- header -->
-    <div class="to-top">^</div>
+    <div class="to-top"><i class="fa fa-chevron-up"></i></div>
     <header class="container">
         <div class="row">
             <div class="header-container col-12">
@@ -84,15 +84,14 @@
                                <p>Download CV</p>
                            </div>
                         </div>
-                    </div>
-        
+                    </div> 
                     <div id="particles-js"> </div>
                 </div>
+                </div>
+                <div class="hero-bottom-for-mouse">
+                <div class="hero-mouse"></div>
             </div>
-            <div class="hero-bottom-for-mouse">
-            <div class="hero-mouse"></div>
-        </div>
-        </div>
+            </div>
             <!-- ______________________________________________________________________________________________________________________ -->
         </div>
     </div>
@@ -104,7 +103,7 @@
     </div>
     <div class="container">
         <div class="row aboutMe">
-            <div class="about-section col-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="about-section section-header col-12 col-lg-12 col-md-12 col-sm-12">
                 <h2><bold>About</bold> Me</h2>
                 <div class="line-break"><p class="star">&#42;</p></div>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
@@ -127,8 +126,8 @@
     <!-- services -->
     <div class="container bg-services">
         <div class="row servicesRow">
-            <div class="servicesStar col-12 col-lg-12 col-md-12 col-sm-12">
-                <h2>Our <strong>Services</strong></h2>
+            <div class="servicesStar section-header col-12 col-lg-12 col-md-12 col-sm-12">
+                <h2>Our <bold>Services</bold></h2>
                 <div class="line-break"><p class="star">&#42;</p></div>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             </div>
@@ -150,13 +149,14 @@
     </div>
     <!-- education -->
     <div class="container education section-padding">
-        <div class="row edu-top-section col-12 col-lg-12 col-md-12 col-sm-12">
-            <h2><bold>Education & Experience</bold></h2>
-            <div class="line-break"><p class="star">&#42;</p></div>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+        <div class="row edu-top-section">
+            <div class="section-header col-12 col-lg-12 col-md-12 col-sm-12">
+                <h2><bold>Education & Experience</bold></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+            </div>
         </div>    
         <div class="row edu-1"></div>
-        </div>
     </div>
      <!-- hire me -->
      <div class="container-fluid">
@@ -193,7 +193,7 @@
         <div class="row">
             <div class="clients col-12">
                 <div class="bg-overlay col-12"></div>
-                <div class="clients-texts col-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="clients-texts section-header col-12 col-lg-12 col-md-12 col-sm-12">
                     <h2>Our <bold>Clients</bold></h2>
                     <div class="line-break"><p class="star">&#42;</p></div>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
@@ -207,7 +207,7 @@
     <!-- trusties -->
     <div class="container trusties-section">
         <div class="row ">
-            <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="section-header col-12">
                 <h2>Trusted by <bold>Great people</bold></h2>
                 <div class="line-break"><p class="star">&#42;</p></div>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
@@ -232,22 +232,23 @@
     <!-- subscribe -->
     <div class='container'>
         <div class="row">
-            <div class="subscribe-section col-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="subscribe-section section-header col-12 col-lg-12 col-md-12 col-sm-12">
                 <h2><bold>Subscribe</bold> to newsletter</h2>
                 <div class="line-break"><p class="star">&#42;</p></div>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
             </div>
             <div class="subscribe-form col-12 col-lg-12 col-md-12 col-sm-12">
-            <form id ="subscribeform" action="#" NoValidate>
-                <input class="subscribe-input" id="subscribe-email" type="email" placeholder="Email">
-                <div class="subscribe-error"></div>
-                <div class="subscribe-errorIcon">!</div>
-                <button class="subscribe-submit" id="subscribe-click" type="submit"> Subscribe</button>
-              </form>
+                <form id ="subscribeform" action="#" NoValidate>
+                    <div class='subscribe-line'>
+                        <input class="subscribe-input" id="subscribe-email" type="email" placeholder="Email">
+                        <button class="subscribe-submit" id="subscribe-click" type="submit">Subscribe</button>  
+                    </div>
+                    <div class="subscribe-error"></div>
+                    <div class="subscribe-errorIcon">!</div>
+                </form>
             </div>
+        </div>
     </div>
-</div>
-</div>
     <!-- blog -->
     <div class="container">
         <div class="row col-12">
@@ -261,19 +262,20 @@
         </div>
     </div>
     <!-- footer -->
-    <footer class="container col-12">
+    <footer class="container">
         <div class="row">
-                <div class="footer-container col-12">
-                    <div class="copyright col-6 col-lg-12">
-                            <p>2018 © Elvish. Design by ThemesBoss.</p>
-                    </div>
-                    <div class="footer-social-icons col-6 col-lg-12">
-                            <a id="footer-socials" href="#" target="blink"  class="fa fa-facebook"></a >
-                            <a id="footer-socials" href="#" target="blink" class="fa fa-twitter"></a >
-                            <a id="footer-socials" href="#" target="blink" class="fa fa-linkedin"></a >
-                            <a id="footer-socials"  href="#" target="blink" class="fa fa-instagram"></a >
-                    </div>
+            <div class="footer col-12">
+                <div class="copyright">
+                    <p>2018 © Elvish. Design by ThemesBoss.</p>
                 </div>
+                <div class="footer-social-icons col-6 col-lg-12">
+                    <a id="footer-socials" href="#" target="blink"  class="fa fa-facebook"></a >
+                    <a id="footer-socials" href="#" target="blink" class="fa fa-twitter"></a >
+                    <a id="footer-socials" href="#" target="blink" class="fa fa-linkedin"></a >
+                    <a id="footer-socials"  href="#" target="blink" class="fa fa-instagram"></a >
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/particles.js"></script>
