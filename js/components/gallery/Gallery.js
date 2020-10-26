@@ -41,7 +41,7 @@ class Gallery {
 
         this.renderImages();
         this.renderFilter();
-        // this.renderGallery();
+        this.renderGallery();
     }
 
     renderImages() {
@@ -95,37 +95,49 @@ class Gallery {
         for (let i=0; i<uniqueTags.length; i++) {
             HTML += 
                 `<span class="filter-menu-star">&#65121</span>
-                 <div class="filter-item">${uniqueTags[i]}</div>`;
+                 <div class="filter-item" value="${uniqueTags[i]}">${uniqueTags[i]}</div>`;
         }
         
         this.DOMfilter.innerHTML = HTML;
     }
 
-    // renderGallery() {
-    //     const filterDOM = document.querySelector('.filter-menu');
-    //     filterDOM.innerHTML = HTML;
+    renderGallery() {
 
-    //     on('.filter-menu .filter-item', 'click', (event) => {
-    //         const el = event.target;
-    //         console.log(el);
-    //         const filter = el.dataset.filter;
+        const filterDOM = document.querySelectorAll('.filter-item');
+        let tempThis = this;
+        
+        for(let i=0; i<filterDOM.length; i++) {
+            let newImages = [];
+            let newImagesTempThis = [];
 
-    //         let allFilter = document.querySelectorAll('.filter-list-item')
-    //         allFilter.forEach(filter => {
-    //         filter.classList.remove('active')
+            filterDOM[i].addEventListener('click', function(e) {
 
-    //         })
+                filterDOM.forEach(filter => {
+                filter.classList.remove('active')
+                })
+                
+                filterDOM[i].classList.add('active');
 
-    //         el.classList.add('active')
+                if(filterDOM[i].getAttribute('value') === null) {
+                    tempThis.renderImages();
+                    return;
+                }
 
-    //         if (filter === 'all') {
-    //             onFilterChange();
-    //         } else {
-    //             onFilterChange(filter);
-    //         }
+                    for(let n=0; n<tempThis.params.images.length; n++) {
+                        newImagesTempThis.push(tempThis.params.images[n]);//duplikatas visu images
+                        if (tempThis.params.images[n].filter.includes(filterDOM[i].getAttribute('value'))) {
+                            newImages.push(tempThis.params.images[n]);
+                        }
+            }
 
-    //     })
-    
+                tempThis.params.images=newImages;
+                tempThis.renderImages();
+                tempThis.params.images=newImagesTempThis;
+                newImagesTempThis=[];
+                newImages = [];
+                });
+        }
+    }
 }
 
 export { Gallery }
