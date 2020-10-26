@@ -351,9 +351,9 @@ header.sticky a {
     flex-wrap: wrap;
     margin:0 auto;
     height: 50%;
-    margin-top: 25vh;
-
+    margin-top: 20vh;
 }
+
 .hero-container-center {
     width: 95%;
     text-align: center;
@@ -387,11 +387,11 @@ header.sticky a {
     color: #fff;
     letter-spacing: 1px;
     font-size: 15px;
-    width: 160px;
-    height: 50px;
+    /* width: 160px;
+    height: 50px; */
     display: inline-block;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
     font-weight: 300;
     line-height: 1.5;
@@ -416,11 +416,11 @@ canvas {
     height: 57px;
     border: 2px solid white;
     position: absolute;
-    right: 50%;
-    left: 48.5%;
+    right: 49%;
+    left: 49%;
     border-radius: 30px;
     transform: translate(-50%, -50%);
-    bottom: 30px;
+    bottom: 85px;
     animation: mouse 2s infinite;
     cursor: pointer;
 }
@@ -440,7 +440,7 @@ canvas {
     width: 1px;
     height: 5px;
     position: absolute;
-    right: 38%;
+    right: 35%;
     bottom: 9px;
     transform: rotate(179deg);
     font-size: 14px;
@@ -448,6 +448,7 @@ canvas {
 .hero-bottom-for-mouse {
     width: 100%;
 }
+
 /* -------------------------------------- Hero animacija-------------------------------------------- */
 @keyframes mouse {
     0%, 20%, 53%, 80%, 100% {transform: translateZ(0);
@@ -474,7 +475,10 @@ canvas {
 
 /* --------------------------------------------animacijos pabaiga-----------------------------------
 ------------------------------------------------Hero resposiviness------------------------------------ */
-@media (max-width:750px) {
+@media (max-width:880px) {
+    .changing-text {
+        font-size: 50px
+    }
     .hero-container {
         margin-top: 15vh;
        }
@@ -489,6 +493,57 @@ canvas {
     }
     .hero-mouse {
         bottom: 8px;
+    }
+    .hero-btn{
+        padding: 7px 15px;
+        border-radius: 30px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        border: 1.5px solid white;
+        display: inline-block;
+        text-align: center;
+        margin-top: 0px;
+        line-height: 1.5;
+    }
+
+    .hero-mouse{
+        bottom: 70px;
+        height: 35px;
+        width: 20px;
+        border: 1.5px solid white;
+    }
+    .hero-mouse:after{
+        font-size: 10px;
+        right: 33%;
+        bottom: 4px;
+
+    }
+}
+
+@media (max-width:630px) {
+    .changing-text {
+        font-size: 35px
+    }
+       .rows > h1 {
+        font-size: 35px;
+    }
+    .hero-btn{
+        margin-top: 0px;
+    }
+
+    .hero-mouse{
+        bottom: 65px;
+        height: 35px;
+        width: 20px;
+        border: 1.5px solid white;
+        right: 48%;
+        left: 48%;
+    }
+    .hero-mouse:after{
+        font-size: 10px;
+        right: 32%;
+        bottom: 4px;
+
     }
 }
 /* -------------------------------------------------end of resposiviness------------------------------------- */
@@ -508,11 +563,17 @@ canvas {
         }
 
         #about-me-curve {
-            z-index: 1;
+            z-index: 10;
             height: 100%;
             width: 100%;
         }
     
+
+        .aboutWhiteGap{
+            margin-top: -100px;
+            z-index: 20;
+
+        }
     .row.aboutMe > .hello-section {
         padding-bottom: 30px;
     }
@@ -614,7 +675,7 @@ canvas {
                 }
                 @media (max-width: 768px) {
                     .curve-box-container {
-                        margin-top: -100px;
+                        margin-top: -130px;
                     }
                 }
 
@@ -693,7 +754,7 @@ canvas {
 
     .statistics-item{
         width:253px;
-        margin:40px 15px;
+        margin:15px 15px;
         display: inline-block;
         border: 1px dashed #b9b9b9;
         border-radius: 0.25rem;
@@ -777,7 +838,7 @@ canvas {
     } */
     .edu {
         border: 1px solid  #e7e7e7;
-        margin: 24px 30px 0px 50px;
+        margin: 24px 0px 0px 20px;
         padding: 20px;
         text-align: left;
         position: relative;
@@ -920,7 +981,7 @@ canvas {
 /* our clients */
     .clients{
         width:100%;
-        padding: 60px;
+        padding: 15px;
         background-image: url(../img/background/background-client.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -1102,6 +1163,13 @@ canvas {
     display: none;
 }
 
+@media (max-width:900px) {
+    .subscribe-line{
+        width: 100%;
+
+    }
+}
+
 /* @media (max-width:1300px) {
     .subscribe-submit[type="submit"] {
         right: 200px;
@@ -1159,9 +1227,9 @@ footer {
     /* transition: all 0.5s; */
     width: 37px;
     height: 37px;
-    line-height: 37px;
+    line-height: 33px;
     text-align: center;
-    margin-right:10px;
+    /* margin-right:10px; */
     color: #868e96;
     margin-right: 20px;
 }

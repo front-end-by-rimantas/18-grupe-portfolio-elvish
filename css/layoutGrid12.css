@@ -248,7 +248,7 @@ body {
 }
 @media (max-width: 700px) {
     .container {
-        grid-template-columns: 15px 1fr 15px;
+        grid-template-columns: 30px 1fr 30px;
     }
     .container-fluid > .row,
     .container > .row {
