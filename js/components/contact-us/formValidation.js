@@ -39,7 +39,7 @@ function contactFormValidation() {
 
         if (emailValue === '' ) {
             setErrorFor(email, 'Email cannot be blank');
-        } else if (email != emailFormat) {
+        } else if (!emailValue.match(emailFormat)) {
             setErrorFor(email, "Please enter valid email");
         } else {
             setSuccessFor(email);
