@@ -841,8 +841,8 @@ canvas {
         content: '';
         border-left: 1px solid #e7e7e7;
         position: absolute;
-        top: -20px;
-        bottom: -17px;
+        top: -30px;
+        bottom: -27px;
         left: -20px;
     }
     .edu::after {
@@ -856,7 +856,6 @@ canvas {
         top: 20px;
         left: -28px;
      }
-
 
 /* hire me */
 .hire-me-row {
