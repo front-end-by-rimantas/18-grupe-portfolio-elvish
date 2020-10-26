@@ -371,7 +371,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: url(../img/background/background-hero1.jpg);  /* sita nuotrauka pakeisti kai gausim final img kataloga */
+    background-image: url(../img/background/background-hero1.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -434,8 +434,6 @@ header {
     color: #fff;
     letter-spacing: 1px;
     font-size: 15px;
-    /* width: 160px;
-    height: 50px; */
     display: inline-block;
     text-align: center;
     margin-top: 20px;
@@ -506,14 +504,6 @@ canvas {
 @keyframes mouse {
     0%, 20%, 53%, 80%, 100% {transform: translateZ(0);
         animation-timing-function: cubic-bezier(.215,.61,.355,1);}
-    /* 0%   {bottom: 30px;}
-  
-    30% {bottom: 10px;}
-    50% 
-    57%  {bottom:0px}
-    64%  
-    100%  */
-  
   40%,43% {
     animation-timing-function: cubic-bezier(.755,.05,.855,.06);
     transform: translate3d(0,-30px,0);
