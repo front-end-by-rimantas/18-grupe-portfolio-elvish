@@ -979,7 +979,7 @@ canvas {
 
 
 /* our clients */
-    .clients{
+    /* .clients{
         width:100%;
         padding: 15px;
         background-image: url(../img/background/background-client.jpg);
@@ -996,10 +996,10 @@ canvas {
         position: absolute;
         z-index: -1;
     }
-
+*/
     .clients-texts > p{
         color: white;
-    }
+    } 
 
         /* .clients-texts{
             display: inline-block;
@@ -1018,14 +1018,14 @@ canvas {
                 font-size: 18px;
             }
  */
-            .clients .line-break::before, 
+            /* .clients .line-break::before, 
             .clients .line-break::after {
                 border-top: 1px solid white; 
             }  
             
-        .clients-pagination{
+        .testimonials-carousel{
             padding: 30px;
-        }
+        } */
 
     /* @media (max-width: 690px) {
         .clients{ */
