@@ -53,17 +53,15 @@ class Gallery {
             HTML +=`
                 <div class="gallery-item col-4 col-sm-12">
                     <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
-                
-                    <div id="myModal" class="modal">
-                        <span class="closeImage">&times;</span>
-                        <img class="modal-content" id="imgModal">
-                    </div>
-
                     <div class="gallery-image-overlay"></div>
                     <div class="text">
                         <h3>${project.title}</h3>
                         <h4>${project.content}</h4>
                     </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <span class="closeImage">&times;</span>
+                    <img class="modal-content" id="imgModal">
                 </div>`;
         }
 
@@ -108,7 +106,7 @@ class Gallery {
         
         for(let i=0; i<filterDOM.length; i++) {
             let newImages = [];
-            let newImagesTempThis = [];
+            let newImagesDuplicateList = [];
 
             filterDOM[i].addEventListener('click', function(e) {
 
@@ -124,7 +122,7 @@ class Gallery {
                 }
 
                     for(let n=0; n<tempThis.params.images.length; n++) {
-                        newImagesTempThis.push(tempThis.params.images[n]);//duplikatas visu images
+                        newImagesDuplicateList.push(tempThis.params.images[n]);
                         if (tempThis.params.images[n].filter.includes(filterDOM[i].getAttribute('value'))) {
                             newImages.push(tempThis.params.images[n]);
                         }
@@ -132,8 +130,8 @@ class Gallery {
 
                 tempThis.params.images=newImages;
                 tempThis.renderImages();
-                tempThis.params.images=newImagesTempThis;
-                newImagesTempThis=[];
+                tempThis.params.images=newImagesDuplicateList;
+                newImagesDuplicateList=[];
                 newImages = [];
                 });
         }
