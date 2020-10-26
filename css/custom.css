@@ -545,30 +545,16 @@ canvas {
                 background-color: lightgrey;
                 border-radius: 2px;
             }
-                .progressBar > .bottom > .progress {
+            
+                .progressBar > .bottom > .bar {
                     display: block;
+                    width: 100%;
                     height: 100%;
-                    background-color: transparent;
+                    background-color: black;
                     border-radius: 2px;
+                    color:transparent;
                 }
-                    .progressBar > .bottom > .progress > .bar {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        background-color: black;
-                        border-radius: 2px;
-                        animation-name: loading;
-                        animation-duration: 2s;
-                    }
-
-                @keyframes loading{
-                    0% {
-                        width: 0%;
-                    }
-                    100% {
-                        width: 100%;
-                    }
-                }
+               
 
                 @media (min-width: 1200px) {
                     .curve-box-container {
@@ -852,7 +838,7 @@ canvas {
                 font-size: 14px;
                 padding: 5px 15px;
                 margin: 0 10px;
-                border-radius: 10px;
+                border-radius: 5px;
                 text-transform: capitalize;
                 cursor: pointer;
             }
@@ -868,7 +854,7 @@ canvas {
                 .filter-menu > .filter-item.active {
                     background-color: black;
                     transition: 0.6s;
-                    border-radius: 10px;
+                    border-radius: 5px;
                     color: white;
                     cursor: pointer;
                 }
@@ -878,47 +864,91 @@ canvas {
         background-size: 100%;
         overflow: hidden;
         position: relative;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
         .gallery-item > img {
             display: inline-block;
             width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 7px;
         }
 
             .gallery-item:hover > img{
+                transition: all 0.2s ease-in-out; 
                 transform: scale(1.1);
             }
 
+        .modal {
+            display: none;
+            position: fixed;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            z-index: 55;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+            position: relative;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+            span.closeImage {
+                position: absolute;
+                top: 50px;
+                right: 200px;
+                color: #6c757d;
+                font-size: 40px;
+                transition: 0.3s;
+            }
+
+            span.closeImage:hover,
+            span.closeImage:focus {
+                color: #fff;
+                text-decoration: none;
+            }
+
         .gallery-image-overlay {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
             opacity: 0;
-            transition: opacity 200ms, transform 200ms;
+            transition: all 150ms, ease-in-out 200ms;
             position: absolute;
-            top: 8px;
-            bottom: 8px;
-            right: 8px;
-            left: 8px;
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
             border-radius: 5px;
-            transform: scale(0.4); 
+            transform: scale(0.4);
         }
 
             .gallery-item:hover > .gallery-image-overlay {
                 opacity: 1;
                 transform: scale(1);
+                transition-delay: 0.2s;
+
             }
 
         .gallery-item > .text {
             display: none;
             color: white;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left:0 ;
-            margin: 30px 30px 0 0;
+            width: auto;
+            top: 40px;
+            right: 40px;
         }
 
             .gallery-item:hover > .text {
@@ -927,15 +957,15 @@ canvas {
                 align-items: flex-end;
             }
 
-            .gallery-item > .text h3,
-            .gallery-item > .text h4 {
+            .gallery-item > .text > h3,
+            .gallery-item > .text > h4 {
                 margin: 0;
                 font-size: 16px;
                 line-height: 25px;
                 position: relative;
-                overflow: hidden;
+                /* overflow: hidden; */
             }
-            .gallery-item > .text h4 {
+            .gallery-item > .text > h4 {
                 font-size: 13px;
                 color: #d5d7da;
             }
@@ -946,6 +976,9 @@ canvas {
                     background-color: white;
                     width: 100%;
                     position: absolute;
+                }
+
+                .gallery-item > .text > h3::after {
                     top: 4px;
                     bottom: 4px;
                     right: -100%;
@@ -956,15 +989,16 @@ canvas {
                 .gallery-item > .text > h4::after {
                     left: -100%;
                     transition: left 700ms ease-in-out;
+                    transition-delay: 0.5s;
                     top: 5px;
                     bottom: 5px;
                 }
 
-                .gallery-item:hover h3::after {
+                .gallery-item:hover > .text > h3::after {
                     right: 100%; 
                 }
 
-                .gallery-item:hover h4::after {
+                .gallery-item:hover > .text > h4::after {
                     left: 100%;
                 }
 

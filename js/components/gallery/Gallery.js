@@ -41,6 +41,7 @@ class Gallery {
 
         this.renderImages();
         this.renderFilter();
+        // this.renderGallery();
     }
 
     renderImages() {
@@ -48,9 +49,16 @@ class Gallery {
 
         for (let i=0; i<this.params.images.length; i++) {
             const project = this.params.images[i];
+
             HTML +=`
                 <div class="gallery-item col-4 col-sm-12">
                     <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
+                
+                    <div id="myModal" class="modal">
+                        <span class="closeImage">&times;</span>
+                        <img class="modal-content" id="imgModal">
+                    </div>
+
                     <div class="gallery-image-overlay"></div>
                     <div class="text">
                         <h3>${project.title}</h3>
@@ -72,20 +80,17 @@ class Gallery {
     
         }
 
-        console.log(array);
         const uniqueTags = [];
 
         for (let first of array) {
             for (let tag of first) {
-                console.log(tag);
-
-                    if (!uniqueTags.includes(tag)) {
-                        uniqueTags.push(tag)
-                    }
+                if (!uniqueTags.includes(tag)) {
+                    uniqueTags.push(tag)
+                }
             }
         }
+
         let HTML = `<div class="filter-item active">All</div>`;
-        
         
         for (let i=0; i<uniqueTags.length; i++) {
             HTML += 
@@ -94,10 +99,33 @@ class Gallery {
         }
         
         this.DOMfilter.innerHTML = HTML;
-        
     }
 
+    // renderGallery() {
+    //     const filterDOM = document.querySelector('.filter-menu');
+    //     filterDOM.innerHTML = HTML;
 
+    //     on('.filter-menu .filter-item', 'click', (event) => {
+    //         const el = event.target;
+    //         console.log(el);
+    //         const filter = el.dataset.filter;
+
+    //         let allFilter = document.querySelectorAll('.filter-list-item')
+    //         allFilter.forEach(filter => {
+    //         filter.classList.remove('active')
+
+    //         })
+
+    //         el.classList.add('active')
+
+    //         if (filter === 'all') {
+    //             onFilterChange();
+    //         } else {
+    //             onFilterChange(filter);
+    //         }
+
+    //     })
+    
 }
 
 export { Gallery }

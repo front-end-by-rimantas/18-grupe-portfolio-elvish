@@ -11,6 +11,7 @@ import heroTextTransform from "./components/hero/heroTextTransform.js";
 // about me import
 import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
+import progressBarLoad from './components/about-me/progressBarLoad.js';
 
 // services import
 import servicesData from './data/services.js'
@@ -30,6 +31,7 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our work import
 import { dataGallery } from './data/dataGallery.js';
 import { Gallery } from './components/gallery/Gallery.js';
+import { generateModal } from './components/gallery/modal.js';
 
 // our clients import
 
@@ -59,6 +61,8 @@ scrollToTop();
 // HeroTextChanging();
 // about logic
 renderProgressBar(bar);
+progressBarLoad();
+
 
 // services logic
 renderServices(servicesData)
@@ -74,6 +78,7 @@ renderEducation(eduData);
 
 // our work logic
 new Gallery(dataGallery);
+generateModal(dataGallery.imagePath, dataGallery.images);
 
 // our clients logic
 
