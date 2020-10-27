@@ -602,7 +602,9 @@ canvas {
 
         .curve-box-container {
             z-index: 10;
-            margin-top: -140px;
+          position: absolute;
+          bottom: -48px;
+          width: 100%;
         }
 
         #about-me-curve {
@@ -711,14 +713,24 @@ canvas {
                     }
                 }
 
-                @media (min-width: 1200px) {
+                /* @media (min-width: 1200px) {
                     .curve-box-container {
-                        margin-top: -210px;
+                      
+                    }
+                } */
+                @media (max-width: 960px) {
+                    .curve-box-container {
+                      bottom: -35px;
+                    }
+                }
+                @media (max-width: 880px) {
+                    .curve-box-container {
+                      bottom: 86px;
                     }
                 }
                 @media (max-width: 768px) {
                     .curve-box-container {
-                        margin-top: -130px;
+                        bottom: 105px;
                     }
                 }
 
@@ -1327,3 +1339,9 @@ footer {
           margin-bottom: 10px;
       }
   }
+.row h2 {
+    padding-top: 50px;
+}
+.our-work-header {
+    padding-top: 38px;
+}
