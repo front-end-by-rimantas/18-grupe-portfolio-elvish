@@ -1,5 +1,4 @@
-function renderStatisticsItem(statisticsData) {
-            // console.log(statisticsData); 
+function generateStatisticsItem(statisticsData) {
             return `<div class='statistics-item'>
                         <span class="${statisticsData.icon}"></span>
                         <div class="counter" data-target=${statisticsData.number}>0</div>
@@ -7,7 +6,7 @@ function renderStatisticsItem(statisticsData) {
                     </div>`
 };
 
-export default renderStatisticsItem;
+export {generateStatisticsItem};
 
 //input validation
 //logic

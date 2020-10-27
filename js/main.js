@@ -15,11 +15,11 @@ import renderProgressBar from './components/about-me/renderProgressBar.js';
 // services import
 import servicesData from './data/services.js'
 import renderServices from './components/services/renderServices.js'
+
 // statistics import
 import statisticsData from './data/statistics.js';
-// console.log(statisticsData);
 import renderStatistics from './components/statistics/renderStatistics.js';
-import statisticsNumberTransform from './components/statistics/statisticsNumberTransform.js'
+import { numberTransformOnscroll } from './components/statistics/numberTransformOnscroll.js'
 
 // education import
 import {eduData} from "./data/data-education.js";
@@ -32,7 +32,8 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our clients import
 
 // trusties import
-
+import trustieData from "./data/dataTrusties.js"
+import createTrustieRow from "./components/trusties/createTrustieRow.js"
 // subscribe import
 import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
 subscribeEmailValidation ();
@@ -42,7 +43,7 @@ import { blogData } from "./data/blog.js";
 // contact import
 
 // footer import
-
+import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 
 
 // header logic
@@ -60,10 +61,10 @@ renderProgressBar(bar);
 
 // services logic
 renderServices(servicesData)
+
 // statistics logic
-// console.log(statisticsData);
 renderStatistics(statisticsData);
-statisticsNumberTransform();
+numberTransformOnscroll()
 
 // education logic
 renderEducation(eduData);
@@ -75,7 +76,7 @@ renderEducation(eduData);
 // our clients logic
 
 // trusties logic
-
+createTrustieRow(trustieData);
 // subscribe logic
 
 // blog logic
@@ -83,3 +84,4 @@ renderBlog(blogData);
 // contact logic
 
 // footer logic
+hoverAnimation();
