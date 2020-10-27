@@ -12,6 +12,7 @@ const blogData = {
     },
     {
         img: "blog3-shoes.png",
+        video: 'http://vimeo.com/99025203',
         header: 'Contrary to popular belief',
         lifestyleA: 'Travel',
         paDate: '13 February 2018',
