@@ -82,6 +82,8 @@ const lightbox = new Lightbox({
     selector: '#lightbox'
 });
 
+gallery.registerLightbox(lightbox);
+
 // our clients logic
 
 // trusties logic

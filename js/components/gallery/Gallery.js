@@ -1,17 +1,23 @@
 class Gallery {
     constructor(params) {
         this.params = params;
+        this.images = this.params.images;
         this.DOM = null;
         this.DOMfilter = null;
         this.DOMlist = null;
+        this.lightbox = null;
 
         this.init();
     }
 
     init() {
-        if (this.isValid()) {
-            this.render();
+        if (!this.isValid()) {
+            return;
         }
+
+        this.render();
+        this.addEvents();
+
     }
 
     isValid() {
@@ -29,19 +35,19 @@ class Gallery {
     }
 
     render() {
-        const HTML = 
-                `<div class="row">
-                    <div class="filter-menu col-12"></div>
-                </div>
-                <div class="row images"></div>`;
+        const HTML = `<div class="row">
+                        <div class="filter-menu col-12">${this.renderFilter()}</div>
+                    </div>
+                    <div class="row images">${this.renderImages()}</div>
+                    <div class="row" id="lightbox"></div>`;
 
         this.DOM.innerHTML = HTML;
         this.DOMfilter = this.DOM.querySelector('.filter-menu');
         this.DOMimages = this.DOM.querySelector('.images');
 
-        this.renderImages();
-        this.renderFilter();
-        this.renderGallery();
+        // this.renderImages();
+        // this.renderFilter();
+        // this.renderFilteredImages();
         // this.generateModal();
     }
 
@@ -51,22 +57,19 @@ class Gallery {
         for (let i=0; i<this.params.images.length; i++) {
             const project = this.params.images[i];
 
-            HTML +=`
-                <div class="gallery-item col-4 col-sm-12">
-                    <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
-                    <div class="gallery-image-overlay"></div>
-                    <div class="text">
-                        <h3>${project.title}</h3>
-                        <h4>${project.content}</h4>
-                    </div>
-                </div>
-                <div id="myModal" class="modal">
-                    <span class="closeImage">&times;</span>
-                    <img class="modal-content" id="imgModal">
-                </div>`;
+            HTML +=`<div class="gallery-item col-4 col-sm-12">
+                        <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
+                        <div class="gallery-image-overlay"></div>
+                        <div class="text">
+                            <h3>${project.title}</h3>
+                            <h4>${project.content}</h4>
+                        </div>
+                    </div>`;
+
+            this.params.images[i].visible = true;
         }
 
-        this.DOMimages.innerHTML = HTML;
+        return HTML;
     }
 
     renderFilter() {
@@ -96,45 +99,97 @@ class Gallery {
                  <div class="filter-item" value="${uniqueTags[i]}">${uniqueTags[i]}</div>`;
         }
         
-        this.DOMfilter.innerHTML = HTML;
+        return HTML;
     }
 
-    renderGallery() {
-
-        const filterDOM = document.querySelectorAll('.filter-item');
-        let tempThis = this;
+    currentlyVisibleItems() {
+        let visibleImages = [];
         
-        for(let i=0; i<filterDOM.length; i++) {
-            let newImages = [];
-            let newImagesDuplicateList = [];
-
-            filterDOM[i].addEventListener('click', function(e) {
-
-                filterDOM.forEach(filter => {
-                filter.classList.remove('active')
-                })
-                
-                filterDOM[i].classList.add('active');
-
-                if(filterDOM[i].getAttribute('value') === null) {
-                    tempThis.renderImages();
-                    return;
-                }
-
-                    for(let n=0; n<tempThis.params.images.length; n++) {
-                        newImagesDuplicateList.push(tempThis.params.images[n]);
-                        if (tempThis.params.images[n].filter.includes(filterDOM[i].getAttribute('value'))) {
-                            newImages.push(tempThis.params.images[n]);
-                        }
+        for(let n=0; n<this.params.images.length; n++) {
+            visibleImages.push(this.params.images[n].image);
             }
+            console.log(visibleImages);
+            return visibleImages;
+    };
 
-                tempThis.params.images=newImages;
-                tempThis.renderImages();
-                tempThis.params.images=newImagesDuplicateList;
-                newImagesDuplicateList=[];
-                newImages = [];
-                });
+    addEvents() {
+        const galleryItems = this.DOM.querySelectorAll('.gallery-item')
+        const filterItems = this.DOM.querySelectorAll('.filter-item');
+
+        for (let item of galleryItems) {
+            item.addEventListener('click', () => {
+                console.log('galerija');
+                this.lightbox.show(this.currentlyVisibleItems());
+            }); 
         }
+
+        // let tempThis = this;
+        // for(let i=0; i<filterItems.length; i++) {
+        //     let newImages = [];
+        //     let newImagesDuplicateList = [];
+
+        //     filterItems[i].addEventListener('click', function(e) {
+        //         console.log('filtras');
+        //         filterItems.forEach(filter => {
+        //         filter.classList.remove('active')
+        //         })
+                
+        //         filterItems[i].classList.add('active');
+
+        //         if(filterItems[i].getAttribute('value') === null) {
+        //             tempThis.renderImages();
+        //             return;
+        //         }
+
+        //             for(let n=0; n<tempThis.params.images.length; n++) {
+        //                 newImagesDuplicateList.push(tempThis.params.images[n]);
+        //                 if (tempThis.params.images[n].filter.includes(filterItems[i].getAttribute('value'))) {
+        //                     newImages.push(tempThis.params.images[n]);
+        //                 }
+        //     }
+
+        //         tempThis.params.images=newImages;
+        //         tempThis.renderImages();
+        //         tempThis.params.images=newImagesDuplicateList;
+        //         newImagesDuplicateList=[];
+        //         newImages = [];
+        //         });
+        // }
+
+
+        for (let tag of filterItems) {
+            
+            tag.addEventListener('click', () => {
+                let tagValue = tag.innerText;
+                if (tagValue === 'All') {
+                    for(let i=0; i<this.params.images.length; i++) {
+                        const photo = galleryItems[i];
+                        photo.style.display = 'block';
+                        this.params.images[i].visible=true;
+                    }
+                } 
+
+                else {
+                    for (let i=0; i<this.params.images.length; i++) {
+                        const photoData = this.params.images[i];
+                        const photo = galleryItems[i];
+                        if(photoData.filter.includes(tagValue)) {
+                            photo.style.display = 'block';
+                            this.params.images[i].visible=true;
+                        }
+
+                        else {
+                            photo.style.display = 'none';
+                            this.params.images[i].visible=true;
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    registerLightbox(callback) {
+        this.lightbox = callback;
     }
 
     // generateModal() {
@@ -156,6 +211,8 @@ class Gallery {
     //         }
     //     }
     // };
+
+    
 }
 
 export { Gallery }
