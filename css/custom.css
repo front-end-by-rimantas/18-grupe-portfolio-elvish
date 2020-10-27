@@ -137,6 +137,7 @@ header {
         display: table-cell;
         vertical-align: middle;
         font-size: 32px;
+        font-weight: 400!important;
     }
 .navigation {
     float: right;
