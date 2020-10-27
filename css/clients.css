@@ -18,6 +18,7 @@
 
 .clients-texts > p{
     color: white;
+    margin-bottom: -20px;
 }
 
         .clients .line-break::before, 
@@ -25,15 +26,37 @@
             border-top: 1px solid white; 
         }
 
-.testimonials-item{
-    background-color: lightsalmon;
-
-}
-
     .testimonials-item i{
         font-size: 60px;
     }
 
+    .test-item-width{
+        width: 600px;
+        margin: auto;
+    }
+
+    @media (max-width: 700px) {
+        .test-item-width{
+            width: 100%;
+        }
+    }
+
+    .testimonials-item h5{
+        font-family:'Nunito', sans-serif;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .testimonials-item h6{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .testimonials-item p{
+        margin-top: 15px;
+        font-size: 18px;
+        line-height:1.5;
+    }
 
 .carousel {
     display: inline-block;
@@ -56,27 +79,26 @@
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin-top: 20px;
+        margin: 30px 0px 50px 0px;
     }
         .carousel > .actions > .dot {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 6px;
             margin: 5px;
-            border-radius: 50%;
-            background-color: #ccc;
+            border-radius: 20px;
+            background-color: white;
+            /* opacity: 0.5; */
+            background-color: rgb(160, 160, 160) ;
             cursor: pointer;
             transition: all 0.3s;
         }
             .carousel > .actions > .dot:hover {
-                background-color: #36f;
-                width: 14px;
-                height: 14px;
-                margin: 3px;
+                background-color: white;
             }
+
             .carousel > .actions > .dot.active {
-                background-color: #36f;
-                width: 14px;
-                height: 14px;
-                margin: 3px;
+                background-color: white;
+                width: 20px;
+                height: 6px;
             }

@@ -1,8 +1,6 @@
 class Carousel {
     constructor(params) {
-        // console.log(params);
         this.data = params.data;
-        // console.log(this.data);
         this.renderEngine = params.renderEngine;
         this.breakpoints = params.breakpoints;
         this.itemsPerView = params.itemsPerView;
@@ -13,6 +11,7 @@ class Carousel {
         this.activeItem = 0;
 
         this.contentHTML = new this.renderEngine(this.data.testimonials, this.data.imagePath).generateList();
+        this.validTestimonials = new this.renderEngine(this.data.testimonials, this.data.imagePath).validTestimonials()
 
         this.init();
     }
@@ -37,7 +36,7 @@ class Carousel {
     }
 
     renderDots() {
-        const total = this.data.testimonials.length;
+        const total = this.validTestimonials.length;
         let dotsCount = total - this.itemsPerView;
         dotsCount = dotsCount > 0 ? dotsCount : 0;
 
@@ -78,7 +77,7 @@ class Carousel {
 
         // this.itemPerView = itemsPerView;
 
-        const total = this.data.testimonials.length;
+        const total = this.validTestimonials.length;
         const listWidth = 100 * total / this.itemsPerView;
 
         this.listDOM.style.width = listWidth + '%';
@@ -94,7 +93,7 @@ class Carousel {
                 const index = parseInt(dot.dataset.index);
                 this.activeItem = index;
                 dots[this.activeItem].classList.add('active');
-                const diff = -100 / this.data.testimonials.length * this.activeItem;
+                const diff = -100 / this.validTestimonials.length * this.activeItem;
                 // console.log(this.listDOM);
                 // console.log(diff);
                 this.listDOM.style.transform = `translateX(${diff}%)`;
