@@ -367,7 +367,7 @@ header {
 }
 .hero {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,7 +398,7 @@ header {
     justify-content: center!important;
     flex-wrap: wrap;
     margin:0 auto;
-    height: 50%;
+    /* height: 50%; */
     margin-top: 20vh;
 }
 
@@ -533,7 +533,7 @@ canvas {
         text-transform: capitalize;
     }
     .hero {
-        height: 80vh;
+        height: 60vh;
     }
     .hero-mouse {
         bottom: 8px;
@@ -604,7 +604,7 @@ canvas {
         .curve-box-container {
             z-index: 10;
           position: absolute;
-          bottom: -48px;
+          bottom: 130px;
           width: 100%;
         }
 
@@ -714,24 +714,24 @@ canvas {
                     }
                 }
 
-                /* @media (min-width: 1200px) {
+                @media (max-width: 1250px) {
                     .curve-box-container {
-                      
+                      bottom: 160px;
                     }
-                } */
+                }
                 @media (max-width: 960px) {
                     .curve-box-container {
-                      bottom: -35px;
+                      bottom: 160px;
                     }
                 }
                 @media (max-width: 880px) {
                     .curve-box-container {
-                      bottom: 86px;
+                      bottom: 350px;
                     }
                 }
                 @media (max-width: 768px) {
                     .curve-box-container {
-                        bottom: 105px;
+                        bottom: 370px;
                     }
                 }
 
