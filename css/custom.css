@@ -1191,6 +1191,84 @@ canvas {
   
 /* } */
 /* blog */
+.bg-blog {
+    background-color: #f8f9fa;
+}
+.blogStar {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.blogStar > .line-break::before, 
+.blogStar > .line-break::after {
+    border-top: 1px solid #6c757d; 
+} 
+.blogStar > h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+.blogStar > p {
+    color: #6c757d;
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 18px;
+}
+.blogjs {   
+    text-align: center;
+    position: relative;
+
+}
+.blogjs > h5 > .hdr {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.blogjs > .travel {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.blogjs > .date {
+    color: #6c757d;
+}
+.blogjs > p > .envato {
+    color: black;
+    font-weight: bold;
+}
+.blogjs > .parag {
+    color: #6c757d;
+}
+.blogjs > .more {
+    color: #6c757d;
+    font-weight: bold;
+}
+.blogjs > img {
+    width: 275px;
+}
+.blogvideo {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    outline: none;
+    width: 65px;
+    height: 65px;
+    padding-left: 2px;
+    border-radius: 50%;
+    z-index: 4;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.fa-play > :nth-child(1) {
+    display: none;
+}
+.fa-play {
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    line-height: 65px;
+}
 
 /* contact */
 

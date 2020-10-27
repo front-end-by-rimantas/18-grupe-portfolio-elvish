@@ -38,7 +38,8 @@ import createTrustieRow from "./components/trusties/createTrustieRow.js"
 import subscribeEmailValidation from "./components/subscribe/emailValidation.js"
 subscribeEmailValidation ();
 // blog import
-
+import { renderBlog } from "./components/blog/renderBlog.js";
+import { blogData } from "./data/blog.js";
 // contact import
 
 // footer import
@@ -79,7 +80,7 @@ createTrustieRow(trustieData);
 // subscribe logic
 
 // blog logic
-
+renderBlog(blogData);
 // contact logic
 
 // footer logic
