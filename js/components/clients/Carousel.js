@@ -94,8 +94,6 @@ class Carousel {
                 this.activeItem = index;
                 dots[this.activeItem].classList.add('active');
                 const diff = -100 / this.validTestimonials.length * this.activeItem;
-                // console.log(this.listDOM);
-                // console.log(diff);
                 this.listDOM.style.transform = `translateX(${diff}%)`;
             })
         }
@@ -113,15 +111,25 @@ class Carousel {
 
     slider() {
     
-        window.addEventListener('scroll', function() {
-            let element = document.querySelector('.carousel');    
+        let element = document.querySelector('.carousel'); 
+
+        window.addEventListener('scroll', function() {   
             let position = element.getBoundingClientRect();
     
             // checking whether fully visible
             if(position.top >= 70 && position.bottom <= window.innerHeight) {
                 console.log('matomas');
             }
-        });
+        })
+
+        element.addEventListener('mouseleave', function(){
+    
+            //iskviese dotclick sekanciam elementui negu dabar yra, o jei pasirinktas paskutinis tai iskviesti pirma
+            //const timer = setInterval() iskviesti dot
+            //atskiras metodas, kuris iskvieciamas pradzioje
+            
+        console.log('out');
+        })
     }
 
 
