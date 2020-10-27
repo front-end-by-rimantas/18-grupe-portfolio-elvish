@@ -39,7 +39,7 @@ class Gallery {
                         <div class="filter-menu col-12">${this.renderFilter()}</div>
                     </div>
                     <div class="row images">${this.renderImages()}</div>
-                    <div class="row" id="lightbox"></div>`;
+                    <div id="lightbox"></div>`;
 
         this.DOM.innerHTML = HTML;
         this.DOMfilter = this.DOM.querySelector('.filter-menu');
@@ -106,8 +106,11 @@ class Gallery {
         let visibleImages = [];
         
         for(let n=0; n<this.params.images.length; n++) {
-            visibleImages.push(this.params.images[n].image);
+            if (this.params.images[n].visible) {
+                visibleImages.push(this.params.images[n]);
             }
+            
+        }
             console.log(visibleImages);
             return visibleImages;
     };
@@ -116,10 +119,13 @@ class Gallery {
         const galleryItems = this.DOM.querySelectorAll('.gallery-item')
         const filterItems = this.DOM.querySelectorAll('.filter-item');
 
-        for (let item of galleryItems) {
+        for (let i = 0; i < galleryItems.length; i++) {
+            let item = galleryItems[i]
             item.addEventListener('click', () => {
                 console.log('galerija');
-                this.lightbox.show(this.currentlyVisibleItems());
+                let visibleItems = this.currentlyVisibleItems()
+                let clickedIndex = visibleItems.indexOf(this.params.images[i])
+                this.lightbox.show(visibleItems, this.params.imagePath, clickedIndex);
             }); 
         }
 
@@ -156,11 +162,10 @@ class Gallery {
         //         });
         // }
 
-
         for (let tag of filterItems) {
             
             tag.addEventListener('click', () => {
-                let tagValue = tag.innerText;
+                let tagValue = tag.innerHTML;
                 if (tagValue === 'All') {
                     for(let i=0; i<this.params.images.length; i++) {
                         const photo = galleryItems[i];
@@ -180,7 +185,7 @@ class Gallery {
 
                         else {
                             photo.style.display = 'none';
-                            this.params.images[i].visible=true;
+                            this.params.images[i].visible=false;
                         }
                     }
                 }

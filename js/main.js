@@ -81,7 +81,6 @@ const gallery = new Gallery(dataGallery);
 const lightbox = new Lightbox({
     selector: '#lightbox'
 });
-
 gallery.registerLightbox(lightbox);
 
 // our clients logic
