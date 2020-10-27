@@ -913,15 +913,7 @@ canvas {
         .our-work-header > h2 {
             font-size: 32px;
             font-weight: normal;
-            /* margin-bottom: 30px; */
         }
-
-        /* .our-work-header > p { 
-            color: #6c757d;
-            font-size: 18px;
-            margin: 20px 0;
-            line-height: 25px;
-        } */
 
     #work-gallery {
         text-align: center;
@@ -965,6 +957,9 @@ canvas {
                     cursor: pointer;
                 }
 
+    .gallery-padding {
+        padding-bottom: 60px;
+    }
     .gallery-item {
         cursor: pointer;
         background-size: 100%;
@@ -988,7 +983,7 @@ canvas {
         .modal {
             display: none;
             position: fixed;
-            padding-top: 100px;
+            padding-top: 150px;
             left: 0;
             top: 0;
             z-index: 55;
@@ -996,6 +991,7 @@ canvas {
             height: 100%;
             overflow: auto;
             background-color: rgba(0,0,0,0.8);
+
         }
 
         .modal-content {
@@ -1005,7 +1001,6 @@ canvas {
             max-width: 700px;
             animation-name: zoom;
             animation-duration: 0.6s;
-            position: relative;
         }
 
         @keyframes zoom {
@@ -1015,8 +1010,8 @@ canvas {
 
             span.closeImage {
                 position: absolute;
-                top: 50px;
-                right: 200px;
+                top: 100px;
+                right: 100px;
                 color: #6c757d;
                 font-size: 40px;
                 transition: 0.3s;
@@ -1026,6 +1021,7 @@ canvas {
             span.closeImage:focus {
                 color: #fff;
                 text-decoration: none;
+                cursor: pointer;
             }
 
         .gallery-image-overlay {
@@ -1049,7 +1045,7 @@ canvas {
             }
 
         .gallery-item > .text {
-            display: none;
+            opacity: 0;
             color: white;
             position: absolute;
             width: auto;
@@ -1058,9 +1054,11 @@ canvas {
         }
 
             .gallery-item:hover > .text {
+                opacity: 1;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+                
             }
 
             .gallery-item > .text > h3,
@@ -1069,7 +1067,7 @@ canvas {
                 font-size: 16px;
                 line-height: 25px;
                 position: relative;
-                /* overflow: hidden; */
+                overflow: hidden;
             }
             .gallery-item > .text > h4 {
                 font-size: 13px;
@@ -1078,6 +1076,7 @@ canvas {
 
                 .gallery-item > .text > h3::after,
                 .gallery-item > .text > h4::after {
+                    /* display: none; */
                     content: ' ' ;
                     background-color: white;
                     width: 100%;
@@ -1107,6 +1106,12 @@ canvas {
                 .gallery-item:hover > .text > h4::after {
                     left: 100%;
                 }
+
+        @media (max-width: 700px) {
+            .gallery-item {
+                padding-bottom: 20px;
+            }
+        }
 
 
 /* our clients */

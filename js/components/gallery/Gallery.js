@@ -17,7 +17,7 @@ class Gallery {
     isValid() {
         const DOM = document.querySelector(this.params.selector);
         if (!DOM) {
-            throw 'ERROR: params selec tor is incorrect'
+            throw 'ERROR: params selector is incorrect'
         }
         this.DOM = DOM;
 
@@ -42,6 +42,7 @@ class Gallery {
         this.renderImages();
         this.renderFilter();
         this.renderGallery();
+        // this.generateModal();
     }
 
     renderImages() {
@@ -75,7 +76,6 @@ class Gallery {
         for (let i=0; i<gallery.length; i++) {
 
             array.push(this.params.images[i].filter);
-    
         }
 
         const uniqueTags = [];
@@ -136,6 +136,26 @@ class Gallery {
                 });
         }
     }
+
+    // generateModal() {
+    //     let modal = document.querySelectorAll('#myModal');
+    //     let img = document.querySelectorAll('.gallery-item');
+    //     let modalImg = document.querySelectorAll('#imgModal');
+    //     let tempThis = this;
+        
+    //     for (let i = 0; i < img.length; i++) {
+    //         img[i].onclick = function() {
+    //             modal[i].style.display ='block';
+    //             modalImg[i].src = tempThis.params.imagePath + tempThis.params.images[i].image;
+    //             console.log(modalImg[i].src);
+    //         }
+    
+    //         let closeBtn = document.querySelectorAll('.closeImage');
+    //         closeBtn[i].onclick = function() {
+    //         modal[i].style.display ='none';
+    //         }
+    //     }
+    // };
 }
 
 export { Gallery }

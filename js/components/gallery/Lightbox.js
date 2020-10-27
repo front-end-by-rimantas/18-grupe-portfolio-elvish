@@ -1,0 +1,7 @@
+class Lightbox {
+
+}
+
+
+
+export { Lightbox }

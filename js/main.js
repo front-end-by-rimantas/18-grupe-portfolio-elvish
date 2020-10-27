@@ -31,7 +31,7 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our work import
 import { dataGallery } from './data/dataGallery.js';
 import { Gallery } from './components/gallery/Gallery.js';
-import { generateModal } from './components/gallery/modal.js';
+import { Lightbox } from './components/gallery/Lightbox.js';
 
 // our clients import
 
@@ -77,8 +77,10 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
-new Gallery(dataGallery);
-generateModal(dataGallery.imagePath, dataGallery.images);
+const gallery = new Gallery(dataGallery);
+const lightbox = new Lightbox({
+    selector: '#lightbox'
+});
 
 // our clients logic
 
