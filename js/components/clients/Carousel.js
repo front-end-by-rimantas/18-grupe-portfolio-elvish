@@ -104,11 +104,29 @@ class Carousel {
     addEvents() {
         // paspaudus taskiukus turi judeti/slinktis turinys
         this.dotClick();
+        this.slider()
 
         window.addEventListener('resize', () => {
             this.updateListWidth();
         });
     }
+
+    slider() {
+    
+        window.addEventListener('scroll', function() {
+            let element = document.querySelector('.carousel');    
+            let position = element.getBoundingClientRect();
+    
+            // checking whether fully visible
+            if(position.top >= 70 && position.bottom <= window.innerHeight) {
+                console.log('matomas');
+            }
+        });
+    }
+
+
+
+
 }
 
 export { Carousel }
