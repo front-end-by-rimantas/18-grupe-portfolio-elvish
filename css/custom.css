@@ -850,37 +850,12 @@ canvas {
     }
 
 /* education */
-.container.education.section-padding {
+.section-padding {
     padding-bottom: 80px;
 }
-/* .row.edu-top-section {
-    width: 70%;
-    display: block;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
-    margin-bottom: 50px;
-
-}   */
-    /* .row.edu-top-section > .line-break::before, 
-    .row.edu-top-section > .line-break::after {
-        border-top: 1px solid #6c757d; 
-    } 
-    .edu-top-section > h2 {
-        font-size: 32px; 
-        font-weight: normal;
-        margin: 0px 0px 8px;
-    }
-
-    .edu-top-section > p { 
-        display: block;
-        color: #6c757d;
-        font-size: 18px;
-        margin: 8px 0px 16px;
-    } */
-    .edu {
+      .edu {
         border: 1px solid  #e7e7e7;
-        margin: 24px 0px 0px 20px;
+        margin: 24px 0px 0px 40px;
         padding: 20px;
         text-align: left;
         position: relative;
@@ -908,8 +883,8 @@ canvas {
         content: '';
         border-left: 1px solid #e7e7e7;
         position: absolute;
-        top: -20px;
-        bottom: -17px;
+        top: -30px;
+        bottom: -27px;
         left: -20px;
     }
     .edu::after {
@@ -923,7 +898,6 @@ canvas {
         top: 20px;
         left: -28px;
      }
-
 
 /* hire me */
 .hire-me-row {
@@ -1316,7 +1290,6 @@ canvas {
     border: none;
     font-size: 20px;
     padding-left: 22px;
-  
 }
 
 .subscribe-input::placeholder {
@@ -1393,7 +1366,144 @@ canvas {
 /* } */
 /* blog */
 
+
+
 /* contact */
+.icons-left {
+    text-align: center;
+    padding: 0px 15px;
+}
+
+.icons3 {
+    margin: 24px 0px 0px;
+}
+.icons3 > span {
+    font-size: 30px;
+}
+.icons3 > .icon-title {
+    font-weight: 700;
+}
+.icons3 > .icon-content-line {
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.contact-form {
+    padding: 0px 15px;
+    margin: 8px 0px 16px;
+}
+.contact-form > .form-row {
+    line-height: 25px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.contact-form > .form-row:nth-child(1),
+.contact-form > .form-row:nth-child(2) {
+    width: calc((100%-10px) / 2);
+    display: inline-block;
+}
+.form-row > label {
+    display: inline-block;
+    margin: 0px 0px 8px;
+    font-weight: 700;
+
+}
+.form-row > input {
+    display: block;
+    padding: 6px 12px;
+    font-weight: 400;
+    width: 100%;
+    cursor: text;
+    outline: none;
+}
+.form-row.success input,
+.form-row.success textarea {
+    border: 2px solid green;
+}
+.form-row.error input,
+.form-row.error textarea {
+    border: 1px solid red;
+}
+.form-row.success i.fa-check-circle {
+    color: green;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.form-row.error i.fa-exclamation-circle {
+    color: red;
+    visibility: visible;
+}
+.form-row.error small {
+    color: red;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+.form-row i.fa-check-circle,
+.form-row i.fa-exclamation-circle {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    color: black;
+    visibility: hidden;
+}
+.form-row small {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-row textarea > small {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    visibility: hidden;
+}
+
+.textAr {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 6px 12px;
+    resize: vertical;
+    outline: none;
+}
+input.m-btn {
+    float: right;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 26px;
+    font-size:  15px;
+    text-transform: capitalize;
+    font-weight: 400;
+    outline: none;
+    width: auto;
+    margin-top: 20px;
+}
+    .m-btn:hover {
+        cursor: pointer;
+        background-color: #ffffff ;
+        color: #000000
+    }
+    .m-btn:focus,
+    input:focus,
+    .textAr:focus {
+        border-color: #000;
+    }
+
+@media (max-width: 1000px) {
+    .contact-form > .form-row:nth-child(1),
+    .contact-form > .form-row:nth-child(2) {
+        width: 100%;
+        display: block;
+    }
+} 
 
 /* footer */
 footer { 
