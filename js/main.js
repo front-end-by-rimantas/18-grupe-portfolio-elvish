@@ -1,8 +1,10 @@
 // header import
 import headerEffect from "./components/header/headerJS.js";
-import sandwich from "./components/hero/heroSandwich.js"
-import HeroScroll from "./components/header/scrollFromHero.js"
+import sandwich from "./components/header/headerBurger.js"
+import mobileNav from "./components/header/mobileNavigation.js"
 import scrollToTop from "./components/back-to-top/scrollToTop.js"
+import sectionHeights from "./data/section-heigths.js"
+import scrollFromTop from "./components/header/scrollFromTop.js"
 // import headerFixes from "./headerFixes.js"
 
 // hero import
@@ -50,11 +52,10 @@ import hoverAnimation from "./components/footer/footerHoverAnimation.js"
 
 
 // header logic
+
 headerEffect();
-HeroScroll();
 scrollToTop();
-// headerFixes();
-// sandwich();
+mobileNav();
 // hero logic
 // change();
 
@@ -95,3 +96,4 @@ createTrustieRow(trustieData);
 
 // footer logic
 hoverAnimation();
+scrollFromTop();
