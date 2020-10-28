@@ -25,6 +25,16 @@ class Categories {
                     </div>`;
     }
 
+    categoryClick(){
+       let categories = document.querySelectorAll('.categories-item');
+
+    categories.forEach(category => {
+        category.addEventListener('click', () => {
+
+    }) })}
+
+    
+
 }
 
 export { Categories }

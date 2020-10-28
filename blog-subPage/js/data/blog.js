@@ -30,7 +30,7 @@ const blogData = {
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
-                year:'2018',
+                year:'2020',
                 month:'February',
                 day:'13'
             },
@@ -48,8 +48,8 @@ const blogData = {
             title: 'There are many variations',
             category: 'Food',
             date: {
-                year:'2018',
-                month:'March',
+                year:'2020',
+                month:'January',
                 day:'13'
             },
             author: 'Envato', 
@@ -66,7 +66,7 @@ const blogData = {
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
-                year:'2018',
+                year:'2019',
                 month:'April',
                 day:'13'
             },
@@ -84,9 +84,9 @@ const blogData = {
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
-                year:'2018',
-                month:'March',
-                day:'13'
+                year:'2019',
+                month:'April',
+                day:'2'
             },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
@@ -122,7 +122,7 @@ const blogData = {
             date: {
                 year:'2018',
                 month:'March',
-                day:'13'
+                day:'2'
             },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
@@ -156,7 +156,7 @@ const blogData = {
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
-                year:'2018',
+                year:'2016',
                 month:'March',
                 day:'13'
             },

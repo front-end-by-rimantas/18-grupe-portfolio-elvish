@@ -3,7 +3,7 @@ import { isValidBlogItem } from './isValidBlogItem.js'
 
 function generateBlogItem(item, imagePath, showErrors = false) {
 
-    console.log(item);
+    // console.log(item);
     if (!isValidBlogItem(item, showErrors)) {
         return '';
     }
