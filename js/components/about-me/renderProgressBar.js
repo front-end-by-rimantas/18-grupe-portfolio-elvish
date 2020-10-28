@@ -1,3 +1,4 @@
+
 import renderSingleBar from './renderSingleBar.js';
 
 function renderProgressBar(bar) {
