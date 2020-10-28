@@ -122,7 +122,6 @@ class Gallery {
         for (let i = 0; i < galleryItems.length; i++) {
             let item = galleryItems[i]
             item.addEventListener('click', () => {
-                console.log('galerija');
                 let visibleItems = this.currentlyVisibleItems()
                 let clickedIndex = visibleItems.indexOf(this.params.images[i])
                 this.lightbox.show(visibleItems, this.params.imagePath, clickedIndex);
@@ -195,29 +194,7 @@ class Gallery {
 
     registerLightbox(callback) {
         this.lightbox = callback;
-    }
-
-    // generateModal() {
-    //     let modal = document.querySelectorAll('#myModal');
-    //     let img = document.querySelectorAll('.gallery-item');
-    //     let modalImg = document.querySelectorAll('#imgModal');
-    //     let tempThis = this;
-        
-    //     for (let i = 0; i < img.length; i++) {
-    //         img[i].onclick = function() {
-    //             modal[i].style.display ='block';
-    //             modalImg[i].src = tempThis.params.imagePath + tempThis.params.images[i].image;
-    //             console.log(modalImg[i].src);
-    //         }
-    
-    //         let closeBtn = document.querySelectorAll('.closeImage');
-    //         closeBtn[i].onclick = function() {
-    //         modal[i].style.display ='none';
-    //         }
-    //     }
-    // };
-
-    
+    }  
 }
 
 export { Gallery }

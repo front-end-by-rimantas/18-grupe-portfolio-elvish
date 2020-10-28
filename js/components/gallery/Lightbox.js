@@ -31,9 +31,12 @@ class Lightbox {
 
     render() {
         const HTML = `<span class="closeImage">&times;</span>
+                    <div class="modalItem">
                     <div class="arrow left">&#10094;</div>
                     <div class="content" id="lightboxSlide"></div>
-                    <div class="arrow right">&#10095</div>`
+                    <div class="arrow right">&#10095</div>
+                    <div class="caption"></div>
+                    </div>`
         this.DOM.innerHTML = HTML;
         this.contentDOM = this.DOM.querySelector('.content');
     }
@@ -62,7 +65,6 @@ class Lightbox {
 
 
             leftArrow.addEventListener('click', () => {
-                // kai pasiekia 0, eiti i 5
                 this.index--
                 if (this.index < 0) {
                     this.index = this.images.length-1;
@@ -73,7 +75,6 @@ class Lightbox {
             }); 
 
             rightArrow.addEventListener('click', () => {
-                // kai pasiekia 5, eiti i 0
                 this.index++
                 if (this.index > this.images.length-1) {
                     this.index = 0;
@@ -85,6 +86,12 @@ class Lightbox {
 
         closeBtn.addEventListener('click', () => {
             this.DOM.style.display ='none';
+        })
+
+        document.addEventListener('keydown', ({key}) => {
+            if (key === "Escape") {
+                this.DOM.style.display ='none';
+            }
         })
     }
 }

@@ -1030,29 +1030,34 @@ canvas {
             background-color: rgba(0,0,0,0.8);
         }
 
-            #lightboxSlide > img {
+            .modalItem {
                 position: relative;
-                padding: 30px 0;
-                width: 70%;
-                max-width: 1200px;
             }
 
-                #lightbox > .arrow {
-                    position: absolute;
-                    cursor: pointer;
-                    color: #6c757d;
-                    font-size: 40px;
-                    top: 50%;
-                    bottom: 50%;                   
+                #lightboxSlide > img {
+                    position: relative;
+                    padding: 30px 0;
+                    width: 60%;
+                    max-width: 1200px;
                 }
 
-                    #lightbox > .left {
-                        left: 50px;
+                    .modalItem > .arrow {
+                        position: absolute;
+                        cursor: pointer;
+                        color: #6c757d;
+                        font-size: 40px;
+                        color: red;
+                        top: 0;
+                        bottom: 0;                   
                     }
 
-                    #lightbox > .right {
-                        right: 50px;
-                    }
+                        .modalItem > .arrow > .left {
+                            left: 0;
+                        }
+
+                        .modalItem > .arrow .right {
+                            right: 0;
+                        }
 
             span.closeImage {
                 position: absolute;
