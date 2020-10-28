@@ -45,10 +45,6 @@ class Gallery {
         this.DOMfilter = this.DOM.querySelector('.filter-menu');
         this.DOMimages = this.DOM.querySelector('.images');
 
-        // this.renderImages();
-        // this.renderFilter();
-        // this.renderFilteredImages();
-        // this.generateModal();
     }
 
     renderImages() {
@@ -57,10 +53,10 @@ class Gallery {
         for (let i=0; i<this.params.images.length; i++) {
             const project = this.params.images[i];
 
-            HTML +=`<div class="gallery-item col-4 col-sm-12">
+            HTML +=`<div class="gallery-item col-4 col-md-12">
                         <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
                         <div class="gallery-image-overlay"></div>
-                        <div class="text">
+                        <div class="text" id=""gallery-text>
                             <h3>${project.title}</h3>
                             <h4>${project.content}</h4>
                         </div>
@@ -108,10 +104,8 @@ class Gallery {
         for(let n=0; n<this.params.images.length; n++) {
             if (this.params.images[n].visible) {
                 visibleImages.push(this.params.images[n]);
-            }
-            
+            }   
         }
-            console.log(visibleImages);
             return visibleImages;
     };
 
@@ -125,46 +119,23 @@ class Gallery {
                 let visibleItems = this.currentlyVisibleItems()
                 let clickedIndex = visibleItems.indexOf(this.params.images[i])
                 this.lightbox.show(visibleItems, this.params.imagePath, clickedIndex);
+                console.log('ijungta foto', clickedIndex+1);
             }); 
         }
 
-        // let tempThis = this;
-        // for(let i=0; i<filterItems.length; i++) {
-        //     let newImages = [];
-        //     let newImagesDuplicateList = [];
-
-        //     filterItems[i].addEventListener('click', function(e) {
-        //         console.log('filtras');
-        //         filterItems.forEach(filter => {
-        //         filter.classList.remove('active')
-        //         })
-                
-        //         filterItems[i].classList.add('active');
-
-        //         if(filterItems[i].getAttribute('value') === null) {
-        //             tempThis.renderImages();
-        //             return;
-        //         }
-
-        //             for(let n=0; n<tempThis.params.images.length; n++) {
-        //                 newImagesDuplicateList.push(tempThis.params.images[n]);
-        //                 if (tempThis.params.images[n].filter.includes(filterItems[i].getAttribute('value'))) {
-        //                     newImages.push(tempThis.params.images[n]);
-        //                 }
-        //     }
-
-        //         tempThis.params.images=newImages;
-        //         tempThis.renderImages();
-        //         tempThis.params.images=newImagesDuplicateList;
-        //         newImagesDuplicateList=[];
-        //         newImages = [];
-        //         });
-        // }
 
         for (let tag of filterItems) {
             
             tag.addEventListener('click', () => {
                 let tagValue = tag.innerHTML;
+               
+                filterItems.forEach(filter => {
+                filter.classList.remove('active')
+                })
+
+                tag.classList.add('active');
+
+
                 if (tagValue === 'All') {
                     for(let i=0; i<this.params.images.length; i++) {
                         const photo = galleryItems[i];

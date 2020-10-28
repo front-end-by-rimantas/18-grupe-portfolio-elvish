@@ -32,11 +32,12 @@ class Lightbox {
     render() {
         const HTML = `<span class="closeImage">&times;</span>
                     <div class="modalItem">
-                    <div class="arrow left">&#10094;</div>
-                    <div class="content" id="lightboxSlide"></div>
-                    <div class="arrow right">&#10095</div>
-                    <div class="caption"></div>
+                        <div class="arrow left">&#10094;</div>
+                        <div class="content" id="lightboxSlide"></div>
+                        <div class="arrow right">&#10095</div>
+                        <p id="caption">of 6</p>
                     </div>`
+
         this.DOM.innerHTML = HTML;
         this.contentDOM = this.DOM.querySelector('.content');
     }
@@ -71,7 +72,7 @@ class Lightbox {
                 }
 
                 this.renderImage();
-                console.log('leftArrow', this.index);
+                // console.log('leftArrow', this.index);
             }); 
 
             rightArrow.addEventListener('click', () => {
@@ -81,7 +82,6 @@ class Lightbox {
                 }
 
                 this.renderImage();
-                console.log('rightArrow', this.index);
             });
 
         closeBtn.addEventListener('click', () => {

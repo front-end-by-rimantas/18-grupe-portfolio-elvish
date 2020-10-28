@@ -1036,28 +1036,43 @@ canvas {
 
                 #lightboxSlide > img {
                     position: relative;
-                    padding: 30px 0;
                     width: 60%;
                     max-width: 1200px;
                 }
 
-                    .modalItem > .arrow {
+                    .modalItem > .arrow.left,
+                    .modalItem > .arrow.right {
                         position: absolute;
                         cursor: pointer;
                         color: #6c757d;
                         font-size: 40px;
-                        color: red;
-                        top: 0;
-                        bottom: 0;                   
                     }
 
-                        .modalItem > .arrow > .left {
-                            left: 0;
+                    .modalItem > .arrow.left:hover,
+                    .modalItem > .arrow.right:hover {
+                        color: white;
+                    }
+
+                        .modalItem > .arrow.left {  
+                        left: 10%;
+                        top: 0;
+                        bottom: 0;
+                        transform: translateY(45%);
                         }
 
-                        .modalItem > .arrow .right {
-                            right: 0;
+                        .modalItem > .arrow.right {
+                        right: 10%;
+                        top: 0;
+                        bottom: 0;
+                        transform: translateY(45%);
                         }
+
+                .modalItem > #caption {
+                    position: absolute;
+                    right: 20%;
+                    color: #6c757d;
+                    font-size: 13px;
+                }
 
             span.closeImage {
                 position: absolute;
@@ -1162,17 +1177,27 @@ canvas {
             span.filter-menu-star {
                 padding: 0 5px;
             }
+
+            .gallery-item > .text {
+                top: 50px;
+                right: 50px;
+            }
         }
 
         @media (max-width: 700px) {
             .gallery-item {
                 padding-bottom: 20px;
             }
+
+            .modalItem > .arrow.left,
+                .modalItem > .arrow.right {
+                    font-size: 30px;
+                }
         }
 
         @media (max-width: 500px) {
             .filter-menu > .filter-item{
-                padding: 5px 8px;
+                padding: 5px;
             }
         }
 
