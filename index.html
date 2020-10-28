@@ -18,48 +18,39 @@
 
 <body>
     <!-- header -->
-    <div class="to-top"><i class="fa fa-chevron-up"></i></div>
-    <header class="container">
-        <div class="row">
-            <div class="header-container col-12">
-                <div class="header-sandwhich">
-                    <div id="burger" class="sandwhcih-icon"></div>
-                    <div id="burger" class="sandwhcih-icon1"></div>
-                    <div id="burger" class="sandwhcih-icon2"></div>
-                </div>
-                <a class="logo" href="#">Elvish</a>
-                    <ul class="header-ul">
-                          <li class="header-list"><a class="nav-links" href="#">Home</a></li>
-                          <li class="header-list"><a class="nav-links" href="#">About</a></li>
-                          <li class="header-list"><a class="nav-links" href="#">Services</a></li>
-                          <li class="header-list"><a class="nav-links" href="#">Education</a></li>
-                          <li class="header-list"><a class="nav-links"  href="#">Work</a></li>
-                          <li class="header-list"><a class="nav-links" href="#">Client</a></li>
-                          <li class="header-list"><a class="nav-links" href="#">Blog</a></li>
-                          <li class="header-list"><a class="nav-links"href="#">Contact</a></li>
-                    </ul>
-            </div>
-        </div>
-                    <!-- ----------------------mobile navigation----------------------------- -->
-            <div class="row">
-                <div class="mobile-navigation col-12">
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Home</a> </div>
-                    <div class="mobile-nav-links"><a id="mobile-link-white" href="#">About</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Services</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Education</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Work</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Client</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#"> Blog</a> </div>
-                    <div class="mobile-nav-links"><a  id="mobile-link-white" href="#">Contact </a> </div>
-            </div>
-        </div>   
-    </header>
+    <!-- <div class="to-top fa fa-angle-up"></div> -->
+    <i class="fa fa-angle-up to-top" aria-hidden="true"></i>
+    <header>
+      
+                <div class="header-container">
+                    <div class="header-sandwhich">
+                        <div id="burger" class="sandwhcih-icon"></div>
+                        <div id="burger" class="sandwhcih-icon1"></div>
+                        <div id="burger" class="sandwhcih-icon2"></div>
+                    </div>
+                              <div class="logo-container">
+                                  <h1>Elvish</h1>
+                              </div>
+                              <ul class="navigation">
+                                  <a class="nav-links" href="#home"> <li class="header-list">Home</li></a>
+                                  <a class="nav-links" href="#about"> <li class="header-list">About</li></a>
+                                  <a class="nav-links" href="#services"> <li class="header-list">Services</li></a>
+                                  <a class="nav-links" href="#education"> <li class="header-list">Education</li></a>
+                                  <a class="nav-links" href="#work"> <li class="header-list">Work</li></a>
+                                  <a class="nav-links" href="#client"> <li class="header-list">Client</li></a>
+                                  <a class="nav-links" href="#blog"> <li class="header-list">Blog</li></a>
+                                  <a class="nav-links" href="#contact"> <li class="header-list">Contact</li></a>
+                              </ul>
+                        </div>
+                        <div class="mobile-navigation">
+                        </div>
+        </header>
     <!-- hero -->
-    <div class="container-fluid hero-fluid">
+    <div id="home" class="container-fluid hero-fluid">
         <div class="row">
             <div class="hero col-12">
                 <div class="bg-overlay">
-                <div class="hero-container">
+                <div id="homeSection" class="hero-container">
                     <div class="hero-container-center">
                         <div class="rows">
                             <h4> Hello & Welcome</h4>
@@ -89,25 +80,22 @@
                 </div>
                 </div>
                 <div class="hero-bottom-for-mouse">
-                <div class="hero-mouse"></div>
+                <a href="#about"> <div class="hero-mouse"></div></a>
             </div>
             </div>
             <!-- ______________________________________________________________________________________________________________________ -->
         </div>
+        <div  class="container-fluid">
+            <div class="row">
+                <div class="curve-box-container col-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,245.3C640,235,800,181,960,160C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+                 </div>
+            </div>
+        </div>
     </div>
     <!-- about -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="curve-box-container col-12">
-                <svg id="about-me-curve"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path id="path" fill="#ffffff" fill-opacity="1" preserveAspectRatio="none" d="M0,64L80,85.3C160,107,320,149,480,149.3C640,149,800,107,960,85.3C1120,64,1280,64,1360,64L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-                </svg>
-         </div>
-    </div>
-</div>
 
-    
-    <div class="container aboutWhiteGap">
+    <div id="about" class="container aboutWhiteGap">
         <div class="row aboutMe">
             <div class="about-section section-header col-12">
                 <h2><bold>About</bold> Me</h2>
@@ -130,7 +118,7 @@
         </div>
     </div>
     <!-- services -->
-    <div class="container bg-services">
+    <div id="services" class="container bg-services">
         <div class="row servicesRow">
             <div class="servicesStar section-header col-12">
                 <h2>Our <bold>Services</bold></h2>
@@ -154,7 +142,7 @@
         </div>
     </div>
     <!-- education -->
-    <div class="container education section-padding">
+    <div id="education" class="container education section-padding">
         <div class="row edu-top-section">
             <div class="section-header col-12">
                 <h2><bold>Education & Experience</bold></h2>
@@ -164,6 +152,7 @@
         </div>    
         <div class="row edu-1"></div>
     </div>
+    <div class="scroll-education"></div>
      <!-- hire me -->
      <div class="container-fluid">
         <div class="row">
@@ -177,7 +166,7 @@
     </div>
     </div>
     <!-- our work -->
-    <div class="container">
+    <div  id= "work" class="container">
         <div class="row our-work-section">
             <div class="our-work-header col-12">
                 <h2>Our <bold>Work</bold></h2>
@@ -191,11 +180,13 @@
                         <li class="filter-list-item star">Wordpress</li>
                     </ul>
                 <div class="gallery col-3">GALLERY</div>
+               
             </div>
         </div>
+        <div class="scroll-to-work"></div>
     </div>
     <!-- our clients -->
-    <div class="container-fluid">
+    <div id="client" class="container-fluid">
         <div class="row">
             <div class="clients col-12">
                 <div class="bg-overlay"></div>
@@ -242,13 +233,13 @@
         </div>
     </div>
     <!-- blog -->
-    <div class="container">
+    <div id="blog" class="container">
         <div class="row col-12">
             BLOG
         </div>  
     </div>
     <!-- contact -->
-    <div class="container">
+    <div id="contact" class="container">
         <div class="row col-12">
             CONTACT FORM
         </div>
