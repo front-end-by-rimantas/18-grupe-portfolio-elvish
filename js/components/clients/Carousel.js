@@ -118,7 +118,7 @@ class Carousel {
     
             // checking whether fully visible
             if(position.top >= 70 && position.bottom <= window.innerHeight) {
-                console.log('matomas');
+                // console.log('matomas');
             }
         })
 
@@ -128,7 +128,7 @@ class Carousel {
             //const timer = setInterval() iskviesti dot
             //atskiras metodas, kuris iskvieciamas pradzioje
             
-        console.log('out');
+        // console.log('out');
         })
     }
 
