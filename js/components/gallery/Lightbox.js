@@ -30,10 +30,10 @@ class Lightbox {
     }
 
     render() {
-        const HTML = `<span class="closeImage">x</span>
-                    <div class="arrow left"><</div>
+        const HTML = `<span class="closeImage">&times;</span>
+                    <div class="arrow left">&#10094;</div>
                     <div class="content" id="lightboxSlide"></div>
-                    <div class="arrow right">></div>`
+                    <div class="arrow right">&#10095</div>`
         this.DOM.innerHTML = HTML;
         this.contentDOM = this.DOM.querySelector('.content');
     }
@@ -58,6 +58,8 @@ class Lightbox {
     addEvents() {
         const leftArrow = this.DOM.querySelector('.arrow.left')
         const rightArrow = this.DOM.querySelector('.arrow.right');
+        let closeBtn = this.DOM.querySelector('.closeImage');
+
 
             leftArrow.addEventListener('click', () => {
                 // kai pasiekia 0, eiti i 5
@@ -81,6 +83,9 @@ class Lightbox {
                 console.log('rightArrow', this.index);
             });
 
+        closeBtn.addEventListener('click', () => {
+            this.DOM.style.display ='none';
+        })
     }
 }
 

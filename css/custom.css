@@ -1052,26 +1052,26 @@ canvas {
             #lightboxSlide > img {
                 position: relative;
                 padding: 30px 0;
-                margin: auto;
                 width: 70%;
                 max-width: 1200px;
             }
 
-            #lightbox > .arrow {
-                position: relative;
-                font-size: 40px;
-                color: red;
-            }
+                #lightbox > .arrow {
+                    position: absolute;
+                    cursor: pointer;
+                    color: #6c757d;
+                    font-size: 40px;
+                    top: 50%;
+                    bottom: 50%;                   
+                }
 
-            #lightbox > .left {
-                left: 0;
-                top: 0;
-            }
+                    #lightbox > .left {
+                        left: 50px;
+                    }
 
-            #lightbox > .right {
-                right: 0;
-                top: 0;
-            }
+                    #lightbox > .right {
+                        right: 50px;
+                    }
 
             span.closeImage {
                 position: absolute;
