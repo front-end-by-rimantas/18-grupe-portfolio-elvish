@@ -2,7 +2,7 @@ function progressBarLoad() {
     const items = document.querySelectorAll('.bar');
     const value = document.querySelectorAll('.value');
     
-    const speed = 60; //the lower the slower
+    const speed = 30;
     
     items.forEach(counter => {
             const updateCount = () => {

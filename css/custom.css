@@ -705,21 +705,28 @@ canvas {
                       
                     }
                 } */
-                @media (max-width: 960px) {
-                    .curve-box-container {
-                      bottom: -35px;
-                    }
-                }
-                @media (max-width: 880px) {
-                    .curve-box-container {
-                      bottom: 86px;
-                    }
-                }
-                @media (max-width: 768px) {
-                    .curve-box-container {
-                        bottom: 105px;
-                    }
-                }
+
+    @media (max-width: 1100px) {
+        .row.aboutMe {
+            gap: 0;
+        }
+    }
+    
+    @media (max-width: 960px) {
+        .curve-box-container {
+            bottom: -35px;
+        }
+    }
+    @media (max-width: 880px) {
+        .curve-box-container {
+            bottom: 86px;
+        }
+    }
+    @media (max-width: 768px) {
+        .curve-box-container {
+            bottom: 105px;
+        }
+    }
 
 /* services */
 
@@ -965,7 +972,6 @@ canvas {
                 color: black;
                 font-size: 14px;
                 padding: 5px 15px;
-                margin: 0 10px;
                 border-radius: 5px;
                 text-transform: capitalize;
                 cursor: pointer;
@@ -976,6 +982,7 @@ canvas {
                     color: #bebcbc;
                     font-size: 12px;
                     margin-top: 1px;
+                    padding: 0 10px;
                 }
 
                 .filter-menu > .filter-item:hover,
@@ -1146,9 +1153,21 @@ canvas {
                     left: 100%;
                 }
 
+        @media (max-width: 900px) {
+            span.filter-menu-star {
+                padding: 0 5px;
+            }
+        }
+
         @media (max-width: 700px) {
             .gallery-item {
                 padding-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .filter-menu > .filter-item{
+                padding: 5px 8px;
             }
         }
 

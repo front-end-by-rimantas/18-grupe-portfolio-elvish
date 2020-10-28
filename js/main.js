@@ -13,7 +13,7 @@ import heroTextTransform from "./components/hero/heroTextTransform.js";
 // about me import
 import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
-import progressBarLoad from './components/about-me/progressBarLoad.js';
+import { progressOnScroll } from './components/about-me/progressOnScroll.js';
 
 // services import
 import servicesData from './data/services.js'
@@ -70,7 +70,7 @@ mobileNav();
 // HeroTextChanging();
 // about logic
 renderProgressBar(bar);
-progressBarLoad();
+progressOnScroll();
 
 
 // services logic
