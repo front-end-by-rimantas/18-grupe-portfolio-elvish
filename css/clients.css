@@ -1,0 +1,104 @@
+.clients{
+    width:100%;
+    padding: 15px;
+    background-image: url(../img/background/background-client.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 40%;
+    text-align: center;
+    color:white;
+    position: relative;
+    z-index: 1;
+}
+
+.clients > .bg-overlay {
+    position: absolute;
+    z-index: -1;
+}
+
+.clients-texts > p{
+    color: white;
+    margin-bottom: -20px;
+}
+
+        .clients .line-break::before, 
+        .clients .line-break::after {
+            border-top: 1px solid white; 
+        }
+
+    .testimonials-item i{
+        font-size: 60px;
+    }
+
+    .test-item-width{
+        width: 600px;
+        margin: auto;
+    }
+
+    @media (max-width: 700px) {
+        .test-item-width{
+            width: 100%;
+        }
+    }
+
+    .testimonials-item h5{
+        font-family:'Nunito', sans-serif;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .testimonials-item h6{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .testimonials-item p{
+        margin-top: 15px;
+        font-size: 18px;
+        line-height:1.5;
+    }
+
+.carousel {
+    display: inline-block;
+    width: 100%;
+}
+    .carousel > .content {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+    }
+        .carousel > .content > .list {
+            display: inline-block;
+            transition: all 1s;
+        }
+            .carousel > .content > .list > * {
+                display: inline-block;
+                float: left;
+            }
+    .carousel > .actions {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 30px 0px 50px 0px;
+    }
+        .carousel > .actions > .dot {
+            display: inline-block;
+            width: 12px;
+            height: 6px;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: white;
+            /* opacity: 0.5; */
+            background-color: rgb(160, 160, 160) ;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+            .carousel > .actions > .dot:hover {
+                background-color: white;
+            }
+
+            .carousel > .actions > .dot.active {
+                background-color: white;
+                width: 20px;
+                height: 6px;
+            }

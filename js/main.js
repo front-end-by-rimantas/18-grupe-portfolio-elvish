@@ -32,6 +32,9 @@ import {renderEducation} from './components/education/renderEducation.js';
 // our work import
 
 // our clients import
+import { testimonialsData } from './data/clientsData.js';
+import { Item } from './components/clients/Item.js';
+import { Carousel } from './components/clients/Carousel.js';
 
 // trusties import
 import trustieData from "./data/dataTrusties.js"
@@ -74,6 +77,12 @@ renderEducation(eduData);
 // our work logic
 
 // our clients logic
+new Carousel({
+    data: testimonialsData,
+    renderEngine: Item,
+    breakpoints: [800, 1100],
+    itemsPerView: 1
+});
 
 // trusties logic
 createTrustieRow(trustieData);
