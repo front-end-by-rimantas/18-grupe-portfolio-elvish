@@ -1,22 +1,48 @@
-[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/belauzas/HTML5-website-template/blob/master/LICENSE.md)
-![Gluten Status](https://img.shields.io/badge/Gluten-Free-green.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+## Welcome! 👋
 
-# Mitech
-### 18b group personal website project
+Thanks for checking out our Baltic Institute of Technology front-end course assigment!
 
-This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
+The main challenge of this assigment was to  to improve our skills in a real-life workflow, as well as,
+improve our communication skills, team work and get hands-on experience using GitHub platform!
 
-Site published at https://front-end-by-rimantas.github.io/18b-grupe-portfolio/
+**In order to complete this assigment we used HTML CSS and JavaScript and built everything from scratch**
 
-Design: [Mitech portfolio template](https://demo.hasthemes.com/mitech-preview/index-infotechno.html)
+
+## About the task
+
+Our task was to build out a project form a scratch, while following given design template/example.
 
 
 ## Project features
-- responsive design
-- repetitive content is generated/rendered;
-- multi-page
-- no AJAX
 
-## Authors
-[Rimantas](https://github.com/belauzas)
+* Responsive design
+* Repetitive content is generated/rendered;
+* Multi-page
+* No AJAX
+
+
+## Building our project
+
+We tried to use structured workflow in order to keep our code clean and easy to read, as well as, we tried to employ workflow used in real-life
+
+## Style
+
+While following given design template we had to use our best judgment for styles such as `font-size`, `padding` or `margin`.
+
+This meant that in order to finish our project we had to train our eyes to perceive differences in spacings,colors and sizes.
+
+
+## Site published at:
+https://front-end-by-rimantas.github.io/18-grupe-portfolio-elvish/
+
+
+## Design:
+http://themesboss.com/elvish/index_6.html
+
+
+## Members:
+[link to Giedrius](https://github.com/giedrunas)
+[link to Karina](https://github.com/Karina-N)
+[link to Milda](https://github.com/mildasuziedelyte)
+[link to Ugnius](https://github.com/ugniusnor)
+[link to Urte](https://github.com/UrteZ)

@@ -1,0 +1,126 @@
+header{
+    height: 70px;
+    background-color: transparent;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+header.container.scroll {
+    background-color: white;
+}
+
+header.container.scroll a {
+    color: black;
+}
+
+
+header.container.scroll .nav-item:hover::after{
+    background-color: black;
+}
+
+    header .logo{
+        float: left;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    header #burger{
+        display:none;
+    }
+
+    header nav{
+        float: right;
+    }
+        header nav .nav-item{
+            float: left;
+            color: white;
+            text-transform: capitalize;
+            line-height: 30px;
+            position: relative;
+        }
+
+        header nav .nav-item + .nav-item{
+            margin-left: 40px;
+        }
+
+       nav > .nav-item:hover::after {
+            display: block;
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translate(-50%, 0); 
+        }
+
+@media (max-width: 900px) {
+header #burger{
+    display: inline-block;
+    float: right;
+    color: white;
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+header.container.scroll #burger{
+    color: black;
+}
+
+header nav{
+    display: none;
+}
+
+header.visible{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+    .header .visible{
+        display: block;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 70px;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.5s;
+    }
+
+    header.container.scroll .visible{
+        display: block;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 70px;
+        background-color: white;
+    }
+
+    header nav.visible >.nav-item{
+        display:block;
+        float: none;
+        margin: 4px 5px;
+    }
+
+    nav.visible > .nav-item:hover::after{
+        display:none;
+    }
+
+    header nav > a::after {
+        display: none;
+    }
+
+
+}
+

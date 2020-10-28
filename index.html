@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- reset -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/layoutGrid12.css">
     <!-- 3rd party -->
+    <link rel="icon" href="./img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/mobirise-icons-style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <!-- components -->
     <!-- custom -->
     <link rel="stylesheet" href="./css/custom.css">
@@ -16,84 +18,250 @@
 
 <body>
     <!-- header -->
-    <header class="container-fluid">
-        <div class="row">
-            HEADER
-        </div>
-    </header>
+    <!-- <div class="to-top fa fa-angle-up"></div> -->
+    <i class="fa fa-angle-up to-top" aria-hidden="true"></i>
+    <header>
+      
+                <div class="header-container">
+                    <div class="header-sandwhich">
+                        <div id="burger" class="sandwhcih-icon"></div>
+                        <div id="burger" class="sandwhcih-icon1"></div>
+                        <div id="burger" class="sandwhcih-icon2"></div>
+                    </div>
+                              <div class="logo-container">
+                                  <h1>Elvish</h1>
+                              </div>
+                              <ul class="navigation">
+                                  <a class="nav-links" href="#home"> <li class="header-list">Home</li></a>
+                                  <a class="nav-links" href="#about"> <li class="header-list">About</li></a>
+                                  <a class="nav-links" href="#services"> <li class="header-list">Services</li></a>
+                                  <a class="nav-links" href="#education"> <li class="header-list">Education</li></a>
+                                  <a class="nav-links" href="#work"> <li class="header-list">Work</li></a>
+                                  <a class="nav-links" href="#client"> <li class="header-list">Client</li></a>
+                                  <a class="nav-links" href="#blog"> <li class="header-list">Blog</li></a>
+                                  <a class="nav-links" href="#contact"> <li class="header-list">Contact</li></a>
+                              </ul>
+                        </div>
+                        <div class="mobile-navigation">
+                        </div>
+        </header>
     <!-- hero -->
-    <div class="container">
+    <div id="home" class="container-fluid hero-fluid">
         <div class="row">
-            HERO
+            <div class="hero col-12">
+                <div class="bg-overlay">
+                <div id="homeSection" class="hero-container">
+                    <div class="hero-container-center">
+                        <div class="rows">
+                            <h4> Hello & Welcome</h4>
+                        </div>
+                        <div class="rows">
+                            <h1>
+                                I am <span  class="changing-text">Elvish walter</span>
+                            </h1>
+                        </div>
+                        <div class="rows">
+                            <div class="socials-hero">
+                                     <a href="#" target="blink"  class="fa fa-facebook"></a >
+                                    <a href="#" target="blink" class="fa fa-twitter"></a >
+                                    <a href="#" target="blink" class="fa fa-dribbble"></a >
+                                    <a href="#" target="blink" class="fa fa-tumblr"></a >
+                                    <a href="#" target="blink" class="fa fa-linkedin"></a >
+                                    <a href="#" target="blink" class="fa fa-instagram"></a >
+                            </div>
+                        </div>
+                        <div class="rows">
+                           <div class="hero-btn">
+                               <p>Download CV</p>
+                           </div>
+                        </div>
+                    </div> 
+                    <div id="particles-js"> </div>
+                </div>
+                </div>
+                <div class="hero-bottom-for-mouse">
+                <a href="#about"> <div class="hero-mouse"></div></a>
+            </div>
+            </div>
+            <!-- ______________________________________________________________________________________________________________________ -->
+        </div>
+        <div  class="container-fluid">
+            <div class="row">
+                <div class="curve-box-container col-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,245.3C640,235,800,181,960,160C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+                 </div>
+            </div>
         </div>
     </div>
-    <!-- clients -->
-    <div class="container">
-        <div class="row">
-            CLIENTS
+    <!-- about -->
+
+    <div id="about" class="container aboutWhiteGap">
+        <div class="row aboutMe">
+            <div class="about-section section-header col-12">
+                <h2><bold>About</bold> Me</h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+            </div>
+
+            <div class="hello-section col-12">
+                <img id="Elvish-sig" src="./img/elvish-signature.png" alt="Elvish signature">
+                <h2>Hello! <bold>I'm Elvish Walters.</bold></h2>
+                <div class="hello-list">
+                    <div>UI/UX Designer</div>
+                    <div class="hello-list-middle"><span class="hello-dot">&middot;</span>Photographer<span class="hello-dot">&middot;</span></div>
+                    <div>Developer</div>
+                </div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+            <div class="bar1 col-6 col-lg-12"></div>
+            <div class="bar2 col-6 col-lg-12"></div>
         </div>
     </div>
     <!-- services -->
-    <div class="container">
-        <div class="row">
-            SERVICES
+    <div id="services" class="container bg-services">
+        <div class="row servicesRow">
+            <div class="servicesStar section-header col-12">
+                <h2>Our <bold>Services</bold></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
         </div>
+        <!-- <div class="row servicesItems"></div> -->
+        <div class="row services"></div>
     </div>
-    <!-- our company -->
-    <div class="container">
-        <div class="row">
-            OUR COMPANY
-        </div>
-    </div>
-    <!-- hire us -->
-    <div class="container">
-        <div class="row">
-            HIRE US
-        </div>
-    </div>
-    <!-- achievements -->
-    <div class="container">
-        <div class="row">
-            ACHIEVEMENTS
-        </div>
-    </div>
-    <!-- watch video -->
+    <!-- statistics -->
     <div class="container-fluid">
         <div class="row">
-            WATCH VIDEO
+            <div class="statistics col-12">
+                <div class="bg-stats-overlay">
+                    <div class="statistics-container">
+                        STATISTICS
+                    </div>
+                </div>
+            </div>    
         </div>
     </div>
-    <!-- case studies -->
-    <div class="container">
-        <div class="row">
-            CASE STUDIES
-        </div>
+    <!-- education -->
+    <div id="education" class="container education section-padding">
+        <div class="row edu-top-section">
+            <div class="section-header col-12">
+                <h2><bold>Education & Experience</bold></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+            </div>
+        </div>    
+        <div class="row edu-1"></div>
     </div>
-    <!-- testimonials -->
-    <div class="container-fluid">
+    <div class="scroll-education"></div>
+     <!-- hire me -->
+     <div class="container-fluid">
         <div class="row">
-            TESTIMONIALS
+            <div class="hire-me-row col-12">
+                <div class="bg-overlay"></div>
+                <div>
+                    <h1 id="hire-me-h1">I am available for freelance work.</h1>
+                    <a id="hire-me-a" href="mailto:example@gmail.com?subject=Freelance opportunity&body=Hi Elvish, I am really intrigued by your portfolio!">Hire me&#33;</a>
+                </div>
+            </div>
+    </div>
+    </div>
+    <!-- our work -->
+    <div  id= "work" class="container">
+        <div class="row our-work-section">
+            <div class="our-work-header col-12">
+                <h2>Our <bold>Work</bold></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+                    <ul class="filter-ul">
+                        <li class="filter-list-item">All</li>
+                        <li class="filter-list-item star">Seo</li>
+                        <li class="filter-list-item star">Webdesign</li>
+                        <li class="filter-list-item star">Work</li>
+                        <li class="filter-list-item star">Wordpress</li>
+                    </ul>
+                <div class="gallery col-3">GALLERY</div>
+               
+            </div>
+        </div>
+        <div class="scroll-to-work"></div>
+    </div>
+    <!-- our clients -->
+    <div id="client" class="container-fluid">
+        <div class="row">
+            <div class="clients col-12">
+                <div class="bg-overlay"></div>
+                <div class="clients-texts section-header">
+                    <h2>Our <bold>Clients</bold></h2>
+                    <div class="line-break"><p class="star">&#42;</p></div>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div class="clients-pagination">
+                    CLIENTS PAGINATION
+                    </div>
+                </div>    
+            </div>   
+        </div>    
+    </div>
+    <!-- trusties -->
+    <div class="container trusties-section">
+        <div class="row ">
+            <div class="section-header col-12">
+                <h2>Trusted by <bold>Great people</bold></h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+        </div>
+        <div class="row trusties-img"></div>
+    </div>
+    <!-- subscribe -->
+    <div class='container'>
+        <div class="row">
+            <div class="subscribe-section section-header col-12">
+                <h2><bold>Subscribe</bold> to newsletter</h2>
+                <div class="line-break"><p class="star">&#42;</p></div>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at this layout.</p>
+            </div>
+            <div class="subscribe-form col-12">
+                <form id ="subscribeform" action="#" NoValidate>
+                    <div class='subscribe-line'>
+                        <input class="subscribe-input" id="subscribe-email" type="email" placeholder="Email">
+                        <button class="subscribe-submit" id="subscribe-click" type="submit">Subscribe</button>  
+                    </div>
+                    <div class="subscribe-error"></div>
+                    <div class="subscribe-errorIcon">!</div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- blog -->
-    <div class="container">
-        <div class="row">
+    <div id="blog" class="container">
+        <div class="row col-12">
             BLOG
-        </div>
+        </div>  
     </div>
     <!-- contact -->
-    <div class="container">
-        <div class="row">
-            CONTACT
+    <div id="contact" class="container">
+        <div class="row col-12">
+            CONTACT FORM
         </div>
     </div>
     <!-- footer -->
     <footer class="container">
         <div class="row">
-            FOOTER
+            <div class="footer col-12">
+                <div class="copyright">
+                    <p>2018 © Elvish. Design by ThemesBoss.</p>
+                </div>
+                <div class="footer-social-icons">
+                    <a id="footer-socials" href="#" target="blink"  class="fa fa-facebook"></a >
+                    <a id="footer-socials" href="#" target="blink" class="fa fa-twitter"></a >
+                    <a id="footer-socials" href="#" target="blink" class="fa fa-linkedin"></a >
+                    <a id="footer-socials"  href="#" target="blink" class="fa fa-instagram"></a >
+                </div>
+            </div>
         </div>
     </footer>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
 </body>
-
 </html>
