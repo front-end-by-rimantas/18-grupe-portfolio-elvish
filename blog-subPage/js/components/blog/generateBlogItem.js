@@ -3,6 +3,7 @@ import { isValidBlogItem } from './isValidBlogItem.js'
 
 function generateBlogItem(item, imagePath, showErrors = false) {
 
+    console.log(item);
     if (!isValidBlogItem(item, showErrors)) {
         return '';
     }
@@ -13,7 +14,7 @@ function generateBlogItem(item, imagePath, showErrors = false) {
 
     let HTML = '<div class="row blogItem">'
 
-    HTML += `<img class="col-12" src=${imagePath + item.media} alt="">
+    HTML += `<img class="col-12" src=${imagePath + item.media.img} alt="">
     <h4 class='col-12'>${item.title}</h4>
     <div class="blogCategory col-12">${item.category}</div>`
 

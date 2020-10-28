@@ -42,7 +42,7 @@ function isValidBlogItem(item, showErrors = false) {
         }
     }
 
-    if (typeof item.media !== 'string') {
+    if (typeof item.media.img !== 'string') {
         errors.push('ERROR: paslaugos nuotraukos pavadinimas turi buti tekstinis.');
     }
     //  else {
