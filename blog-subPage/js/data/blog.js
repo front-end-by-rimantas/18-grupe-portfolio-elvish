@@ -5,7 +5,10 @@ const blogData = {
     videoPath: '',
     blogItems: [
         {
-            media:'blogItem-image1.png',
+            media:{
+                img: 'blogItem-image1.png',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -20,7 +23,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem2-video.png',
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
@@ -35,7 +41,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem3-image1.PNG',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Food',
             date: {
@@ -50,7 +59,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem-image1.png',
+            media:{
+                img: 'blogItem-image1.png',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -65,7 +77,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem2-video.png',
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
@@ -80,7 +95,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem3-image1.PNG',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -95,7 +113,10 @@ const blogData = {
             active: false
         },
         {
-            media:'blogItem3-image1.PNG',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -110,7 +131,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem-image1.png',
+            media:{
+                img: 'logItem-image1.png',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -125,7 +149,10 @@ const blogData = {
             active: false
         },
         {
-            media:'blogItem2-video.png',
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
             title: 'Contrary to popular belief',
             category: 'Travel',
             date: {
@@ -140,7 +167,10 @@ const blogData = {
             active: true
         },
         {
-            media:'blogItem3-image1.PNG',
+            media:{
+                img: 'logItem3-image1.PNG',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Lifestyle',
             date: {
@@ -155,7 +185,10 @@ const blogData = {
             active: false
         },
         {
-            media:'blogItem3-image1.PNG',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
             title: 'There are many variations',
             category: 'Animals',
             date: {
