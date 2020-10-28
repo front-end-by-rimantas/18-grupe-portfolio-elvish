@@ -36,6 +36,9 @@ import { Gallery } from './components/gallery/Gallery.js';
 import { Lightbox } from './components/gallery/Lightbox.js';
 
 // our clients import
+import { testimonialsData } from './data/clientsData.js';
+import { Item } from './components/clients/Item.js';
+import { Carousel } from './components/clients/Carousel.js';
 
 // trusties import
 import trustieData from "./data/dataTrusties.js"
@@ -85,6 +88,12 @@ const lightbox = new Lightbox({
 gallery.registerLightbox(lightbox);
 
 // our clients logic
+new Carousel({
+    data: testimonialsData,
+    renderEngine: Item,
+    breakpoints: [800, 1100],
+    itemsPerView: 1
+});
 
 // trusties logic
 createTrustieRow(trustieData);
