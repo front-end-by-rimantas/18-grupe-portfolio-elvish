@@ -1402,23 +1402,42 @@ canvas {
 
 .contact-form > .form-row:nth-child(1),
 .contact-form > .form-row:nth-child(2) {
-    width: calc((100%-10px) / 2);
+    width: calc((100% - 20px) / 2);
     display: inline-block;
 }
+.contact-form > .form-row:nth-child(1) {
+    float: left;
+}
+.contact-form > .form-row:nth-child(2) {
+    float: right;
+}
+
 .form-row > label {
     display: inline-block;
     margin: 0px 0px 8px;
     font-weight: 700;
 
 }
-.form-row > input {
+.form-row > input,
+.form-row > .textAr {
     display: block;
-    padding: 6px 12px;
+    padding: 10px 12px;
     font-weight: 400;
     width: 100%;
     cursor: text;
     outline: none;
+    border: 1px solid #e7e7e7;
 }
+.form-row > .textAr {
+    min-height: 100px;
+    max-height: 300px;
+    resize: vertical;
+}
+.form-row > input:focus,
+.form-row > .textAr:focus {
+        border: 1.5px solid #000;
+    }
+
 .form-row.success input,
 .form-row.success textarea {
     border: 2px solid green;
@@ -1463,15 +1482,6 @@ canvas {
     visibility: hidden;
 }
 
-.textAr {
-    display: block;
-    width: 100%;
-    min-height: 100px;
-    max-height: 300px;
-    padding: 6px 12px;
-    resize: vertical;
-    outline: none;
-}
 input.m-btn {
     float: right;
     border: 2px solid #000;
@@ -1485,16 +1495,12 @@ input.m-btn {
     outline: none;
     width: auto;
     margin-top: 20px;
+    transition: all 0.5s;
 }
     .m-btn:hover {
         cursor: pointer;
         background-color: #ffffff ;
-        color: #000000
-    }
-    .m-btn:focus,
-    input:focus,
-    .textAr:focus {
-        border-color: #000;
+        color: #000000;
     }
 
 @media (max-width: 1000px) {
