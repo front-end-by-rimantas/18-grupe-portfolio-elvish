@@ -1,27 +1,27 @@
 const bar = [
     {   
         label: 'Development',
-        value: '80%',
+        value: '80',
     },
     {   
         label: 'WordPress',
-        value: '59%',
+        value: '59',
     },
     {   
         label: 'Photoshop',
-        value: '88%',
+        value: '88',
     },
     {   
         label: 'HTML',
-        value: '96%',
+        value: '96',
     },
     {   
         label: 'CSS',
-        value: '70%',
+        value: '70',
     },
     {   
         label: 'Asp.net',
-        value: '58%',
+        value: '58',
     }
 ];
 

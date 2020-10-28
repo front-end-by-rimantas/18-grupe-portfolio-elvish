@@ -13,6 +13,7 @@ import heroTextTransform from "./components/hero/heroTextTransform.js";
 // about me import
 import bar from './data/dataBar.js';
 import renderProgressBar from './components/about-me/renderProgressBar.js';
+import progressBarLoad from './components/about-me/progressBarLoad.js';
 
 // services import
 import servicesData from './data/services.js'
@@ -30,6 +31,9 @@ import {renderEducation} from './components/education/renderEducation.js';
 // hire me import
 
 // our work import
+import { dataGallery } from './data/dataGallery.js';
+import { Gallery } from './components/gallery/Gallery.js';
+import { Lightbox } from './components/gallery/Lightbox.js';
 
 // our clients import
 import { testimonialsData } from './data/clientsData.js';
@@ -61,6 +65,8 @@ mobileNav();
 // HeroTextChanging();
 // about logic
 renderProgressBar(bar);
+progressBarLoad();
+
 
 // services logic
 renderServices(servicesData)
@@ -75,6 +81,11 @@ renderEducation(eduData);
 // hire me logic
 
 // our work logic
+const gallery = new Gallery(dataGallery);
+const lightbox = new Lightbox({
+    selector: '#lightbox'
+});
+gallery.registerLightbox(lightbox);
 
 // our clients logic
 new Carousel({
