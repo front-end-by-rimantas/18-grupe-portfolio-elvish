@@ -39,6 +39,7 @@ import { Lightbox } from './components/gallery/Lightbox.js';
 import { testimonialsData } from './data/clientsData.js';
 import { Item } from './components/clients/Item.js';
 import { Carousel } from './components/clients/Carousel.js';
+// import { slideshow } from './components/clients/slideShow.js';
 
 // trusties import
 import trustieData from "./data/dataTrusties.js"

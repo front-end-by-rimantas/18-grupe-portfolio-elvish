@@ -131,10 +131,7 @@ class Carousel {
         // console.log('out');
         })
     }
-
-
-
-
+        
 }
 
 export { Carousel }
