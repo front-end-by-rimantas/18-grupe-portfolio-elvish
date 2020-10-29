@@ -9,12 +9,12 @@ class Lightbox {
         this.index = 0;
         this.init();
     }
- 
+
     init() {
         if (!this.isValidSelector()) {
             return;
-        } 
-        
+        }
+
         this.render();
         this.addEvents();
     }
@@ -35,14 +35,25 @@ class Lightbox {
                         <div class="arrow left">&#10094;</div>
                         <div class="content" id="lightboxSlide"></div>
                         <div class="arrow right">&#10095</div>
-                        <p id="caption">of 6</p>
+                        <p id="caption">
+                            <span class="current">2</span>
+                            <span>of</span>
+                            <span class="total">5</span>
+                        </p>
                     </div>`
 
         this.DOM.innerHTML = HTML;
         this.contentDOM = this.DOM.querySelector('.content');
+        this.counterCurrentDOM = this.DOM.querySelector('.current');
+        this.counterTotalDOM = this.DOM.querySelector('.total');
     }
 
     renderImage() {
+        // const item = this.images[this.index];
+        // const src = this.imagePath + item.image;
+        // const imgHTML = `<img src="${src}" alt="${item.imageAlt}">`;
+        // this.contentDOM.insertAdjacentHTML('beforeend', imgHTML);
+
         const img = document.createElement('img')
         const item = this.images[this.index]
         img.src = this.imagePath + item.image
@@ -56,8 +67,11 @@ class Lightbox {
         this.images = images;
         this.index = index;
         this.renderImage();
-        this.DOM.style.display ='block';
-    } 
+        this.DOM.style.display = 'block';
+
+        this.counterCurrentDOM.innerText = this.index + 1;
+        this.counterTotalDOM.innerText = this.images.length;
+    }
 
     addEvents() {
         const leftArrow = this.DOM.querySelector('.arrow.left')
@@ -65,32 +79,33 @@ class Lightbox {
         let closeBtn = this.DOM.querySelector('.closeImage');
 
 
-            leftArrow.addEventListener('click', () => {
-                this.index--
-                if (this.index < 0) {
-                    this.index = this.images.length-1;
-                }
+        leftArrow.addEventListener('click', () => {
+            this.index--
+            if (this.index < 0) {
+                this.index = this.images.length - 1;
+            }
+            this.counterCurrentDOM.innerText = this.index + 1;
 
-                this.renderImage();
-                // console.log('leftArrow', this.index);
-            }); 
+            this.renderImage();
+        });
 
-            rightArrow.addEventListener('click', () => {
-                this.index++
-                if (this.index > this.images.length-1) {
-                    this.index = 0;
-                }
+        rightArrow.addEventListener('click', () => {
+            this.index++
+            if (this.index > this.images.length - 1) {
+                this.index = 0;
+            }
+            this.counterCurrentDOM.innerText = this.index + 1;
 
-                this.renderImage();
-            });
+            this.renderImage();
+        });
 
         closeBtn.addEventListener('click', () => {
-            this.DOM.style.display ='none';
+            this.DOM.style.display = 'none';
         })
 
-        document.addEventListener('keydown', ({key}) => {
+        document.addEventListener('keydown', ({ key }) => {
             if (key === "Escape") {
-                this.DOM.style.display ='none';
+                this.DOM.style.display = 'none';
             }
         })
     }

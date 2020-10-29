@@ -50,10 +50,10 @@ class Gallery {
     renderImages() {
         let HTML = '';
 
-        for (let i=0; i<this.params.images.length; i++) {
+        for (let i = 0; i < this.params.images.length; i++) {
             const project = this.params.images[i];
 
-            HTML +=`<div class="gallery-item col-4 col-md-12">
+            HTML += `<div class="gallery-item col-4 col-md-12">
                         <img src="${this.params.imagePath + project.image}" alt="${project.imageAlt}">
                         <div class="gallery-image-overlay"></div>
                         <div class="text" id=""gallery-text>
@@ -72,7 +72,7 @@ class Gallery {
         let gallery = this.params.images;
         let array = [];
 
-        for (let i=0; i<gallery.length; i++) {
+        for (let i = 0; i < gallery.length; i++) {
 
             array.push(this.params.images[i].filter);
         }
@@ -88,25 +88,25 @@ class Gallery {
         }
 
         let HTML = `<div class="filter-item active">All</div>`;
-        
-        for (let i=0; i<uniqueTags.length; i++) {
-            HTML += 
+
+        for (let i = 0; i < uniqueTags.length; i++) {
+            HTML +=
                 `<span class="filter-menu-star">&#65121</span>
                  <div class="filter-item" value="${uniqueTags[i]}">${uniqueTags[i]}</div>`;
         }
-        
+
         return HTML;
     }
 
     currentlyVisibleItems() {
         let visibleImages = [];
-        
-        for(let n=0; n<this.params.images.length; n++) {
+
+        for (let n = 0; n < this.params.images.length; n++) {
             if (this.params.images[n].visible) {
                 visibleImages.push(this.params.images[n]);
-            }   
+            }
         }
-            return visibleImages;
+        return visibleImages;
     };
 
     addEvents() {
@@ -119,43 +119,42 @@ class Gallery {
                 let visibleItems = this.currentlyVisibleItems()
                 let clickedIndex = visibleItems.indexOf(this.params.images[i])
                 this.lightbox.show(visibleItems, this.params.imagePath, clickedIndex);
-                console.log('ijungta foto', clickedIndex+1);
-            }); 
+            });
         }
 
 
-        for (let i=0; i<filterItems.length; i++) {
-            
+        for (let i = 0; i < filterItems.length; i++) {
+
             filterItems[i].addEventListener('click', () => {
                 let filterItemsValue = filterItems[i].innerHTML;
-               
+
                 filterItems.forEach(filter => {
-                filter.classList.remove('active')
+                    filter.classList.remove('active')
                 })
 
                 filterItems[i].classList.add('active');
 
 
                 if (filterItemsValue === 'All') {
-                    for(let i=0; i<this.params.images.length; i++) {
+                    for (let i = 0; i < this.params.images.length; i++) {
                         const photo = galleryItems[i];
                         photo.style.display = 'block';
-                        this.params.images[i].visible=true;
+                        this.params.images[i].visible = true;
                     }
-                } 
+                }
 
                 else {
-                    for (let i=0; i<this.params.images.length; i++) {
+                    for (let i = 0; i < this.params.images.length; i++) {
                         const photoData = this.params.images[i];
                         const photo = galleryItems[i];
-                        if(photoData.filter.includes(filterItemsValue)) {
+                        if (photoData.filter.includes(filterItemsValue)) {
                             photo.style.display = 'block';
-                            this.params.images[i].visible=true;
+                            this.params.images[i].visible = true;
                         }
 
                         else {
                             photo.style.display = 'none';
-                            this.params.images[i].visible=false;
+                            this.params.images[i].visible = false;
                         }
                     }
                 }
@@ -165,7 +164,7 @@ class Gallery {
 
     registerLightbox(callback) {
         this.lightbox = callback;
-    }  
+    }
 }
 
 export { Gallery }
