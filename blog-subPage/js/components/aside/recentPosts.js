@@ -1,52 +1,40 @@
-// class Categories {
-//     constructor(categories, blogItems) {
-//         this.title = categories.title
-//         this.blogItems = blogItems
+class RecentPosts {
+    constructor(params) {
+        this.recentPostsSection = params.recentPostsSection;
+        this.blogData = params.blogData;
+        this.sortedRecent = params.categoriesList;
 
-//         this.generateHTML()
-//     }
+        this.generateHTML()
 
-//     // suranda kokių kategorijų blogo įrašų yra
-//     findAllCategories (){
-//         let categoryList = [];
-//         for (let item of this.blogItems) {
-//             if (!categoryList.includes(item.category)){
-//                 categoryList.push(item.category)
-//             }
-//         }
-//         return categoryList
-//     }
+    }
 
-//     // Generuoja kategorijų HTML'ą
-//     generateCategories(){
-//         let allCategories = this.findAllCategories();
+    // Generuoja recent posts item HTML'ą
+    generateRecentPosts() {
+        let recentPostItemHTML = '';
+        for (let i = 0; i < 3; i++) {
+            recentPostItemHTML += `<div class="recent-post-item">
+                                        <img src="${this.blogData.imagePath + this.blogData.blogItems[this.sortedRecent[i]].media.img}" alt="Blog post image">
+                                        <div class='recent-post-item-texts'>
+                                            <h4>${this.blogData.blogItems[this.sortedRecent[i]].title}</h4>
+                                            <p>${this.blogData.blogItems[this.sortedRecent[i]].date.month.substring(0,3)} ${this.blogData.blogItems[this.sortedRecent[i]].date.day}, ${this.blogData.blogItems[this.sortedRecent[i]].date.year}</p>
+                                        </div>
+                                    </div>`
+        }
+        return recentPostItemHTML;
+    }
 
-//         let categoriesHTML = ''
+    /**
+     * Generuoja recent posts elemento HTML.
+     */
+    generateHTML() {
+        return `<div class='aside-container aside-recent-posts'>
+        <h4>${this.recentPostsSection.title}</h4>
+        <div class="recent-posts">
+             ${this.generateRecentPosts()}
+        </div>
+        </div>`;
+    }
 
-//         for (let category of allCategories){
-//             categoriesHTML += `<div class='category-item'>
-//                         <a class='arrows' href="#">&raquo;</a>
-//                         <span>${category}</span>
-//                     </div>`
-//         }
+}
 
-//         return categoriesHTML
-        
-//     }
-
-//     /**
-//      * Generuoja categories elemento HTML.
-//      */
-//     generateHTML() {
-//         let categoriesList = this.generateCategories()
-
-//         return `<div class='aside-container aside-categories'>
-//                     <h4>${this.title}</h4>
-//                     <div class="categories">
-//                           ${categoriesList}
-//                     </div>
-//                  </div>`;
-//     }
-// }
-
-// export { Categories }
+export { RecentPosts }

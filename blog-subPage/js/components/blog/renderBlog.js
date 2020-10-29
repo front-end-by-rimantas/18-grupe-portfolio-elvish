@@ -1,18 +1,20 @@
 import {generateBlogItem} from './generateBlogItem.js';
-import { getActiveBlogItemsIndexes } from './getActiveItemsIndexes.js'
+// import { getActiveBlogItemsIndexes } from './getActiveItemsIndexes.js'
 
-function renderBlog(blogData, pageIndex) {
+function renderBlog(blogData, pageIndex, sortedBlogItemsIndexes) {
 
-    let activeBlogItemsIndexes = getActiveBlogItemsIndexes(blogData);
+    // console.log(sortedBlogItemsIndexes);
+
+    // let activeBlogItemsIndexes = getActiveBlogItemsIndexes(blogData);
 
     let HTML = '';
 
     let i = pageIndex - 1;
-    let itemFrom = i * blogData.blogItemsInPage;
-    let itemTo = pageIndex * blogData.blogItemsInPage < activeBlogItemsIndexes.length ? pageIndex * blogData.blogItemsInPage : activeBlogItemsIndexes.length;
+     let itemTo = pageIndex * blogData.blogItemsInPage < sortedBlogItemsIndexes.length ? pageIndex * blogData.blogItemsInPage : sortedBlogItemsIndexes.length;
+   let itemFrom = i * blogData.blogItemsInPage;
     
     for (let i = itemFrom; i < itemTo;  i++) {
-        const item = blogData.blogItems[activeBlogItemsIndexes[i]];
+        const item = blogData.blogItems[sortedBlogItemsIndexes[i]];
         HTML += generateBlogItem(item, blogData.imagePath, blogData.videoPath );
     }
 

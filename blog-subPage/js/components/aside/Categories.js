@@ -1,69 +1,40 @@
-// class Categories {
-//     constructor(categories, blogItems) {
-//         this.title = categories.title
-//         this.blogItems = blogItems
-//         // console.log(this.blogItems);
+class Categories {
+    constructor(params) {
+        this.categoriesSection = params.categoriesSection;
+        this.blogData = params.blogData;
+        this.categoriesList = params.categoriesList;
 
-//         this.generateHTML()
-//     }
-
-//     // suranda kokių kategorijų blogo įrašų yra
-//     findAllCategories (){
-//         let categoryList = [];
-//         console.log(this.blogItems);
-//         console.log(this.blogItems[0].category );
-//         console.log(this.blogItems[0].active);
-
-//         for (let i=0; i<this.blogItems.length; i++) {
-
-//             if (this.blogItems[i].category && this.blogItems[i].active === 'true'){
-//                 if (!categoryList.includes(this.blogItems[i].category)){
-//                     categoryList.push(this.blogItems[i].category)
-//                 }
-//         }
-//     }
-//         // console.log(categoryList);
-//         return categoryList
-//     }
-
-//     // Generuoja kategorijų HTML'ą
-//     generateCategories(){
-//         let allCategories = this.findAllCategories();
-
-//         let categoriesHTML = ''
-//         if (allCategories.length!==0) {
-//              for (let category of allCategories){
-//             categoriesHTML += `<div class='category-item'>
-//                         <a class='arrows' href="#">&raquo;</a>
-//                         <span>${category}</span>
-//                     </div>`
-//             } 
-//         }
-      
-
-//         return categoriesHTML
+        this.generateHTML()
         
-//     }
+    }
 
-//     /**
-//      * Generuoja categories elemento HTML.
-//      */
-//     generateHTML() {
-//         let categoriesList = this.generateCategories()
+    generateCategoriesListHTML(){
+        let categoriesHTML = '';
+        for (let i = 0; i < this.categoriesList.length; i++) {
+            categoriesHTML += `<div class="categories-item data-index=${i}"> &raquo; ${this.categoriesList[i]}</div>`
+        }
+        return categoriesHTML;
+    }
 
-//         if(categoriesList == ''){
-//             return ''
-//         } else{
-//            return `<div class='aside-container aside-categories'>
-//                     <h4>${this.title}</h4>
-//                     <div class="categories">
-//                           ${categoriesList}
-//                     </div>
-//                  </div>`; 
-//         }
+    generateHTML() {
+        return `<div class='aside-container aside-categories'>
+                    <h4>${this.categoriesSection.title}</h4>
+                    <div class="categories">
+                         ${this.generateCategoriesListHTML()}
+                    </div>
+                    </div>`;
+    }
 
-        
-//     }
-// }
+    categoryClick(){
+       let categories = document.querySelectorAll('.categories-item');
 
-// export { Categories }
+    categories.forEach(category => {
+        category.addEventListener('click', () => {
+
+    }) })}
+
+    
+
+}
+
+export { Categories }
