@@ -10,8 +10,8 @@ function renderBlog(blogData, pageIndex, sortedBlogItemsIndexes) {
     let HTML = '';
 
     let i = pageIndex - 1;
-    let itemFrom = i * blogData.blogItemsInPage;
-    let itemTo = pageIndex * blogData.blogItemsInPage < sortedBlogItemsIndexes.length ? pageIndex * blogData.blogItemsInPage : activeBlogItemsIndexes.length;
+     let itemTo = pageIndex * blogData.blogItemsInPage < sortedBlogItemsIndexes.length ? pageIndex * blogData.blogItemsInPage : sortedBlogItemsIndexes.length;
+   let itemFrom = i * blogData.blogItemsInPage;
     
     for (let i = itemFrom; i < itemTo;  i++) {
         const item = blogData.blogItems[sortedBlogItemsIndexes[i]];

@@ -1,3 +1,5 @@
+import { renderBlog } from '../blog/renderBlog.js'
+
 function onClick(params){
     let sortedBlogItemsIndexes = params.sortedBlogItemsIndexes
     let data = params.blogData.blogItems
@@ -15,27 +17,22 @@ function onClick(params){
             category.classList.add('active-category')
             
             let current = document.querySelector('.categories > .active-category');
-                    let selectedCategory = current.innerHTML
+            // console.log(current);
+                    let selectedCategory = (current.innerHTML).slice(3);
 
                     let list = [];
 
-                    for (let i = 0; i < sortedBlogItemsIndexes.length; i++) {     
-                        if (data[i].category === selectedCategory) {
+                    for (let i = 0; i < sortedBlogItemsIndexes.length; i++) {  
+                        // console.log(data[sortedBlogItemsIndexes[i]].category);   
+                        if (data[sortedBlogItemsIndexes[i]].category === selectedCategory) {
                             list.push(i)                
                         }       
                     }
-                    console.log(list);
-                })})
-        
-    //         let pageIndex = Number (pageButton.innerHTML);
-    //         renderBlog(blogData, pageIndex, activeBlogItemsIndexes);
 
-    //         let allLinks = document.querySelectorAll('a');
-    //         allLinks.forEach(element => {
-    //             element.classList.remove('active-page')});
-    
-    //         pageButton.classList.add('active-page');
-    // })
+                    renderBlog(params.blogData, 1, list);
+                })})
+
+        
 
 
 }
