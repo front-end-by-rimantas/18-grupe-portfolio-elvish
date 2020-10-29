@@ -11,7 +11,7 @@ class Categories {
     generateCategoriesListHTML(){
         let categoriesHTML = '';
         for (let i = 0; i < this.categoriesList.length; i++) {
-            categoriesHTML += `<div class="categories-item"> &raquo; ${this.categoriesList[i]}</div>`
+            categoriesHTML += `<div class="categories-item data-index=${i}"> &raquo; ${this.categoriesList[i]}</div>`
         }
         return categoriesHTML;
     }
