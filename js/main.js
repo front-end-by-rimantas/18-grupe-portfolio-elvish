@@ -110,6 +110,7 @@ import {blogData} from "../blog-subPage/js/data/blog.js"
 
 let a=new BlogCatalog(blogData)
 a.render();
+a.playVideo();
 // contact logic
 renderIcons(leftIcons);
 renderForm(formData);

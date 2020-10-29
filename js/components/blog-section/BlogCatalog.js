@@ -32,13 +32,14 @@ class BlogCatalog {
                                 <p>${this.description1} </p>
                                 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
                                
-                                <div class="blog-card">
+                                <div class="blog-card video-card">
                                 <img src="../../../blog-subPage/img/${this.image2}" alt="blog-image1">
                                 <a href=""../../../blog-subPage/index.html""> <h3>${this.header2}</h3> </a>
                                 <span>${this.category2}</span>
                                 <span>13${this.date2} <strong>By Envato</strong></span>
                                 <p>${this.description2} </p>
                                 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
+                                
 
                                 <div class="blog-card">
                                 <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
@@ -47,6 +48,7 @@ class BlogCatalog {
                                 <span>13${this.date3} <strong>By Envato</strong></span>
                                 <p>${this.description3} </p>
                                 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
+                               
 
                                 `
             //    this.image+this.header+this.category+this.date+this.description
@@ -54,6 +56,7 @@ class BlogCatalog {
                b.innerHTML=domHTML;
                console.log(this.date);
             }
+      
 
 }
 export {BlogCatalog};
@@ -65,3 +68,6 @@ export {BlogCatalog};
 <p>Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.</p>
 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>
 </div> */
+
+
+{/* <div class="video-responsive"> <iframe width="560" height="315" src="https://www.youtube.com/embed/pVE92TNDwUk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> */}
