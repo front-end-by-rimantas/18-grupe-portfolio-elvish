@@ -124,19 +124,19 @@ class Gallery {
         }
 
 
-        for (let tag of filterItems) {
+        for (let i=0; i<filterItems.length; i++) {
             
-            tag.addEventListener('click', () => {
-                let tagValue = tag.innerHTML;
+            filterItems[i].addEventListener('click', () => {
+                let filterItemsValue = filterItems[i].innerHTML;
                
                 filterItems.forEach(filter => {
                 filter.classList.remove('active')
                 })
 
-                tag.classList.add('active');
+                filterItems[i].classList.add('active');
 
 
-                if (tagValue === 'All') {
+                if (filterItemsValue === 'All') {
                     for(let i=0; i<this.params.images.length; i++) {
                         const photo = galleryItems[i];
                         photo.style.display = 'block';
@@ -148,7 +148,7 @@ class Gallery {
                     for (let i=0; i<this.params.images.length; i++) {
                         const photoData = this.params.images[i];
                         const photo = galleryItems[i];
-                        if(photoData.filter.includes(tagValue)) {
+                        if(photoData.filter.includes(filterItemsValue)) {
                             photo.style.display = 'block';
                             this.params.images[i].visible=true;
                         }
