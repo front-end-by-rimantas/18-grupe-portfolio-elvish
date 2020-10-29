@@ -49,17 +49,10 @@ class Lightbox {
     }
 
     renderImage() {
-        // const item = this.images[this.index];
-        // const src = this.imagePath + item.image;
-        // const imgHTML = `<img src="${src}" alt="${item.imageAlt}">`;
-        // this.contentDOM.insertAdjacentHTML('beforeend', imgHTML);
-
-        const img = document.createElement('img')
-        const item = this.images[this.index]
-        img.src = this.imagePath + item.image
-        img.alt = item.imageAlt
-        this.contentDOM.innerHTML = ''
-        this.contentDOM.appendChild(img)
+        const item = this.images[this.index];
+        const src = this.imagePath + item.image;
+        const imgHTML = `<img src="${src}" alt="${item.imageAlt}">`;
+        this.contentDOM.innerHTML = imgHTML;
     }
 
     show(images, imagePath, index = 0) {
