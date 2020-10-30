@@ -105,7 +105,13 @@ createTrustieRow(trustieData);
 // subscribe logic
 
 // blog logic
+import {BlogCatalog} from "./components/blog-section/BlogCatalog.js"
+import {blogData} from "../blog-subPage/js/data/blog.js"
 
+let a=new BlogCatalog(blogData)
+a.render();
+a.blogSlider();
+a.videoBox () 
 // contact logic
 renderIcons(leftIcons);
 renderForm(formData);
