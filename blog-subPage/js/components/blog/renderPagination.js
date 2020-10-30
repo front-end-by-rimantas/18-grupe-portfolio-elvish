@@ -1,9 +1,9 @@
-import { getActiveBlogItemsIndexes } from './getActiveItemsIndexes.js'
+import { sortedBlogItemsIndexes } from './getActiveItemsIndexes.js'
 import { renderBlog } from './renderBlog.js'
 
 function renderPagination(blogData) {
     let blogItemsInPage = blogData.blogItemsInPage;
-    let activeBlogItemsIndexes = getActiveBlogItemsIndexes(blogData);
+    let activeBlogItemsIndexes = sortedBlogItemsIndexes(blogData);
     let numberOfBlogItems = activeBlogItemsIndexes.length;
 
     let pageCount = Math.ceil(numberOfBlogItems / blogItemsInPage);

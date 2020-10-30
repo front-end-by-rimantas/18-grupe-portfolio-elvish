@@ -5,65 +5,107 @@ const blogData = {
     videoPath: '',
     blogItems: [
         {
-            image:'blogItem-image1.png',
-            title: '1 Active There are many variations',
-            // category: 'Lifestyle',
-            date: '13 February 2018',
-            author: 'Envato', 
-            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-            link: '#',
-            fullText: '',
-            active: true
-        },
-        {
-            image:'blogItem2-video.png',
-            title: '2 Active Contrary to popular belief',
-            // category: 'Travel',
-            date: '13 February 2018',
-            author: 'Envato', 
-            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-            link: '#',
-            fullText: '',
-            active: true
-        },
-        {
-            image:'blogItem3-image1.PNG',
-            title: '3 Active There are many variations',
-            // category: 'Lifestyle',
-            date: '13 February 2018',
-            author: 'Envato', 
-            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-            link: '#',
-            fullText: '',
-            active: true
-        },
-        {
-            image:'blogItem-image1.png',
-            title: '4 Active There are many variations',
-            // category: 'Lifestyle',
-            date: '13 February 2018',
-            author: 'Envato', 
-            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-            link: '#',
-            fullText: '',
-            active: true
-        },
-        {
-            image:'blogItem2-video.png',
-            title: '5 Active Contrary to popular belief',
-            // category: 'Travel',
-            date: '13 February 2018',
-            author: 'Envato', 
-            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
-            link: '#',
-            fullText: '',
-            active: true
-        },
-        {
-            image:'blogItem3-image1.PNG',
-            title: '6 Not There are many variations',
+            media:{
+                img: 'blogItem-image1.png',
+                video: ''
+            },
+            title: 'There are many variations',
             category: 'Lifestyle',
-            date: '13 February 2018',
+            date: {
+                year:'2018',
+                month:'January',
+                day:'13'
+            },
+            author: 'Envato', 
+            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            link: '#',
+            fullText: '',
+            active: true
+        },
+        {
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
+            title: 'Contrary to popular belief',
+            category: 'Travel',
+            date: {
+                year:'2020',
+                month:'February',
+                day:'13'
+            },
+            author: 'Envato', 
+            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            link: '#',
+            fullText: '',
+            active: true
+        },
+        {
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
+            title: 'There are many variations',
+            category: 'Food',
+            date: {
+                year:'2020',
+                month:'January',
+                day:'13'
+            },
+            author: 'Envato', 
+            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            link: '#',
+            fullText: '',
+            active: true
+        },
+        {
+            media:{
+                img: 'blogItem-image1.png',
+                video: ''
+            },
+            title: 'There are many variations',
+            category: 'Lifestyle',
+            date: {
+                year:'2019',
+                month:'April',
+                day:'13'
+            },
+            author: 'Envato', 
+            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            link: '#',
+            fullText: '',
+            active: true
+        },
+        {
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
+            title: 'Contrary to popular belief',
+            category: 'Travel',
+            date: {
+                year:'2019',
+                month:'April',
+                day:'2'
+            },
+            author: 'Envato', 
+            description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
+            link: '#',
+            fullText: '',
+            active: true
+        },
+        {
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
+            title: 'There are many variations',
+            category: 'Lifestyle',
+            date: {
+                year:'2018',
+                month:'March',
+                day:'13'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',
@@ -71,10 +113,17 @@ const blogData = {
             active: false
         },
         {
-            image:'blogItem3-image1.PNG',
-            title: '7 Active There are many variations',
-            // category: 'Lifestyle',
-            date: '13 February 2018',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
+            title: 'There are many variations',
+            category: 'Lifestyle',
+            date: {
+                year:'2018',
+                month:'March',
+                day:'2'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',
@@ -82,10 +131,17 @@ const blogData = {
             active: true
         },
         {
-            image:'blogItem-image1.png',
-            title: '8 Not There are many variations',
+            media:{
+                img: 'logItem-image1.png',
+                video: ''
+            },
+            title: 'There are many variations',
             category: 'Lifestyle',
-            date: '13 February 2018',
+            date: {
+                year:'2018',
+                month:'March',
+                day:'13'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',
@@ -93,10 +149,17 @@ const blogData = {
             active: false
         },
         {
-            image:'blogItem2-video.png',
-            title: '9 Active Contrary to popular belief',
-            // category: 'Travel',
-            date: '13 February 2018',
+            media:{
+                img: 'blogItem2-video.png',
+                video: ''
+            },
+            title: 'Contrary to popular belief',
+            category: 'Travel',
+            date: {
+                year:'2016',
+                month:'March',
+                day:'13'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',
@@ -104,10 +167,17 @@ const blogData = {
             active: true
         },
         {
-            image:'blogItem3-image1.PNG',
-            title: '10 Not There are many variations',
+            media:{
+                img: 'logItem3-image1.PNG',
+                video: ''
+            },
+            title: 'There are many variations',
             category: 'Lifestyle',
-            date: '13 February 2018',
+            date: {
+                year:'2018',
+                month:'March',
+                day:'13'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',
@@ -115,10 +185,17 @@ const blogData = {
             active: false
         },
         {
-            image:'blogItem3-image1.PNG',
-            title: '11 Not There are many variations',
-            category: 'Lifestyle',
-            date: '13 February 2018',
+            media:{
+                img: 'blogItem3-image1.PNG',
+                video: ''
+            },
+            title: 'There are many variations',
+            category: 'Animals',
+            date: {
+                year:'2018',
+                month:'March',
+                day:'13'
+            },
             author: 'Envato', 
             description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English.',
             link: '#',

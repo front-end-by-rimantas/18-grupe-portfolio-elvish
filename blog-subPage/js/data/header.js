@@ -5,14 +5,6 @@ const headerData = {
         {
             text: 'Go home',
             link: '#',
-        },        
-        {
-            text: 'Pirmas',
-            link: '#',
-        },
-        {
-            text: 'Antras',
-            link: '#',
         }
     ]
 }

@@ -53,7 +53,7 @@ h1, h2, h3, h5 {
 
     main{
         background-color: #f8f9fa;
-        padding: 80px;
+        padding: 80px 0px;
     }
 
         main .blog{
@@ -73,7 +73,8 @@ h1, h2, h3, h5 {
 
                 }
 
-                .blog > .blogItem >h4{
+                .blog > .blogItem > h4{
+                    padding-top: 10px;
                     font-size: 20px;
                     color: black;
                 }
@@ -90,7 +91,7 @@ h1, h2, h3, h5 {
                 }
 
                 .blog > .blogItem > .blogText{
-
+                    line-height: 1.5;
                 }
 
                 .blog > .blogItem > .readMore{
@@ -102,7 +103,7 @@ h1, h2, h3, h5 {
 
         main .blog-pages{
             text-align: center;
-            margin: 15px 0px;
+            margin: 50px 0px;
         }        
 
         /* Pagination links */
