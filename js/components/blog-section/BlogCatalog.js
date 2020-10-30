@@ -25,7 +25,9 @@ class BlogCatalog {
                let domHTML =
                                 `
                                 <div class="blog-card">
+                                <div class="blog-image">
                                 <img src="../../../blog-subPage/img/${this.image1}" alt="blog-image1">
+                                </div>
                                 <a href=""../../../blog-subPage/index.html""> <h3>${this.header1}</h3> </a>
                                 <span>${this.category1}</span>
                                 <span>13${this.date1} <strong>By Envato</strong></span>
@@ -33,7 +35,9 @@ class BlogCatalog {
                                 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
                                
                                 <div class="blog-card video-card">
+                                <div class="blog-image">
                                 <img src="../../../blog-subPage/img/${this.image2}" alt="blog-image1">
+                                </div>
                                 <a href=""../../../blog-subPage/index.html""> <h3>${this.header2}</h3> </a>
                                 <span>${this.category2}</span>
                                 <span>13${this.date2} <strong>By Envato</strong></span>
@@ -42,21 +46,46 @@ class BlogCatalog {
                                 
 
                                 <div class="blog-card">
+                                <div class="slider">
+                                <div class="next-slide"> > </div>
+                                <div class="prev-slide"> < </div>
                                 <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
+                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
+                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
+                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
+                                </div>
                                 <a href=""../../../blog-subPage/index.html""> <h3>${this.header3}</h3> </a>
                                 <span>${this.category3}</span>
                                 <span>13${this.date3} <strong>By Envato</strong></span>
                                 <p>${this.description3} </p>
                                 <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
-                               
-
                                 `
             //    this.image+this.header+this.category+this.date+this.description
                const b= document.querySelector(".blog-catalog");
                b.innerHTML=domHTML;
-               console.log(this.date);
+               
             }
-      
+            blogSlider() {
+                const nextSlide = document.querySelector(".next-slide")
+                const prevSlide = document.querySelector(".prev-slide")
+                let count = 0;
+                const slides = document.querySelectorAll(".slider img")
+                let size = slides[count];
+                let currentSlide=slides[count];
+            nextSlide.addEventListener('click',()=>{
+                      console.log("click");
+                      console.log(currentSlide);
+                      console.log(size.width);
+                      currentSlide.style.transform="translateX(300px);"
+                    
+                })
+                prevSlide.addEventListener('click',()=>{
+                    console.log("click");
+                })
+
+            }
+
+        
 
 }
 export {BlogCatalog};
