@@ -1388,38 +1388,52 @@ canvas {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    
 }
 .blog-catalog .blog-card .blog-image img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    cursor: pointer;
 }
 .blog-card .slider {
-    position: relative;
     display: flex;
     flex-direction: row;
-    /* overflow: hidden; */
     transition: 1s ease-in-out;
+    width: 100%;
+    
 }
-.blog-catalog .blog-card .slider .next-slide{
+.carousel-container {
+    overflow: hidden;
+     position: relative;
+}
+ .next-slide{
     position: absolute;
-    top: 40%;
-    right: 5%;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    right: 8%;
+    font-size: 35px;
+    z-index: 9999;
+    color: white;
+    cursor: pointer;
+    
+}
+.prev-slide{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    left: 8%;
     transform: translate(-40%,-5%);
     font-size: 35px;
     z-index: 9999;
     color: white;
     cursor: pointer;
 }
-.blog-catalog .blog-card .slider .prev-slide{
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    transform: translate(-40%,-5%);
-    font-size: 35px;
-    z-index: 9999;
-    color: white;
-    cursor: pointer;
+.prev-slide:hover, .next-slide:hover {
+    color: grey;
+
 }
 
 .blog-catalog .blog-card h3 {
@@ -1427,16 +1441,39 @@ canvas {
     color: black;
     margin-top: 10px;
 }
-.blog-catalog .blog-card p {
+.blog-catalog .blog-card p , .blog-catalog .blog-card span{
     margin-top: 20px;
 }
-.blog-catalog .blog-card span {
-    margin-top: 20px;
-}
+
 .blog-catalog .blog-card a {
   color: grey;
   margin-top: 30px;
 }
+.video-box {
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    background:rgba(242, 241, 239, 1);
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+    display: none;
+   
+}
+.video-box > span {
+    display: inline-block;
+    float: right;
+    padding: 20px 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 @media (max-width:950px) {
@@ -1452,6 +1489,9 @@ canvas {
         height: 55%;
       
     }
+    .video-box {
+        height: 49%;
+        }
 }
 @media (max-width:880px) {
     .blog-catalog {
@@ -1461,8 +1501,8 @@ canvas {
     .blog-card {
         width: 100%;
     }
+    
 }
-
 
 /* contact */
 .icons-left {

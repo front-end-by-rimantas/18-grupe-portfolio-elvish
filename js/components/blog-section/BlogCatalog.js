@@ -28,75 +28,111 @@ class BlogCatalog {
                                 <div class="blog-image">
                                 <img src="../../../blog-subPage/img/${this.image1}" alt="blog-image1">
                                 </div>
-                                <a href=""../../../blog-subPage/index.html""> <h3>${this.header1}</h3> </a>
+                                <a href="../../../blog-subPage/index.html"> <h3>${this.header1}</h3> </a>
                                 <span>${this.category1}</span>
                                 <span>13${this.date1} <strong>By Envato</strong></span>
                                 <p>${this.description1} </p>
-                                <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
+                                <a href="../../../blog-subPage/index.html"> <span>Read more...</span></a>  </div>
                                
+                                <div class="video-box"> <span> x
+                                 </span> </div>
                                 <div class="blog-card video-card">
                                 <div class="blog-image">
                                 <img src="../../../blog-subPage/img/${this.image2}" alt="blog-image1">
                                 </div>
-                                <a href=""../../../blog-subPage/index.html""> <h3>${this.header2}</h3> </a>
+                                <a href="../../../blog-subPage/index.html"> <h3>${this.header2}</h3> </a>
                                 <span>${this.category2}</span>
                                 <span>13${this.date2} <strong>By Envato</strong></span>
                                 <p>${this.description2} </p>
-                                <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
+                                <a href="../../../blog-subPage/index.html"> <span>Read more...</span></a>  </div>
                                 
 
                                 <div class="blog-card">
-                                <div class="slider">
+                                
+                                <div class="carousel-container">
                                 <div class="next-slide"> > </div>
                                 <div class="prev-slide"> < </div>
+                                <div class="slider">
+                                <img id="last-clone" src="../../../blog-subPage/img/${this.image1}" alt="blog-image1">
                                 <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
-                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
-                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
-                                <img src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
+                                <img src="../../../blog-subPage/img/${this.image2}" alt="blog-image1">
+                                <img src="../../../blog-subPage/img/${this.image1}" alt="blog-image1">
+                                <img id="first-clone" src="../../../blog-subPage/img/${this.image3}" alt="blog-image1">
                                 </div>
-                                <a href=""../../../blog-subPage/index.html""> <h3>${this.header3}</h3> </a>
+                                </div>
+                                <a href="../../../blog-subPage/index.html"> <h3>${this.header3}</h3> </a>
                                 <span>${this.category3}</span>
                                 <span>13${this.date3} <strong>By Envato</strong></span>
                                 <p>${this.description3} </p>
-                                <a href="./blog-subPage/index.html"> <span>Read more...</span></a>  </div>
+                                <a href="../../../blog-subPage/index.html"> <span>Read more...</span></a>  </div>
                                 `
-            //    this.image+this.header+this.category+this.date+this.description
+        
                const b= document.querySelector(".blog-catalog");
                b.innerHTML=domHTML;
                
             }
             blogSlider() {
-                const nextSlide = document.querySelector(".next-slide")
+                const carouselSlide= document.querySelector(".slider")
+                const carouselImages = document.querySelectorAll(".slider img")
                 const prevSlide = document.querySelector(".prev-slide")
-                let count = 1;
-                const slides = document.querySelectorAll(".slider img")
-                let size = slides[count].width;
-                let currentSlide=slides[count];
-            nextSlide.addEventListener('click',()=>{
-                      console.log("click");
-                      console.log(currentSlide);
-                      console.log(slides[count].width);
-                      currentSlide.style.transform = "translateX(" +(slides[count].width * count) + "px)";
-                    
-                })
-                prevSlide.addEventListener('click',()=>{
-                    console.log("click");
-                })
+                const nextSlide = document.querySelector(".next-slide")
+                let counter = 1;
+                let size = carouselImages[1].width;
+                
+                carouselSlide.style.transform="translateX(" + (-carouselImages[0].width * counter) + "px)"
 
+
+            nextSlide.addEventListener('click',()=>{
+                    if (counter>= carouselImages.length-1) return;
+                     carouselSlide.style.transition = "transform 0.4s ease-in-out"
+                     counter++;
+                     carouselSlide.style.transform="translateX(" + (-carouselImages[0].width * counter) + "px)"
+                    
+                });
+                prevSlide.addEventListener('click',()=>{
+                    if (counter <=0) return;
+                    carouselSlide.style.transition = "transform 0.4s ease-in-out"
+                    counter--;
+                    carouselSlide.style.transform="translateX(" + (-carouselImages[0].width * counter) + "px)"
+                });
+                 carouselSlide.addEventListener('transitionend',()=>{
+                     if(carouselImages[counter].id==='last-clone') {
+                        carouselSlide.style.transition = "none"
+                        counter=carouselImages.length-2;
+                        carouselSlide.style.transform="translateX(" + (-carouselImages[0].width * counter) + "px)"
+
+                     }
+                     if(carouselImages[counter].id==='first-clone') {
+                        carouselSlide.style.transition = "none"
+                        counter=carouselImages.length-counter;
+                        carouselSlide.style.transform="translateX(" + (-carouselImages[0].width * counter) + "px)"
+
+                     }
+                 })
             }
 
-        
+        videoBox () {
+            const close=document.querySelector(".video-box > span")
+            const videoBox = document.querySelector(".video-box")
+            const videoCard = document.querySelector(".video-card > .blog-image")
+            const htmlColor = document.querySelector("body")
+            let count=1;
+            close.addEventListener ('click', ()=> {
+                if (count==1){
+                    videoBox.style.display="none"
+                    count--;
+                    htmlColor.style.backgroundColor="white"
+                }
+                else {
+                    count=1;
+                }
+            })
+            videoCard.addEventListener('click',()=>
+            {
+                videoBox.style.display="inline-block"
+                htmlColor.style.backgroundColor="grey"
+             })
+        }
 
 }
 export {BlogCatalog};
-/* <div class="blog-card">
-<img src="./blog-subPage/img/blogItem-image1.PNG" alt="">
-<a href="./blog-subPage/index.html"> <h3>Contrary to popular belief</h3> </a>
-<span>Lifestyle</span>
-<span>13 February 2018 <strong>By Envato</strong></span>
-<p>Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.</p>
-<a href="./blog-subPage/index.html"> <span>Read more...</span></a>
-</div> */
-
-
-{/* <div class="video-responsive"> <iframe width="560" height="315" src="https://www.youtube.com/embed/pVE92TNDwUk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> */}
