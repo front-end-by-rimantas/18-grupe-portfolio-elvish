@@ -27,7 +27,7 @@ class Item {
         let listHTML = ``
 
         for (let i = 0; i < validTestimonials.length; i++) {
-                listHTML += `<div class='testimonials-item' style="width: ${itemWidth}%">
+                listHTML += `<div id="test" class='testimonials-item' style="width: ${itemWidth}%">
                                 <div class='test-item-width'>`
 
                 if(this.reviews[validTestimonials[i]].avatar && this.reviews[validTestimonials[i]].avatar !==""){

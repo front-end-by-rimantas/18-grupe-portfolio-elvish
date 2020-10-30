@@ -131,6 +131,9 @@ class Carousel {
         // console.log('out');
         })
     }
+    // slideshow(){
+
+    // };
         
 }
 
