@@ -13,7 +13,7 @@ import { renderPagination } from './components/blog/renderPagination.js'
 import { prevNext } from './components/blog/prevNextButtons.js'
 
 import { Aside } from './components/aside/Aside.js'
-import { onClick } from './components/aside/onClick.js'
+// import { onClick } from './components/aside/onClick.js'
 
 import { Footer } from './components/footer/Footer.js'
 
@@ -34,11 +34,11 @@ new Aside ({
     blogData: blogData
 });
 
-onClick ({
-    blogData:blogData,
-    renderEngine: renderBlog,
-    sortedBlogItemsIndexes:sortedBlogItemsIndexes(blogData)
-})
+// onClick ({
+//     blogData:blogData,
+//     renderEngine: renderBlog,
+//     sortedBlogItemsIndexes:sortedBlogItemsIndexes(blogData)
+// })
 
 //Header
 new Footer();
