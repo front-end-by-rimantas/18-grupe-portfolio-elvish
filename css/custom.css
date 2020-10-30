@@ -1399,6 +1399,7 @@ canvas {
     display: flex;
     flex-direction: row;
     /* overflow: hidden; */
+    transition: 1s ease-in-out;
 }
 .blog-catalog .blog-card .slider .next-slide{
     position: absolute;

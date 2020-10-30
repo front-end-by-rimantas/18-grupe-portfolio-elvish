@@ -68,15 +68,15 @@ class BlogCatalog {
             blogSlider() {
                 const nextSlide = document.querySelector(".next-slide")
                 const prevSlide = document.querySelector(".prev-slide")
-                let count = 0;
+                let count = 1;
                 const slides = document.querySelectorAll(".slider img")
-                let size = slides[count];
+                let size = slides[count].width;
                 let currentSlide=slides[count];
             nextSlide.addEventListener('click',()=>{
                       console.log("click");
                       console.log(currentSlide);
-                      console.log(size.width);
-                      currentSlide.style.transform="translateX(300px);"
+                      console.log(slides[count].width);
+                      currentSlide.style.transform = "translateX(" +(slides[count].width * count) + "px)";
                     
                 })
                 prevSlide.addEventListener('click',()=>{
