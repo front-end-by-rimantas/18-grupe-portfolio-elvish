@@ -1381,14 +1381,12 @@ canvas {
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
 }
 
 .blog-catalog .blog-card .slider img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    
 }
 .blog-catalog .blog-card .blog-image img {
     width: 100%;
@@ -1401,7 +1399,6 @@ canvas {
     flex-direction: row;
     transition: 1s ease-in-out;
     width: 100%;
-    
 }
 .carousel-container {
     overflow: hidden;
@@ -1409,7 +1406,7 @@ canvas {
 }
  .next-slide{
     position: absolute;
-    top: 50%;
+    top: calc(50% - 35px / 2);
     bottom: 50%;
     transform: translateY(-50%);
     right: 8%;
@@ -1417,15 +1414,13 @@ canvas {
     z-index: 9999;
     color: white;
     cursor: pointer;
-    
 }
 .prev-slide{
     position: absolute;
-    top: 50%;
+    top: calc(50% - 35px / 2);
     bottom: 50%;
-    transform: translateY(-50%);
     left: 8%;
-    transform: translate(-40%,-5%);
+    transform: translateY(-50%);
     font-size: 35px;
     z-index: 9999;
     color: white;
