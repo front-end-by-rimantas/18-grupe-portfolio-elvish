@@ -1,9 +1,7 @@
 import { isValidBlogItem } from './isValidBlogItem.js'
 
-
 function generateBlogItem(item, imagePath, showErrors = false) {
 
-    // console.log(item);
     if (!isValidBlogItem(item, showErrors)) {
         return '';
     }
@@ -22,10 +20,7 @@ function generateBlogItem(item, imagePath, showErrors = false) {
 
     HTML += `<p class="blogText col-12">${item.description}</p>
     <a class="readMore col-12" href="${item.link}">Read more...</a>
-    </div>`
-    
-    
-  
+    </div>` 
 
     return HTML
 };

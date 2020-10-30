@@ -1,11 +1,6 @@
 import {generateBlogItem} from './generateBlogItem.js';
-// import { getActiveBlogItemsIndexes } from './getActiveItemsIndexes.js'
 
 function renderBlog(blogData, pageIndex, sortedBlogItemsIndexes) {
-
-    // console.log(sortedBlogItemsIndexes);
-
-    // let activeBlogItemsIndexes = getActiveBlogItemsIndexes(blogData);
 
     let HTML = '';
 
